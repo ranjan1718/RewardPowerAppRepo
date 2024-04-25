@@ -86,5 +86,20 @@ HomeScreen As screen:
             LayoutMode: =LayoutMode.Auto
             LayoutOverflowX: =LayoutOverflow.Scroll
             LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingTop: =150
             ZIndex: =2
+
+            Button1 As button:
+                AlignInContainer: =AlignInContainer.Start
+                Fill: =RGBA(0, 121, 187, 1)
+                Font: =Font.Verdana
+                Height: =Parent.Height*0.35
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Size: =20
+                Text: ="Nominee List"
+                Width: =Parent.Width*0.2
+                ZIndex: =1
 

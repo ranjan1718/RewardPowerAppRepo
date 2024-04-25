@@ -61,6 +61,10 @@ HomeScreen As screen:
             LayoutMinHeight: =100
             LayoutMinWidth: =50
             LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
             Width: =Parent.Width*0.4
             ZIndex: =1
 
@@ -73,4 +77,14 @@ HomeScreen As screen:
                 Text: ="Dashboard"
                 Width: =Parent.Width
                 ZIndex: =1
+
+        Container4 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowX: =LayoutOverflow.Scroll
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            ZIndex: =2
 

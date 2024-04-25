@@ -1,0 +1,101 @@
+RedemptionScreen As screen:
+
+    HeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(255, 78, 38, 1)
+        Height: =Parent.Height*0.14
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        Y: =(Parent.Height-Self.Height)/9
+        ZIndex: =1
+
+    ImageContainer_2 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height*0.24
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width*0.18
+        ZIndex: =2
+
+        Image1_2 As image:
+            Image: =User().Image
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
+            ZIndex: =1
+
+        Label1_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height*0.25
+            Size: =20
+            Text: =User().FullName
+            Width: =Parent.Width
+            ZIndex: =2
+
+    RedemptionBodyContainer As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.Regular
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height*0.7
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Width: =Parent.Width*0.8
+        X: =(Parent.Width-Self.Width)/2
+        Y: =(Parent.Height-Self.Height)/1.1
+        ZIndex: =3
+
+        Label17_1 As label:
+            Height: =Parent.Height*0.05
+            Text: =""
+            Width: =Parent.Width*0.5
+            ZIndex: =1
+
+        ListHeaderContainer_1 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderColor: =RGBA(128, 128, 128, 1)
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =Parent.Height*0.12
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
+            X: =Parent.X
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =2
+
+            Label12_1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(77, 77, 77, 1)
+                BorderThickness: =2
+                Font: =Font.'Courier New'
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                Size: =18
+                Text: ="Gifts"
+                Width: =Parent.Width/3
+                ZIndex: =1
+
+        Container10_1 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+

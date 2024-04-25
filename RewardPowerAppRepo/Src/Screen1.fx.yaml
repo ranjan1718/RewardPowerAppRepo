@@ -1,7 +1,6 @@
 Screen1 As screen:
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 98, 0, 1)
         Height: =Parent.Height*0.2
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -9,34 +8,4 @@ Screen1 As screen:
         Width: =Parent.Width
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
-
-        Container2 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            Height: =Parent.Height
-            LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutJustifyContent: =LayoutJustifyContent.Center
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            Width: =Parent.Width*0.5
-            ZIndex: =1
-
-            Label3 As label:
-                Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
-                Font: =Font.'Courier New'
-                FontWeight: =FontWeight.Semibold
-                Size: =25
-                Text: =User().FullName
-                Width: =Parent.Width
-                ZIndex: =2
-
-            Circle1 As circle:
-                BorderColor: =RGBA(48, 179, 255, 1)
-                BorderThickness: =5
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =Parent.Height*0.2
-                Width: =Parent.Width*0.15
-                ZIndex: =3
 

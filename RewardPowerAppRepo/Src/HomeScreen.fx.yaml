@@ -1,5 +1,5 @@
 HomeScreen As screen:
-    Fill: =RGBA(237, 237, 237, 1)
+    Fill: =RGBA(219, 219, 219, 1)
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Semibold
@@ -41,6 +41,7 @@ HomeScreen As screen:
 
     BodyContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Bold
+        Fill: =RGBA(237, 237, 237, 1)
         Height: =Parent.Height*0.74
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
@@ -55,6 +56,7 @@ HomeScreen As screen:
             BorderColor: =RGBA(219, 219, 219, 1)
             BorderThickness: =1
             DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =Parent.Height*0.12
             LayoutDirection: =LayoutDirection.Vertical

@@ -167,7 +167,9 @@ HomeScreen As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Parent.Height*0.29
         HoverFill: =Color.Transparent
-        OnSelect: =Navigate(RedemptionScreen)
+        OnSelect: |-
+            =Set(varEmployeeData,LookUp(NomineeList,NomineeEmail=User().Email));
+            Navigate(RedemptionScreen);
         PressedFill: =Color.Transparent
         Text: =""
         Width: =Parent.Width*0.19

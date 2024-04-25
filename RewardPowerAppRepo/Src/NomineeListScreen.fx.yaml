@@ -123,7 +123,7 @@ NomineeListScreen As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height
                 Size: =18
-                Text: ="Exellence level"
+                Text: ="Experience level"
                 Width: =Parent.Width/3
                 ZIndex: =7
 

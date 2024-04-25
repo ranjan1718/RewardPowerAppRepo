@@ -52,59 +52,45 @@ NomineeListScreen As screen:
         ZIndex: =3
 
         ListHeaderContainer As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.Start
+            BorderThickness: =2
             DropShadow: =DropShadow.None
-            FillPortions: =0
             Height: =Parent.Height*0.12
+            LayoutAlignItems: =LayoutAlignItems.Center
             LayoutJustifyContent: =LayoutJustifyContent.Center
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Width: =Parent.Width
             X: =Parent.X
             Y: =Parent.Y
             ZIndex: =1
 
-            Button5 As button:
-                Fill: =RGBA(0, 121, 187, 1)
-                Height: =Parent.Height*0.72
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Text: ="Button"
-                Width: =Parent.Width*0.32
-                ZIndex: =1
-
-            Label11_1 As label:
-                Text: =""
-                Width: =Parent.Width*0.02
-                ZIndex: =2
-
-            Button6 As button:
-                Fill: =RGBA(0, 121, 187, 1)
-                Height: =Parent.Height*0.72
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Text: ="Button"
-                Width: =Parent.Width*0.32
-                ZIndex: =3
-
-            Label11 As label:
-                Text: =""
-                Width: =Parent.Width*0.02
-                ZIndex: =4
-
-            Button7 As button:
-                Fill: =RGBA(0, 121, 187, 1)
-                Height: =Parent.Height*0.72
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Text: ="Button"
-                Width: =Parent.Width*0.32
+            Label12 As label:
+                Align: =Align.Center
+                Font: =Font.'Courier New'
+                FontWeight: =FontWeight.Semibold
+                Size: =18
+                Text: ="Users"
+                Width: =Parent.Width/3
                 ZIndex: =5
+
+            Label13 As label:
+                Align: =Align.Center
+                Font: =Font.'Courier New'
+                FontWeight: =FontWeight.Semibold
+                Size: =18
+                Text: ="Criteria matched"
+                Width: =Parent.Width/3
+                ZIndex: =6
+
+            Label13_1 As label:
+                Align: =Align.Center
+                Font: =Font.'Courier New'
+                FontWeight: =FontWeight.Semibold
+                Size: =18
+                Text: ="Exellence level"
+                Width: =Parent.Width/3
+                ZIndex: =7
 

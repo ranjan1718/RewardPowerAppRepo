@@ -172,7 +172,7 @@ NomineeListScreen As screen:
                     ZIndex: =3
 
                 Button9 As button:
-                    Fill: =RGBA(227, 41, 41, 1)
+                    Fill: =Switch(CountRows(ThisItem.Justification),1,Color.LimeGreen,2,RGBA(227, 41, 41, 1),3,Color.BlueViolet,4,Color.LightYellow,5,Color.Aqua)
                     Height: =Parent.Height*0.12
                     OnSelect: =Select(Parent)
                     Text: =Switch(CountRows(ThisItem.Justification),1,"Looks like just started",2,"Quite experienced",3,"Professional",4,"Excellent",5,"Master")

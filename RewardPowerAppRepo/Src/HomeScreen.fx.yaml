@@ -80,19 +80,17 @@ HomeScreen As screen:
 
         Container4 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.None
-            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            FillPortions: =0
+            Height: =Parent.Height*0.8
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =50
             LayoutMode: =LayoutMode.Auto
-            LayoutOverflowX: =LayoutOverflow.Scroll
             LayoutOverflowY: =LayoutOverflow.Scroll
-            PaddingLeft: =20
-            PaddingRight: =20
-            PaddingTop: =150
             ZIndex: =2
 
             Button1 As button:
-                AlignInContainer: =AlignInContainer.Start
                 Fill: =RGBA(0, 121, 187, 1)
                 Font: =Font.Verdana
                 Height: =Parent.Height*0.3
@@ -105,8 +103,13 @@ HomeScreen As screen:
                 Width: =Parent.Width*0.18
                 ZIndex: =1
 
+            Label5 As label:
+                Height: =Parent.Height*0.1
+                Text: =""
+                Width: =Parent.Width*0.12
+                ZIndex: =2
+
             Button1_1 As button:
-                AlignInContainer: =AlignInContainer.Start
                 Fill: =RGBA(0, 121, 187, 1)
                 Font: =Font.Verdana
                 Height: =Parent.Height*0.3
@@ -117,10 +120,15 @@ HomeScreen As screen:
                 Size: =18
                 Text: ="Your Wallet"
                 Width: =Parent.Width*0.18
-                ZIndex: =2
+                ZIndex: =3
+
+            Label5_1 As label:
+                Height: =Parent.Height*0.1
+                Text: =""
+                Width: =Parent.Width*0.12
+                ZIndex: =4
 
             Button1_2 As button:
-                AlignInContainer: =AlignInContainer.Start
                 Fill: =RGBA(0, 121, 187, 1)
                 Font: =Font.Verdana
                 Height: =Parent.Height*0.3
@@ -131,5 +139,5 @@ HomeScreen As screen:
                 Size: =18
                 Text: ="Redeemption"
                 Width: =Parent.Width*0.18
-                ZIndex: =3
+                ZIndex: =5
 

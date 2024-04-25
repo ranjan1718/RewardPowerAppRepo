@@ -1,0 +1,126 @@
+HomeScreen As screen:
+    Fill: =RGBA(219, 219, 219, 1)
+
+    ImageContainer As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height*0.2
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width*0.15
+        ZIndex: =2
+
+        Image1 As image:
+            Image: =User().Image
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
+            ZIndex: =1
+
+        Label1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height*0.25
+            Size: =20
+            Text: =User().FullName
+            Width: =Parent.Width
+            ZIndex: =2
+
+    BodyContainer As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Bold
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =Parent.Height*0.74
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width*0.95
+        X: =(Parent.Width-Self.Width)/2
+        Y: =(Parent.Height-Self.Height)
+        ZIndex: =3
+
+        DashboardLabelContainer As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Center
+            BorderColor: =RGBA(219, 219, 219, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =Parent.Height*0.12
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =50
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width*0.4
+            ZIndex: =1
+
+        Container4 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =Parent.Height*0.8
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =50
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            ZIndex: =2
+
+            Button1 As button:
+                Fill: =RGBA(0, 121, 187, 1)
+                Font: =Font.Verdana
+                Height: =Parent.Height*0.3
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Size: =18
+                Text: ="Nominee List"
+                Width: =Parent.Width*0.18
+                ZIndex: =1
+
+            Label5 As label:
+                Height: =Parent.Height*0.1
+                Text: =""
+                Width: =Parent.Width*0.12
+                ZIndex: =2
+
+            Button1_1 As button:
+                Fill: =RGBA(0, 121, 187, 1)
+                Font: =Font.Verdana
+                Height: =Parent.Height*0.3
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Size: =18
+                Text: ="Your Wallet"
+                Width: =Parent.Width*0.18
+                ZIndex: =3
+
+            Label5_1 As label:
+                Height: =Parent.Height*0.1
+                Text: =""
+                Width: =Parent.Width*0.12
+                ZIndex: =4
+
+            Button1_2 As button:
+                Fill: =RGBA(0, 121, 187, 1)
+                Font: =Font.Verdana
+                Height: =Parent.Height*0.3
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Size: =18
+                Text: ="Redeemption"
+                Width: =Parent.Width*0.18
+                ZIndex: =5
+

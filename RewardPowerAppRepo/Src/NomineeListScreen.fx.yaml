@@ -67,7 +67,7 @@ NomineeListScreen As screen:
 
             Button5 As button:
                 Fill: =RGBA(0, 121, 187, 1)
-                Height: =Parent.Height*0.7
+                Height: =Parent.Height*0.72
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5
@@ -83,7 +83,7 @@ NomineeListScreen As screen:
 
             Button6 As button:
                 Fill: =RGBA(0, 121, 187, 1)
-                Height: =Parent.Height*0.7
+                Height: =Parent.Height*0.72
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5
@@ -99,7 +99,7 @@ NomineeListScreen As screen:
 
             Button7 As button:
                 Fill: =RGBA(0, 121, 187, 1)
-                Height: =Parent.Height*0.7
+                Height: =Parent.Height*0.72
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5

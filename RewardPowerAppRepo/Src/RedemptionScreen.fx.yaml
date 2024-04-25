@@ -97,9 +97,11 @@ RedemptionScreen As screen:
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width*0.6
             ZIndex: =3
 
             Gallery1 As gallery.variableTemplateHeightGallery:
+                AlignInContainer: =AlignInContainer.Center
                 DelayItemLoading: =true
                 Fill: =Color.LightGray
                 Items: =PrizeList
@@ -109,6 +111,7 @@ RedemptionScreen As screen:
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateFill: =Color.White
                 TemplateSize: =Parent.Width*0.3
+                Width: =Parent.Width
                 ZIndex: =1
 
                 Label2_1 As label:
@@ -122,4 +125,12 @@ RedemptionScreen As screen:
                     X: =(Parent.TemplateWidth-Self.Width)/2
                     Y: =(Parent.TemplateHeight-Self.Height)/2
                     ZIndex: =2
+
+                Button1 As button:
+                    Fill: =RGBA(0, 121, 187, 1)
+                    OnSelect: =Select(Parent)
+                    Text: ="Button"
+                    X: =(Parent.TemplateWidth-Self.Width)
+                    Y: =(Parent.TemplateHeight-Self.Height)/2
+                    ZIndex: =3
 

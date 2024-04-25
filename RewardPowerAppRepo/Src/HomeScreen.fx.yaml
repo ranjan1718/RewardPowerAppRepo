@@ -11,6 +11,7 @@ HomeScreen As screen:
         ZIndex: =1
 
     Container1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
         Height: =Parent.Height*0.2
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
@@ -20,11 +21,15 @@ HomeScreen As screen:
         ZIndex: =2
 
         Image1 As image:
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
             ZIndex: =1
 
         Label1 As label:
             Align: =Align.Center
-            Color: =RGBA(183, 245, 247, 1)
+            Color: =RGBA(255, 255, 255, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             Height: =Parent.Height*0.25

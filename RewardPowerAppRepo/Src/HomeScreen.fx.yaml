@@ -42,10 +42,21 @@ HomeScreen As screen:
     BodyContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Bold
         Height: =Parent.Height*0.74
+        LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width*0.95
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)
         ZIndex: =3
+
+        Label2 As label:
+            Align: =Align.Center
+            Color: =RGBA(30, 148, 212, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height*0.12
+            Size: =25
+            Text: ="Dashboard"
+            Width: =Parent.Width
+            ZIndex: =1
 

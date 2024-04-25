@@ -40,7 +40,7 @@ RedemptionScreen As screen:
 
     RedemptionBodyContainer As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular
-        Fill: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(242, 242, 242, 1)
         Height: =Parent.Height*0.7
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical

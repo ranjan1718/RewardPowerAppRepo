@@ -3,7 +3,7 @@ HomeScreen As screen:
 
     BodyContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Bold
-        Fill: =RGBA(237, 237, 237, 1)
+        Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height*0.72
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
@@ -54,18 +54,30 @@ HomeScreen As screen:
             LayoutOverflowY: =LayoutOverflow.Scroll
             ZIndex: =2
 
-            Button1 As button:
-                Fill: =RGBA(0, 121, 187, 1)
-                Font: =Font.Verdana
-                Height: =Parent.Height*0.3
-                RadiusBottomLeft: =15
-                RadiusBottomRight: =15
-                RadiusTopLeft: =15
-                RadiusTopRight: =15
-                Size: =18
-                Text: ="Nominee List"
-                Width: =Parent.Width*0.18
+            Container3 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                DropShadow: =DropShadow.Regular
+                FillPortions: =0
+                Height: =Parent.Height*0.5
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width*0.2
                 ZIndex: =1
+
+                Icon2 As icon.AddUser:
+                    Icon: =Icon.AddUser
+                    ZIndex: =1
+
+                Label3 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Semibold
+                    Size: =15
+                    Text: ="Nominee List"
+                    ZIndex: =2
 
             Label5 As label:
                 Height: =Parent.Height*0.1
@@ -73,18 +85,30 @@ HomeScreen As screen:
                 Width: =Parent.Width*0.12
                 ZIndex: =2
 
-            Button1_1 As button:
-                Fill: =RGBA(0, 121, 187, 1)
-                Font: =Font.Verdana
-                Height: =Parent.Height*0.3
-                RadiusBottomLeft: =15
-                RadiusBottomRight: =15
-                RadiusTopLeft: =15
-                RadiusTopRight: =15
-                Size: =18
-                Text: ="Your Wallet"
-                Width: =Parent.Width*0.18
+            Container5 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                DropShadow: =DropShadow.Regular
+                FillPortions: =0
+                Height: =Parent.Height*0.5
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width*0.2
                 ZIndex: =3
+
+                Icon4 As icon.Money:
+                    Icon: =Icon.Money
+                    ZIndex: =1
+
+                Label4 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Semibold
+                    Size: =15
+                    Text: ="Your wallet"
+                    ZIndex: =2
 
             Label5_1 As label:
                 Height: =Parent.Height*0.1
@@ -92,18 +116,30 @@ HomeScreen As screen:
                 Width: =Parent.Width*0.12
                 ZIndex: =4
 
-            Button1_2 As button:
-                Fill: =RGBA(0, 121, 187, 1)
-                Font: =Font.Verdana
-                Height: =Parent.Height*0.3
-                RadiusBottomLeft: =15
-                RadiusBottomRight: =15
-                RadiusTopLeft: =15
-                RadiusTopRight: =15
-                Size: =18
-                Text: ="Redeemption"
-                Width: =Parent.Width*0.18
+            Container6 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                DropShadow: =DropShadow.Regular
+                FillPortions: =0
+                Height: =Parent.Height*0.5
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width*0.2
                 ZIndex: =5
+
+                Icon5 As icon.ShoppingCart:
+                    Icon: =Icon.ShoppingCart
+                    ZIndex: =1
+
+                Label6 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Semibold
+                    Size: =15
+                    Text: ="Redeemption"
+                    ZIndex: =2
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(255, 78, 38, 1)

@@ -2,9 +2,9 @@ HomeScreen As screen:
     Fill: =RGBA(219, 219, 219, 1)
 
     BodyContainer As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Bold
+        DropShadow: =DropShadow.None
         Fill: =RGBA(245, 245, 245, 1)
-        Height: =Parent.Height*0.72
+        Height: =Parent.Height*0.7
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
@@ -13,34 +13,24 @@ HomeScreen As screen:
         Y: =(Parent.Height-Self.Height)/1.1
         ZIndex: =1
 
-        DashboardLabelContainer As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.Center
+        DashboardContainer As groupContainer.verticalAutoLayoutContainer:
             BorderColor: =RGBA(219, 219, 219, 1)
-            BorderThickness: =1
-            DropShadow: =DropShadow.Regular
-            Fill: =RGBA(255, 255, 255, 1)
-            FillPortions: =0
-            Height: =Parent.Height*0.12
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height*0.1
             LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =100
-            LayoutMinWidth: =50
             LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =10
-            RadiusBottomRight: =10
-            RadiusTopLeft: =10
-            RadiusTopRight: =10
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
             Width: =Parent.Width*0.4
+            Y: =Parent.Y
             ZIndex: =1
 
-            Label2 As label:
-                Align: =Align.Center
-                Color: =RGBA(51, 51, 51, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =Parent.Height
-                Size: =25
-                Text: ="Dashboard"
-                Width: =Parent.Width
-                ZIndex: =1
+        Label7 As label:
+            Text: =""
+            Width: =Parent.Width
+            ZIndex: =2
 
         Container4 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.None
@@ -52,7 +42,7 @@ HomeScreen As screen:
             LayoutMinWidth: =50
             LayoutMode: =LayoutMode.Auto
             LayoutOverflowY: =LayoutOverflow.Scroll
-            ZIndex: =2
+            ZIndex: =3
 
             Container3 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
@@ -84,31 +74,6 @@ HomeScreen As screen:
                 Text: =""
                 Width: =Parent.Width*0.12
                 ZIndex: =2
-
-            Container5 As groupContainer.verticalAutoLayoutContainer:
-                AlignInContainer: =AlignInContainer.Center
-                DropShadow: =DropShadow.Regular
-                FillPortions: =0
-                Height: =Parent.Height*0.5
-                LayoutAlignItems: =LayoutAlignItems.Center
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                Width: =Parent.Width*0.2
-                ZIndex: =3
-
-                Icon4 As icon.Money:
-                    Icon: =Icon.Money
-                    ZIndex: =1
-
-                Label4 As label:
-                    Align: =Align.Center
-                    FontWeight: =FontWeight.Semibold
-                    Size: =15
-                    Text: ="Your wallet"
-                    ZIndex: =2
 
             Label5_1 As label:
                 Height: =Parent.Height*0.1
@@ -177,4 +142,46 @@ HomeScreen As screen:
             Text: =User().FullName
             Width: =Parent.Width
             ZIndex: =2
+
+    NiomineeButton As button:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Parent.Height*0.29
+        Text: =""
+        Width: =Parent.Width*0.19
+        X: =(Parent.Width-Self.Width)/8
+        Y: =(Parent.Height-Self.Height)/1.45
+        ZIndex: =4
+
+    RedeemButton As button:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Parent.Height*0.29
+        Text: =""
+        Width: =Parent.Width*0.19
+        X: =(Parent.Width-Self.Width)/1.14
+        Y: =(Parent.Height-Self.Height)/1.45
+        ZIndex: =6
+
+    DashboardLabelContainer As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Fill: =RGBA(219, 219, 219, 1)
+        Height: =Parent.Height*0.14
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        X: =(Parent.Width-Self.Width)/2
+        Y: =(Parent.Height-Self.Height)/3.6
+        ZIndex: =7
+
+        Label10 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Size: =25
+            Text: ="Dashboard"
+            Width: =Parent.Width
+            ZIndex: =1
 

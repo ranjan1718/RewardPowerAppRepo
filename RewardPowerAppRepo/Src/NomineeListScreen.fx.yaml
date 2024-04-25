@@ -132,7 +132,7 @@ NomineeListScreen As screen:
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =Parent.Height*0.4
                 Width: =Parent.Width
-                Y: =(Parent.TemplateHeight-Self.Height)/2
+                Y: =(Parent.Height-Self.Height)/2
                 ZIndex: =1
 
                 Label18 As label:

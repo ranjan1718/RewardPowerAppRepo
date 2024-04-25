@@ -188,7 +188,7 @@ NomineeListScreen As screen:
                     ZIndex: =3
 
                 Button9 As button:
-                    Fill: =Switch(CountRows(ThisItem.Justification),1,Color.LimeGreen,2,RGBA(227, 41, 41, 1),3,Color.BlueViolet,4,Color.LightYellow,5,Color.Aqua,Color.Transparent)
+                    Fill: =Switch(CountRows(ThisItem.Justification),1,Color.LimeGreen,2,RGBA(227, 41, 41, 1),3,Color.BlueViolet,4,Color.BurlyWood,5,Color.SkyBlue,Color.Transparent)
                     Height: =Parent.Height*0.12
                     HoverFill: =Switch(CountRows(ThisItem.Justification),1,Color.LimeGreen,2,RGBA(227, 41, 41, 1),3,Color.BlueViolet,4,Color.LightYellow,5,Color.CadetBlue,Color.Transparent)
                     OnSelect: =Select(Parent)

@@ -99,3 +99,23 @@ RedemptionScreen As screen:
             LayoutMode: =LayoutMode.Auto
             ZIndex: =3
 
+            Gallery1 As gallery.variableTemplateHeightGallery:
+                DelayItemLoading: =true
+                Fill: =Color.LightGray
+                Items: =PrizeList
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =Parent.Width*0.15
+                ZIndex: =1
+
+                Label2_1 As label:
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: =ThisItem.Prize.Value
+                    X: =(Parent.TemplateWidth-Self.Width)/2
+                    Y: =(Parent.TemplateHeight-Self.Height)/2
+                    ZIndex: =2
+

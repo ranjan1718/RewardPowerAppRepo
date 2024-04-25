@@ -10,12 +10,16 @@
         "dataSources": {
           "NomineeList": {
             "tableName": "731cb6e1-d5dc-4d13-b446-08244275de5c"
+          },
+          "PrizeList": {
+            "tableName": "01a0448c-bbbf-49a0-9d24-7c0145f56bee"
           }
         }
       }
     },
     "dataSources": [
-      "NomineeList"
+      "NomineeList",
+      "PrizeList"
     ],
     "dependencies": {},
     "dependents": [],

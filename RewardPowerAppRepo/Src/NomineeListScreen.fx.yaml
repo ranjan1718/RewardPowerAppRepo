@@ -49,6 +49,7 @@ NomineeListScreen As screen:
             ZIndex: =2
 
     ListBodyContainer As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.Regular
         Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height*0.7
         LayoutAlignItems: =LayoutAlignItems.Center
@@ -136,7 +137,6 @@ NomineeListScreen As screen:
             Gallery4 As gallery.variableTemplateHeightGallery:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(0, 0, 0, 1)
-                BorderThickness: =2
                 DelayItemLoading: =true
                 Items: =NomineeList
                 Layout: =Layout.Vertical
@@ -154,7 +154,7 @@ NomineeListScreen As screen:
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
-                    Visible: =If(IsBlank(Gallery4),true,false)
+                    Visible: =If(IsBlank(Gallery4),false,true)
                     Width: =Parent.TemplateWidth
                     X: =Parent.X
                     Y: =Parent.Y

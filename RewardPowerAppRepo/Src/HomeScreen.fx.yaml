@@ -156,6 +156,7 @@ HomeScreen As screen:
         Height: =Parent.Height*0.29
         HoverFill: =Color.Transparent
         OnSelect: =Navigate(NomineeListScreen);
+        PressedFill: =Color.Transparent
         Text: =""
         Width: =Parent.Width*0.19
         X: =(Parent.Width-Self.Width)/4.2
@@ -167,6 +168,7 @@ HomeScreen As screen:
         Height: =Parent.Height*0.29
         HoverFill: =Color.Transparent
         OnSelect: =Navigate(RedemptionScreen)
+        PressedFill: =Color.Transparent
         Text: =""
         Width: =Parent.Width*0.19
         X: =(Parent.Width-Self.Width)/1.32

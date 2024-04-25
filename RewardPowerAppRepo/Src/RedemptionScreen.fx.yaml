@@ -107,14 +107,18 @@ RedemptionScreen As screen:
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =Parent.Width*0.15
+                TemplateFill: =Color.White
+                TemplateSize: =Parent.Width*0.3
                 ZIndex: =1
 
                 Label2_1 As label:
+                    Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
-                    Size: =15
+                    Size: =18
                     Text: =ThisItem.Prize.Value
+                    Width: =Parent.Width*0.8
                     X: =(Parent.TemplateWidth-Self.Width)/2
                     Y: =(Parent.TemplateHeight-Self.Height)/2
                     ZIndex: =2

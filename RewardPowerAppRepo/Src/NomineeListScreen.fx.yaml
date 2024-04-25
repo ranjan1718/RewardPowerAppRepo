@@ -1,0 +1,39 @@
+NomineeListScreen As screen:
+
+    Container1_1 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(255, 78, 38, 1)
+        Height: =Parent.Height*0.14
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        Y: =(Parent.Height-Self.Height)/9
+        ZIndex: =1
+
+    ImageContainer_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height*0.2
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width*0.15
+        ZIndex: =2
+
+        Image1_1 As image:
+            Image: =User().Image
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
+            ZIndex: =1
+
+        Label1_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height*0.25
+            Size: =20
+            Text: =User().FullName
+            Width: =Parent.Width
+            ZIndex: =2
+

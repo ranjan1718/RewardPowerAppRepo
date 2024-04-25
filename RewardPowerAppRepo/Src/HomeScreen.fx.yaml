@@ -18,10 +18,13 @@ HomeScreen As screen:
         ZIndex: =1
 
         DashboardContainer As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             BorderColor: =RGBA(219, 219, 219, 1)
             DropShadow: =DropShadow.None
             Height: =Parent.Height*0.1
             LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =15
             RadiusBottomRight: =15
@@ -154,7 +157,7 @@ HomeScreen As screen:
         Text: =""
         Width: =Parent.Width*0.19
         X: =(Parent.Width-Self.Width)/4.2
-        Y: =(Parent.Height-Self.Height)/1.34
+        Y: =(Parent.Height-Self.Height)/1.2
         ZIndex: =4
 
     RedeemButton As button:
@@ -163,7 +166,7 @@ HomeScreen As screen:
         Text: =""
         Width: =Parent.Width*0.19
         X: =(Parent.Width-Self.Width)/1.32
-        Y: =(Parent.Height-Self.Height)/1.34
+        Y: =(Parent.Height-Self.Height)/1.2
         ZIndex: =6
 
     DashboardLabelContainer As groupContainer.horizontalAutoLayoutContainer:

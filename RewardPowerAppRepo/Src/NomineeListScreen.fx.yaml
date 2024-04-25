@@ -77,6 +77,8 @@ NomineeListScreen As screen:
             Height: =Parent.Height*0.12
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =0
             RadiusBottomRight: =0

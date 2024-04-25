@@ -4,10 +4,19 @@ NomineeListScreen As screen:
     HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(255, 78, 38, 1)
         Height: =Parent.Height*0.14
+        LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
+        PaddingRight: =10
         Width: =Parent.Width
         Y: =(Parent.Height-Self.Height)/9
         ZIndex: =1
+
+        Icon6 As icon.Home:
+            AlignInContainer: =AlignInContainer.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.Home
+            X: =(Parent.Width-Self.Width)/2
+            ZIndex: =1
 
     ImageContainer_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None

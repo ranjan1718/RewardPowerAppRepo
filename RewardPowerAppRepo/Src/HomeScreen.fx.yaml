@@ -182,7 +182,6 @@ HomeScreen As screen:
 
         Label10 As label:
             Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
             Size: =28
             Text: ="Dashboard"

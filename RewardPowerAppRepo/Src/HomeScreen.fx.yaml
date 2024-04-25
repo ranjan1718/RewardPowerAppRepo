@@ -8,6 +8,10 @@ HomeScreen As screen:
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
         Width: =Parent.Width*0.95
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/1.1
@@ -180,7 +184,7 @@ HomeScreen As screen:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
-            Size: =25
+            Size: =28
             Text: ="Dashboard"
             Width: =Parent.Width
             ZIndex: =1

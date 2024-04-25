@@ -1,15 +1,6 @@
 HomeScreen As screen:
     Fill: =RGBA(219, 219, 219, 1)
 
-    HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
-        DropShadow: =DropShadow.Semibold
-        Fill: =RGBA(255, 96, 56, 1)
-        Height: =Parent.Height*0.15
-        LayoutMode: =LayoutMode.Auto
-        Width: =Parent.Width
-        Y: =(Parent.Height-Self.Height)/12
-        ZIndex: =1
-
     ImageContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
         Height: =Parent.Height*0.2
@@ -69,16 +60,6 @@ HomeScreen As screen:
             RadiusTopRight: =10
             Width: =Parent.Width*0.4
             ZIndex: =1
-
-            Label3 As label:
-                Align: =Align.Center
-                Color: =RGBA(128, 128, 128, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =Parent.Height
-                Size: =25
-                Text: ="Dashboard"
-                Width: =Parent.Width
-                ZIndex: =1
 
         Container4 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.None

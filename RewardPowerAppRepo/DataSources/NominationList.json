@@ -1,0 +1,51 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-04-22T17:40:22.4110000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Attachments",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "File name with extension",
+      "{FullPath}": "Full Path",
+      "{HasAttachments}": "Has attachments",
+      "{Identifier}": "Identifier",
+      "{IsFolder}": "IsFolder",
+      "{Link}": "Link to item",
+      "{ModerationComment}": "Comments associated with the content approval of this list item",
+      "{ModerationStatus}": "Content approval status",
+      "{Name}": "Name",
+      "{Path}": "Folder path",
+      "{Thumbnail}": "Thumbnail",
+      "{TriggerWindowEndToken}": "Trigger Window End Token",
+      "{TriggerWindowStartToken}": "Trigger Window Start Token",
+      "{VersionNumber}": "Version number",
+      "ApproverName": "ApproverName",
+      "Author": "Created By",
+      "Author#Claims": "Created By Claims",
+      "ComplianceAssetId": "Compliance Asset Id",
+      "Created": "Created",
+      "Date": "Date",
+      "Editor": "Modified By",
+      "Editor#Claims": "Modified By Claims",
+      "ID": "ID",
+      "JustificationCategory": "JustificationCategory",
+      "JustificationCategory#Id": "JustificationCategory Id",
+      "ManagerName": "ManagerName",
+      "Modified": "Modified",
+      "NomineeName": "NomineeName",
+      "OData__ColorTag": "Color Tag",
+      "Point": "Point",
+      "Title": "Title"
+    },
+    "DatasetName": "https://sigilotech.sharepoint.com/sites/Ananya",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "NominationList",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

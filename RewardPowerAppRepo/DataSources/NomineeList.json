@@ -39,6 +39,11 @@
       "NomineeName": "NomineeName",
       "OData__ColorTag": "Color Tag",
       "Points": "Points",
+      "Redeemed": "Redeemed",
+      "Redeemed#Id": "Redeemed Id",
+      "Redeemed@odata.type": "Redeemed (Redeemed@odata.type)",
+      "Status": "Status",
+      "Status#Id": "Status Id",
       "Title": "Title"
     },
     "DatasetName": "https://sigilotech.sharepoint.com/sites/RewardEmployees",

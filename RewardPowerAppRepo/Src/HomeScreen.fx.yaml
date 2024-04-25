@@ -124,12 +124,12 @@ HomeScreen As screen:
 
     ImageContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =Parent.Height*0.2
+        Height: =Parent.Height*0.24
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
-        Width: =Parent.Width*0.15
+        Width: =Parent.Width*0.18
         ZIndex: =3
 
         Image1 As image:

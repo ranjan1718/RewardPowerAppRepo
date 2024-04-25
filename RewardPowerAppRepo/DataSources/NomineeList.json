@@ -36,6 +36,7 @@
       "Justification@odata.type": "Justification (Justification@odata.type)",
       "Manager": "Manager",
       "Modified": "Modified",
+      "NominationDate": "NominationDate",
       "NomineeName": "NomineeName",
       "OData__ColorTag": "Color Tag",
       "Points": "Points",

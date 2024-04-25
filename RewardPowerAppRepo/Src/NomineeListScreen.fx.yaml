@@ -182,7 +182,7 @@ NomineeListScreen As screen:
                         =Concat(ThisItem.Justification,Value,"
                         
                         ")
-                    Width: =Parent.Width/3
+                    Width: =Parent.Width/3.1
                     X: =(Parent.Width-Self.Width)/2
                     Y: =(Parent.TemplateHeight-Self.Height)/2
                     ZIndex: =3

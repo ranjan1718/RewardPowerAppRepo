@@ -95,7 +95,7 @@
       "MetaDataIDKey": "",
       "Name": "BodyContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1419,7 +1419,7 @@
       "MetaDataIDKey": "",
       "Name": "DashboardLabelContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1614,7 +1614,7 @@
       "MetaDataIDKey": "",
       "Name": "HeaderContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2274,7 +2274,8 @@
         "PaddingTop",
         "PaddingRight",
         "PaddingBottom",
-        "PaddingLeft"
+        "PaddingLeft",
+        "OnSelect"
       ],
       "DynamicProperties": [
         {
@@ -2472,6 +2473,11 @@
           "Category": "Design",
           "PropertyName": "PaddingLeft",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultImageStyle",

@@ -154,6 +154,7 @@ NomineeListScreen As screen:
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
+                    Visible: =If(IsBlank(Gallery4),true,false)
                     Width: =Parent.TemplateWidth
                     X: =Parent.X
                     Y: =Parent.Y

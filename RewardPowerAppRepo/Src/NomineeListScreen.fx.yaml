@@ -173,6 +173,7 @@ NomineeListScreen As screen:
 
                 Label18_1 As label:
                     Align: =Align.Center
+                    Font: =Font.Verdana
                     FontWeight: =FontWeight.Semibold
                     Height: =Parent.TemplateHeight*0.8
                     OnSelect: =Select(Parent)

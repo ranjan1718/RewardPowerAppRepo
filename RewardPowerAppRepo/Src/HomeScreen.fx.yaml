@@ -4,13 +4,13 @@ HomeScreen As screen:
     BodyContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Bold
         Fill: =RGBA(237, 237, 237, 1)
-        Height: =Parent.Height*0.74
+        Height: =Parent.Height*0.72
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width*0.95
         X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)
+        Y: =(Parent.Height-Self.Height)/1.1
         ZIndex: =1
 
         DashboardLabelContainer As groupContainer.verticalAutoLayoutContainer:
@@ -105,7 +105,7 @@ HomeScreen As screen:
                 Width: =Parent.Width*0.18
                 ZIndex: =5
 
-    Container1 As groupContainer.horizontalAutoLayoutContainer:
+    HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(255, 78, 38, 1)
         Height: =Parent.Height*0.14
         LayoutMode: =LayoutMode.Auto

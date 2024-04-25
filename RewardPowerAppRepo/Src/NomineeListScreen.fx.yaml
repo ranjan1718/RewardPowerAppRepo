@@ -1,6 +1,6 @@
 NomineeListScreen As screen:
 
-    Container1_1 As groupContainer.horizontalAutoLayoutContainer:
+    HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(255, 78, 38, 1)
         Height: =Parent.Height*0.14
         LayoutMode: =LayoutMode.Auto
@@ -36,4 +36,11 @@ NomineeListScreen As screen:
             Text: =User().FullName
             Width: =Parent.Width
             ZIndex: =2
+
+    Container2 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height*0.7
+        LayoutMode: =LayoutMode.Auto
+        X: =40
+        Y: =(Parent.Height-Self.Height)/1.1
+        ZIndex: =3
 

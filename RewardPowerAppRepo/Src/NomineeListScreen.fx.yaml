@@ -15,6 +15,7 @@ NomineeListScreen As screen:
             AlignInContainer: =AlignInContainer.Center
             Color: =RGBA(255, 255, 255, 1)
             Icon: =Icon.Home
+            OnSelect: =Navigate(HomeScreen)
             X: =(Parent.Width-Self.Width)/2
             ZIndex: =1
 

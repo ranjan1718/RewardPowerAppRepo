@@ -45,7 +45,6 @@ HomeScreen As screen:
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        PaddingTop: =10
         Width: =Parent.Width*0.95
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)

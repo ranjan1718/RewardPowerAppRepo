@@ -70,7 +70,7 @@ HomeScreen As screen:
 
             Label3 As label:
                 Align: =Align.Center
-                Color: =RGBA(20, 151, 222, 1)
+                Color: =RGBA(128, 128, 128, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =Parent.Height
                 Size: =25

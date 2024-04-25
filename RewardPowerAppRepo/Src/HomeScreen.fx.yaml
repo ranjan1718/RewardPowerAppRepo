@@ -166,6 +166,7 @@ HomeScreen As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Parent.Height*0.29
         HoverFill: =Color.Transparent
+        OnSelect: =Navigate(RedemptionScreen)
         Text: =""
         Width: =Parent.Width*0.19
         X: =(Parent.Width-Self.Width)/1.32

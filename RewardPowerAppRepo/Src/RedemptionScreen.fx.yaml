@@ -131,7 +131,7 @@ RedemptionScreen As screen:
                     Fill: =RGBA(0, 121, 187, 1)
                     OnSelect: =Select(Parent)
                     Text: ="Button"
-                    X: =(Parent.TemplateWidth-Self.Width)
+                    X: =(Parent.TemplateWidth-Self.Width)*0.95
                     Y: =(Parent.TemplateHeight-Self.Height)/2
                     ZIndex: =3
 

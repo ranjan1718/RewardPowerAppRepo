@@ -153,6 +153,7 @@ HomeScreen As screen:
     NiomineeButton As button:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Parent.Height*0.29
+        HoverFill: =Color.Transparent
         OnSelect: =Navigate(NomineeListScreen);
         Text: =""
         Width: =Parent.Width*0.19
@@ -163,6 +164,7 @@ HomeScreen As screen:
     RedeemButton As button:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Parent.Height*0.29
+        HoverFill: =Color.Transparent
         Text: =""
         Width: =Parent.Width*0.19
         X: =(Parent.Width-Self.Width)/1.32

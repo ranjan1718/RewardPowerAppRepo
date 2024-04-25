@@ -172,7 +172,7 @@ NomineeListScreen As screen:
 
                 Rectangle1 As rectangle:
                     BorderColor: =RGBA(77, 77, 77, 1)
-                    BorderThickness: =2
+                    BorderThickness: =1
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)

@@ -1,4 +1,5 @@
 NomineeListScreen As screen:
+    Fill: =RGBA(219, 219, 219, 1)
 
     HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(255, 78, 38, 1)
@@ -37,10 +38,73 @@ NomineeListScreen As screen:
             Width: =Parent.Width
             ZIndex: =2
 
-    Container2 As groupContainer.horizontalAutoLayoutContainer:
+    ListBodyContainer As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height*0.7
         LayoutMode: =LayoutMode.Auto
-        X: =40
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Width: =Parent.Width*0.8
+        X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/1.1
         ZIndex: =3
+
+        ListHeaderContainer As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Start
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =Parent.Height*0.12
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            X: =Parent.X
+            Y: =Parent.Y
+            ZIndex: =1
+
+            Button5 As button:
+                Fill: =RGBA(0, 121, 187, 1)
+                Height: =Parent.Height*0.7
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Text: ="Button"
+                Width: =Parent.Width*0.32
+                ZIndex: =1
+
+            Label11_1 As label:
+                Text: =""
+                Width: =Parent.Width*0.02
+                ZIndex: =2
+
+            Button6 As button:
+                Fill: =RGBA(0, 121, 187, 1)
+                Height: =Parent.Height*0.7
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Text: ="Button"
+                Width: =Parent.Width*0.32
+                ZIndex: =3
+
+            Label11 As label:
+                Text: =""
+                Width: =Parent.Width*0.02
+                ZIndex: =4
+
+            Button7 As button:
+                Fill: =RGBA(0, 121, 187, 1)
+                Height: =Parent.Height*0.7
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Text: ="Button"
+                Width: =Parent.Width*0.32
+                ZIndex: =5
 

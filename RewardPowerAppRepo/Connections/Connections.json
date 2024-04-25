@@ -1,24 +1,24 @@
 {
-  "3dde3f8b-b6da-49a4-8596-1611e6cffb2b": {
+  "b7b7295d-881e-487e-9b09-2c6455248e20": {
     "connectionRef": {
       "displayName": "SharePoint",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1685/1.0.1685.3700/sharepointonline/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {
-      "https://sigilotech.sharepoint.com/sites/Ananya": {
+      "https://sigilotech.sharepoint.com/sites/RewardEmployees": {
         "dataSources": {
-          "NominationList": {
-            "tableName": "0d85c711-a969-46d0-b018-fb41e7a7443f"
+          "NomineeList": {
+            "tableName": "731cb6e1-d5dc-4d13-b446-08244275de5c"
           }
         }
       }
     },
     "dataSources": [
-      "NominationList"
+      "NomineeList"
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "3dde3f8b-b6da-49a4-8596-1611e6cffb2b"
+    "id": "b7b7295d-881e-487e-9b09-2c6455248e20"
   }
 }

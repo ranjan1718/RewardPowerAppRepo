@@ -1,1 +1,24 @@
-{}
+{
+  "3dde3f8b-b6da-49a4-8596-1611e6cffb2b": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1685/1.0.1685.3700/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://sigilotech.sharepoint.com/sites/Ananya": {
+        "dataSources": {
+          "NominationList": {
+            "tableName": "0d85c711-a969-46d0-b018-fb41e7a7443f"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "NominationList"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "3dde3f8b-b6da-49a4-8596-1611e6cffb2b"
+  }
+}

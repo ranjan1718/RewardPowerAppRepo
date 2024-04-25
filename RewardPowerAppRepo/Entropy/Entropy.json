@@ -1,26 +1,98 @@
 {
   "ComponentIndexes": {},
   "ControlUniqueGuids": {},
-  "ControlUniqueIds": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "BodyContainer": 8,
+    "Button1": 11,
+    "Button1_1": 12,
+    "Button1_2": 13,
+    "Container4": 10,
+    "DashboardLabelContainer": 9,
+    "HomeScreen": 4,
+    "Host": 3,
+    "Image1": 6,
+    "ImageContainer": 5,
+    "Label1": 7,
+    "Label5": 14,
+    "Label5_1": 15,
+    "Screen2": 16
+  },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "04/25/2024 07:01:52",
   "IsLegacyComponentAllowGlobalScopeCase": false,
-  "LocalConnectionIDReferences": {},
-  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalConnectionIDReferences": {
+    "3dde3f8b-b6da-49a4-8596-1611e6cffb2b": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/229dcb2a345c4934bd00f968805fd400\""
+  },
+  "LocalDatabaseReferencesAsEmpty": true,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
-  "OrderDataSource": {},
+  "OrderDataSource": {
+    "NominationList": 0
+  },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {},
-  "OverridablePropertiesEntry": {},
+  "OrderXMLTemplate": {
+    "button": 3,
+    "groupContainer": 0,
+    "image": 1,
+    "label": 2
+  },
+  "OverridablePropertiesEntry": {
+    "App": {},
+    "BodyContainer": {},
+    "Button1": {},
+    "Button1_1": {},
+    "Button1_2": {},
+    "Container4": {},
+    "DashboardLabelContainer": {},
+    "HomeScreen": {},
+    "Host": {},
+    "Image1": {},
+    "ImageContainer": {},
+    "Label1": {},
+    "Label5": {},
+    "Label5_1": {},
+    "Screen2": {}
+  },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
-  "PublishOrderIndices": {},
-  "ResourcesJsonIndices": {},
+  "PublishOrderIndices": {
+    "App": 0,
+    "BodyContainer": 5,
+    "Button1": 10,
+    "Button1_1": 11,
+    "Button1_2": 12,
+    "Container4": 9,
+    "DashboardLabelContainer": 8,
+    "HomeScreen": 3,
+    "Host": 0,
+    "Image1": 6,
+    "ImageContainer": 4,
+    "Label1": 7,
+    "Label5": 13,
+    "Label5_1": 14,
+    "Screen2": 15
+  },
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {}
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.0375369,
+    "ControlCount": {
+      "button": 3,
+      "groupContainer": 4,
+      "image": 1,
+      "label": 3,
+      "screen": 2
+    },
+    "DeserializationLoadTime": 0.7400747
+  },
+  "WasLocalDatabaseReferencesEmpty": true
 }

@@ -646,14 +646,12 @@ ApprovalScreen As screen:
                     ZIndex: =4
 
     HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(0, 94, 146, 1)
-        Height: =Parent.Height*0.14
+        Fill: =RGBA(255, 82, 59, 1)
+        Height: =Parent.Height*0.23
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
-        PaddingRight: =10
         Width: =Parent.Width
-        Y: =(Parent.Height-Self.Height)/9
         ZIndex: =2
 
         HomeIcon As icon.Home:
@@ -661,6 +659,12 @@ ApprovalScreen As screen:
             Icon: =Icon.Home
             OnSelect: =Navigate(HomeScreen);
             ZIndex: =1
+
+        Label11 As label:
+            Text: =""
+            Width: =Parent.Width*0.04
+            X: =(Parent.Width-Self.Width)
+            ZIndex: =2
 
     ImageContainer_3 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None

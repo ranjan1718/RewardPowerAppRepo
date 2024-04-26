@@ -162,11 +162,14 @@ HomeScreen As screen:
                 ZIndex: =8
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(0, 94, 146, 1)
-        Height: =Parent.Height*0.14
+        Fill: =RGBA(255, 82, 59, 1)
+        Height: =Parent.Height*0.23
         LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
         Width: =Parent.Width
-        Y: =(Parent.Height-Self.Height)/9
         ZIndex: =2
 
     ImageContainer As groupContainer.verticalAutoLayoutContainer:
@@ -192,7 +195,7 @@ HomeScreen As screen:
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.'Courier New'
             FontWeight: =FontWeight.Bold
-            Height: =Parent.Height*0.25
+            Height: =Parent.Height*0.28
             Size: =22
             Text: =User().FullName
             Width: =Parent.Width

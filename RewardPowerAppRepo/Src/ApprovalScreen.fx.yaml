@@ -461,7 +461,7 @@ ApprovalScreen As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =20
-                                Text: ="Name of the Nominee"
+                                Text: ="Name of the Approver"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
 
@@ -485,14 +485,17 @@ ApprovalScreen As screen:
                             Width: =Parent.Width*0.55
                             ZIndex: =2
 
-                            ComboBox1_1 As combobox:
-                                ChevronBackground: =RGBA(255, 255, 255, 1)
-                                ChevronFill: =RGBA(0, 0, 0, 1)
-                                DisplayFields: =["Value"]
+                            TextInput1_2 As text:
+                                BorderColor: =RGBA(116, 116, 116, 1)
+                                Default: =User().FullName
+                                DisabledColor: =RGBA(102, 102, 102, 1)
+                                DisplayMode: =DisplayMode.Disabled
+                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Items: =Choices('Managers&Approvers'.Users)
-                                SearchFields: =["Value"]
-                                SearchItems: =Choices('Managers&Approvers'.Users,ComboBox1_1.SearchText)
+                                RadiusBottomLeft: =10
+                                RadiusBottomRight: =10
+                                RadiusTopLeft: =10
+                                RadiusTopRight: =10
                                 Size: =15
                                 Width: =Parent.Width
                                 ZIndex: =1
@@ -534,24 +537,34 @@ ApprovalScreen As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =20
-                                Text: ="Name of the Manager"
+                                Text: ="Date of Approval"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
 
-                        TextInput1_1 As text:
+                        Container7_4 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             BorderColor: =RGBA(116, 116, 116, 1)
-                            Default: =User().FullName
-                            DisabledColor: =RGBA(102, 102, 102, 1)
-                            DisplayMode: =DisplayMode.Disabled
-                            FontWeight: =FontWeight.Semibold
+                            BorderThickness: =2
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
                             Height: =Parent.Height*0.45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
                             RadiusBottomLeft: =10
                             RadiusBottomRight: =10
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
-                            Size: =15
                             Width: =Parent.Width*0.55
                             ZIndex: =2
+
+                            DatePicker1 As datepicker:
+                                Height: =Parent.Height
+                                Width: =Parent.Width
+                                ZIndex: =1
 
                 Label7_4 As label:
                     Height: =Parent.Height*0.05

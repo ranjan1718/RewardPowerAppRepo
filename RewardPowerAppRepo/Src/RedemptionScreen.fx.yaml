@@ -1,8 +1,8 @@
 RedemptionScreen As screen:
-    Fill: =RGBA(222, 222, 222, 1)
+    Fill: =RGBA(202, 202, 202, 1)
 
     HeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 78, 38, 1)
+        Fill: =RGBA(0, 94, 146, 1)
         Height: =Parent.Height*0.14
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
@@ -40,30 +40,31 @@ RedemptionScreen As screen:
 
     RedemptionBodyContainer As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular
-        Fill: =RGBA(242, 242, 242, 1)
-        Height: =Parent.Height*0.7
+        Fill: =RGBA(167, 182, 203, 1)
+        Height: =536
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =5
+        LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
         RadiusBottomLeft: =10
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
-        Width: =Parent.Width*0.8
-        X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/1.1
+        Width: =1277
+        X: =45
+        Y: =202
         ZIndex: =3
-
-        Label17_1 As label:
-            Height: =Parent.Height*0.05
-            Text: =""
-            Width: =Parent.Width*0.5
-            ZIndex: =1
 
         ListHeaderContainer_1 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             BorderColor: =RGBA(128, 128, 128, 1)
             DropShadow: =DropShadow.None
+            Fill: =RGBA(167, 182, 203, 1)
             FillPortions: =0
             Height: =Parent.Height*0.12
             LayoutAlignItems: =LayoutAlignItems.Center
@@ -82,8 +83,9 @@ RedemptionScreen As screen:
 
             Label12_1 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(77, 77, 77, 1)
-                BorderThickness: =2
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =3
+                Fill: =RGBA(214, 223, 238, 1)
                 Font: =Font.'Courier New'
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height
@@ -92,39 +94,99 @@ RedemptionScreen As screen:
                 Width: =Parent.Width/3
                 ZIndex: =1
 
-        Container10_1 As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            LayoutDirection: =LayoutDirection.Vertical
+        Container19 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(227, 234, 243, 1)
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            Width: =Parent.Width*0.6
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =Parent.Width
             ZIndex: =3
 
-            Gallery1 As gallery.variableTemplateHeightGallery:
-                AlignInContainer: =AlignInContainer.Center
+            "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderThickness: =3
                 DelayItemLoading: =true
-                DisplayMode: =
-                Fill: =Color.LightGray
+                Fill: =RGBA(167, 182, 203, 1)
+                Height: =260
                 Items: =PrizeList
                 Layout: =Layout.Vertical
-                LayoutMinHeight: =287
-                LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateFill: =Color.White
-                TemplateSize: =Parent.Width*0.3
-                Width: =Parent.Width
+                TemplatePadding: =0
+                TemplateSize: =90
                 ZIndex: =1
 
-                Label2_1 As label:
-                    Align: =Align.Center
-                    FontWeight: =FontWeight.Semibold
-                    Height: =Parent.TemplateHeight
+                Title10 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
                     OnSelect: =Select(Parent)
-                    Size: =18
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.Title
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 86
+                    X: =16
+                    Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle9.Size * 1.8)) / 2
+                    ZIndex: =1
+
+                Subtitle9 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =50
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =20
                     Text: =ThisItem.Prize.Value
-                    Width: =Parent.Width*0.8
-                    X: =(Parent.TemplateWidth-Self.Width)/2
-                    Y: =(Parent.TemplateHeight-Self.Height)/2
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =312
+                    X: =135
+                    Y: =25
                     ZIndex: =2
+
+                NextArrow9 As icon.ChevronRight:
+                    AccessibleLabel: =Self.Tooltip
+                    Color: =RGBA(166, 166, 166, 1)
+                    Height: =50
+                    Icon: =Icon.ChevronRight
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    Tooltip: ="View item details"
+                    Width: =50
+                    X: =Parent.TemplateWidth - Self.Width - 12
+                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                    ZIndex: =3
+
+                Separator9 As rectangle:
+                    Height: =8
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - Self.Height
+                    ZIndex: =4
+
+                Rectangle10 As rectangle:
+                    Height: =Parent.TemplateHeight - Separator9.Height
+                    OnSelect: =Select(Parent)
+                    Visible: =ThisItem.IsSelected
+                    Width: =4
+                    ZIndex: =5
+
+                Button19 As button:
+                    DisplayMode: =If(LookUp(NomineeList, NomineeName=User().FullName).Points>= ThisItem.point,DisplayMode.Edit,DisplayMode.Disabled)
+                    OnSelect: =Select(Parent)
+                    Text: ="Button"
+                    X: =418
+                    Y: =30
+                    ZIndex: =6
 

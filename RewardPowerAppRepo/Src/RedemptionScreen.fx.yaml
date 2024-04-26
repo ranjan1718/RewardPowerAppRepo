@@ -96,7 +96,9 @@ RedemptionScreen As screen:
                 ZIndex: =1
 
             Label8 As label:
-                Text: =""
+                Align: =Align.Center
+                Text: |-
+                    ="Points:"
                 ZIndex: =2
 
             Label9 As label:

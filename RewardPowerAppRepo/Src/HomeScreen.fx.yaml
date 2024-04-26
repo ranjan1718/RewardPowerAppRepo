@@ -125,6 +125,7 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
+                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)),false,true)
                 Width: =Parent.Width*0.2
                 ZIndex: =5
 

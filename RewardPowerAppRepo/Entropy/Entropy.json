@@ -46,6 +46,7 @@
     "HeaderContainer_1": 113,
     "HeaderContainer_2": 8,
     "HeaderContainer1": 94,
+    "HomeIcon": 131,
     "HomeScreen": 65,
     "Host": 3,
     "Icon2": 78,
@@ -133,7 +134,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/26/2024 11:08:07",
+  "HeaderLastSavedDateTimeUTC": "04/26/2024 11:11:27",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "b7b7295d-881e-487e-9b09-2c6455248e20": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/ee873bcf1842400fa64d2a177fca4e5d\""
@@ -155,16 +156,16 @@
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "button": 6,
-    "combobox": 3,
-    "datepicker": 5,
+    "button": 7,
+    "combobox": 4,
+    "datepicker": 6,
     "gallery": 8,
     "groupContainer": 0,
-    "icon": 7,
+    "icon": 3,
     "image": 1,
     "label": 2,
     "rectangle": 9,
-    "text": 4
+    "text": 5
   },
   "OverridablePropertiesEntry": {
     "App": {},
@@ -211,6 +212,7 @@
     "HeaderContainer_1": {},
     "HeaderContainer_2": {},
     "HeaderContainer1": {},
+    "HomeIcon": {},
     "HomeScreen": {},
     "Host": {},
     "Icon2": {},
@@ -343,6 +345,7 @@
     "HeaderContainer_1": 48,
     "HeaderContainer_2": 64,
     "HeaderContainer1": 27,
+    "HomeIcon": 0,
     "HomeScreen": 64,
     "Host": 0,
     "Icon2": 12,

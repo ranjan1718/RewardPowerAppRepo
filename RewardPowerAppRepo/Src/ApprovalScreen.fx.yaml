@@ -58,15 +58,20 @@ ApprovalScreen As screen:
             ZIndex: =4
 
             NominationContainer As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(128, 128, 128, 1)
+                BorderThickness: =2
                 DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =Parent.Height
+                Height: =Parent.Height*0.96
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
                 LayoutMinWidth: =50
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingTop: =Parent.Height*0.02
+                Width: =Parent.Width*0.98
                 ZIndex: =1
 
                 NameContainer As groupContainer.horizontalAutoLayoutContainer:
@@ -99,11 +104,12 @@ ApprovalScreen As screen:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width*0.5
+                        Width: =Parent.Width*0.48
                         ZIndex: =1
 
                         Container1 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
                             FillPortions: =0
                             Height: =Parent.Height*0.35
                             LayoutMinHeight: =100
@@ -176,6 +182,7 @@ ApprovalScreen As screen:
 
                         Container1_1 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
                             FillPortions: =0
                             Height: =Parent.Height*0.35
                             LayoutMinHeight: =100
@@ -256,6 +263,7 @@ ApprovalScreen As screen:
 
                         Container1_2 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
                             FillPortions: =0
                             Height: =Parent.Height*0.35
                             LayoutMinHeight: =100
@@ -324,6 +332,7 @@ ApprovalScreen As screen:
 
                         Container1_3 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
                             FillPortions: =0
                             Height: =Parent.Height*0.35
                             LayoutMinHeight: =100

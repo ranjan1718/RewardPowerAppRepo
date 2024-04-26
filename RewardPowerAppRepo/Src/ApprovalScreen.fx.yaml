@@ -586,7 +586,7 @@ ApprovalScreen As screen:
                     ZIndex: =2
 
             Label7_6 As label:
-                Height: =Parent.Height*0.07
+                Height: =Parent.Height*0.06
                 Text: =""
                 Width: =Parent.Width
                 ZIndex: =4
@@ -598,7 +598,7 @@ ApprovalScreen As screen:
                 DropShadow: =DropShadow.None
                 Fill: =RGBA(237, 237, 237, 1)
                 FillPortions: =0
-                Height: =Parent.Height*0.15
+                Height: =Parent.Height*0.18
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutJustifyContent: =LayoutJustifyContent.End
                 LayoutMinHeight: =100

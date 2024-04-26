@@ -137,7 +137,7 @@ HomeScreen As screen:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
                     Size: =15
-                    Text: =If(
+                    Text: =If(IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=User().FullName)),"Nominate","Approve")
                     ZIndex: =2
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:

@@ -207,15 +207,15 @@ ApprovalScreen As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =20
-                                Text: ="Name of the Manager"
+                                Text: ="Email of the Nominee"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
 
                         TextInput1 As text:
                             BorderColor: =RGBA(116, 116, 116, 1)
-                            Default: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Closed",User().FullName)
+                            Default: =""
                             DisabledColor: =RGBA(102, 102, 102, 1)
-                            DisplayMode: =DisplayMode.Disabled
+                            DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height*0.45
                             RadiusBottomLeft: =10
@@ -631,6 +631,7 @@ ApprovalScreen As screen:
                 Button2 As button:
                     Fill: =RGBA(40, 173, 62, 1)
                     Height: =Parent.Height*0.4
+                    OnSelect: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=User().FullName)),,If(ComboBox1.Selected.Value=User().FullName,Notify("You can't put your name for nomination",NotificationType.Error,500),Patch('Managers&Approvers',Defaults('Managers&Approvers'),
                     Text: ="Approve"
                     Width: =Parent.Width*0.15
                     ZIndex: =3

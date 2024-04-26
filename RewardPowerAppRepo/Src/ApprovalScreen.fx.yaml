@@ -160,6 +160,7 @@ ApprovalScreen As screen:
                                 ChevronBackground: =RGBA(255, 255, 255, 1)
                                 ChevronFill: =RGBA(0, 0, 0, 1)
                                 DisplayFields: =["Value"]
+                                DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Height: =Parent.Height
                                 Items: =Choices('Managers&Approvers'.Users)
                                 SearchFields: =["Value"]
@@ -212,7 +213,7 @@ ApprovalScreen As screen:
 
                         TextInput1 As text:
                             BorderColor: =RGBA(116, 116, 116, 1)
-                            Default: =User().FullName
+                            Default: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Closed",User().FullName)
                             DisabledColor: =RGBA(102, 102, 102, 1)
                             DisplayMode: =DisplayMode.Disabled
                             FontWeight: =FontWeight.Semibold
@@ -314,6 +315,7 @@ ApprovalScreen As screen:
 
                             TextInput2 As text:
                                 Default: =""
+                                DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Format: =TextFormat.Number
                                 Height: =Parent.Height
                                 Size: =15
@@ -501,7 +503,7 @@ ApprovalScreen As screen:
 
                             TextInput1_2 As text:
                                 BorderColor: =RGBA(116, 116, 116, 1)
-                                Default: =User().FullName
+                                Default: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),User().FullName,"Closed")
                                 DisabledColor: =RGBA(102, 102, 102, 1)
                                 DisplayMode: =DisplayMode.Disabled
                                 FontWeight: =FontWeight.Semibold

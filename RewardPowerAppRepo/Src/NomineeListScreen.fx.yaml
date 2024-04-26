@@ -6,7 +6,7 @@ NomineeListScreen As screen:
         Height: =Parent.Height*0.14
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
-        PaddingRight: =10
+        PaddingRight: =50
         Width: =Parent.Width
         Y: =(Parent.Height-Self.Height)/9
         ZIndex: =1

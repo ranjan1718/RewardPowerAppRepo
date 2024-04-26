@@ -52,6 +52,13 @@ HomeScreen As screen:
             LayoutOverflowY: =LayoutOverflow.Scroll
             ZIndex: =3
 
+            EssentialLabel5_5 As label:
+                Height: =Parent.Height*0.1
+                Text: =""
+                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),true,false)
+                Width: =Parent.Width*0.12
+                ZIndex: =1
+
             Label5_2 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
@@ -132,7 +139,7 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)),false,true)
+                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)
                 Width: =Parent.Width*0.2
                 ZIndex: =7
 
@@ -155,7 +162,7 @@ HomeScreen As screen:
                 ZIndex: =8
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 78, 38, 1)
+        Fill: =RGBA(0, 94, 146, 1)
         Height: =Parent.Height*0.14
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
@@ -199,7 +206,7 @@ HomeScreen As screen:
         PressedFill: =Color.Transparent
         Text: =""
         Width: =Parent.Width*0.19
-        X: =(Parent.Width-Self.Width)/4.2
+        X: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),(Parent.Width-Self.Width)/3.2,(Parent.Width-Self.Width)/3.2)
         Y: =(Parent.Height-Self.Height)/1.3
         ZIndex: =4
 
@@ -213,7 +220,7 @@ HomeScreen As screen:
         PressedFill: =Color.Transparent
         Text: =""
         Width: =Parent.Width*0.19
-        X: =(Parent.Width-Self.Width)/1.32
+        X: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.32)
         Y: =(Parent.Height-Self.Height)/1.3
         ZIndex: =6
 

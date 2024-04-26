@@ -22,14 +22,7 @@
         "LayoutMode",
         "LayoutDirection",
         "LayoutAlignItems",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "LayoutJustifyContent",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "LayoutJustifyContent",
         "LayoutGap",
         "LayoutOverflowX",
         "LayoutOverflowY",
@@ -238,14 +231,7 @@
         "DelayItemLoading",
         "LoadingSpinner",
         "LoadingSpinnerColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "DisplayMode.Edit",
-          "InvariantPropertyName": "DisplayMode",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "DisplayMode",
         "BorderColor",
         "DisabledBorderColor",
         "PressedBorderColor",
@@ -384,7 +370,7 @@
         {
           "Category": "Design",
           "PropertyName": "DisplayMode",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",

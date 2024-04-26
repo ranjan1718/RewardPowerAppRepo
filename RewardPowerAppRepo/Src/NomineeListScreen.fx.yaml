@@ -2,7 +2,7 @@ NomineeListScreen As screen:
     Fill: =RGBA(222, 222, 222, 1)
 
     HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 78, 38, 1)
+        Fill: =RGBA(0, 94, 146, 1)
         Height: =Parent.Height*0.14
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto

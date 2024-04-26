@@ -721,16 +721,39 @@ ApprovalScreen As screen:
                 ZIndex: =4
 
             SubmitContainer As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(116, 116, 116, 1)
                 BorderThickness: =1
+                DropShadow: =DropShadow.None
                 Fill: =RGBA(237, 237, 237, 1)
                 FillPortions: =0
                 Height: =Parent.Height*0.15
-                LayoutDirection: =LayoutDirection.Vertical
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.End
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =Parent.Width*0.98
                 ZIndex: =5
+
+                Button1 As button:
+                    Fill: =RGBA(151, 0, 0, 1)
+                    Text: ="Reject"
+                    ZIndex: =1
+
+                Label5 As label:
+                    Text: =""
+                    Width: =Parent.Width*0.05
+                    ZIndex: =2
+
+                Button2 As button:
+                    Fill: =RGBA(40, 173, 62, 1)
+                    Text: ="Approve"
+                    ZIndex: =3
 
     HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(0, 94, 146, 1)

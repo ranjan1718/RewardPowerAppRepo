@@ -139,7 +139,7 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)
+                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)
                 Width: =Parent.Width*0.2
                 ZIndex: =7
 

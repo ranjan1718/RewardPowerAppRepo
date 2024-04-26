@@ -61,6 +61,7 @@ ApprovalScreen As screen:
             NominationContainer As groupContainer.horizontalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(128, 128, 128, 1)
+                BorderStyle: =BorderStyle.Dashed
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =Parent.Height*0.45
@@ -397,6 +398,8 @@ ApprovalScreen As screen:
             ApprovalContainer As groupContainer.horizontalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(128, 128, 128, 1)
+                BorderStyle: =BorderStyle.Dashed
+                BorderThickness: =2
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =Parent.Height*0.27
@@ -574,6 +577,7 @@ ApprovalScreen As screen:
                             ZIndex: =2
 
                             DatePicker1 As datepicker:
+                                DisplayMode: =DisplayMode.Disabled
                                 Height: =Parent.Height
                                 Width: =Parent.Width
                                 ZIndex: =1

@@ -177,7 +177,7 @@ ApprovalScreen As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
-        Width: =Parent.Width*0.18
+        Width: =Parent.Width*0.25
         ZIndex: =3
 
         Image1_3 As image:

@@ -50,7 +50,7 @@ ApprovalScreen As screen:
 
         FormBodyContainer As groupContainer.verticalAutoLayoutContainer:
             FillPortions: =0
-            Height: =Parent.Height*1.6
+            Height: =Parent.Height*1.15
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -64,7 +64,7 @@ ApprovalScreen As screen:
                 BorderThickness: =1
                 DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =Parent.Height*0.36
+                Height: =Parent.Height*0.45
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -395,7 +395,7 @@ ApprovalScreen As screen:
                 BorderThickness: =1
                 DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =Parent.Height*0.2
+                Height: =Parent.Height*0.27
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -573,7 +573,7 @@ ApprovalScreen As screen:
                     ZIndex: =2
 
             Label7_6 As label:
-                Height: =Parent.Height*0.23
+                Height: =Parent.Height*0.07
                 Text: =""
                 Width: =Parent.Width
                 ZIndex: =4
@@ -658,7 +658,7 @@ ApprovalScreen As screen:
     DashboardLabelContainer_1 As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.None
         Fill: =RGBA(222, 222, 222, 1)
-        Height: =Parent.Height*0.12
+        Height: =Parent.Height*0.1
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto

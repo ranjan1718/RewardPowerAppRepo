@@ -52,6 +52,13 @@ HomeScreen As screen:
             LayoutOverflowY: =LayoutOverflow.Scroll
             ZIndex: =3
 
+            Label5_5 As label:
+                Height: =Parent.Height*0.1
+                Text: =""
+                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),true,false)
+                Width: =Parent.Width*0.12
+                ZIndex: =1
+
             Label5_2 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
@@ -132,7 +139,7 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)),false,true)
+                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),false,true)
                 Width: =Parent.Width*0.2
                 ZIndex: =7
 

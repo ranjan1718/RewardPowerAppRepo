@@ -421,7 +421,7 @@ ApprovalScreen As screen:
                     DropShadow: =DropShadow.Semilight
                     Fill: =RGBA(255, 255, 255, 1)
                     FillPortions: =0
-                    Height: =Parent.Height*0.7
+                    Height: =Parent.Height*0.8
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -482,7 +482,7 @@ ApprovalScreen As screen:
                             BorderThickness: =2
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =Parent.Height*0.45
+                            Height: =Parent.Height*0.4
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -559,7 +559,7 @@ ApprovalScreen As screen:
                             BorderThickness: =2
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =Parent.Height*0.45
+                            Height: =Parent.Height*0.4
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center

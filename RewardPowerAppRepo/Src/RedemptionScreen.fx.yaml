@@ -62,7 +62,7 @@ RedemptionScreen As screen:
         ZIndex: =3
 
         ListHeaderContainer_1 As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
+            AlignInContainer: =AlignInContainer.Start
             BorderColor: =RGBA(128, 128, 128, 1)
             DropShadow: =DropShadow.None
             Fill: =RGBA(167, 182, 203, 1)

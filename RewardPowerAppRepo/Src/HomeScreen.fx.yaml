@@ -52,12 +52,6 @@ HomeScreen As screen:
             LayoutOverflowY: =LayoutOverflow.Scroll
             ZIndex: =3
 
-            Label5 As label:
-                Height: =Parent.Height*0.1
-                Text: =""
-                Width: =Parent.Width*0.12
-                ZIndex: =1
-
             Label5_2 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
@@ -121,6 +115,12 @@ HomeScreen As screen:
                     Text: ="Redeemption"
                     ZIndex: =2
 
+            Label5_4 As label:
+                Height: =Parent.Height*0.1
+                Text: =""
+                Width: =Parent.Width*0.12
+                ZIndex: =6
+
             Container6 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Regular
@@ -134,7 +134,7 @@ HomeScreen As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)),false,true)
                 Width: =Parent.Width*0.2
-                ZIndex: =6
+                ZIndex: =7
 
                 Icon5 As icon.ShoppingCart:
                     Icon: =Icon.CheckBadge
@@ -152,12 +152,6 @@ HomeScreen As screen:
                 Text: =""
                 Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)),false,true)
                 Width: =Parent.Width*0.05
-                ZIndex: =7
-
-            Label5_4 As label:
-                Height: =Parent.Height*0.1
-                Text: =""
-                Width: =Parent.Width*0.12
                 ZIndex: =8
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:

@@ -243,7 +243,7 @@ ApprovalScreen As screen:
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
             Size: =28
-            Text: ="Dashboard"
+            Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
             Width: =Parent.Width
             ZIndex: =1
 

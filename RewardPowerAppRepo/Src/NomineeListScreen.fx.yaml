@@ -40,10 +40,10 @@ NomineeListScreen As screen:
         Label1_1 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Segoe UI'
+            Font: =Font.'Courier New'
             FontWeight: =FontWeight.Bold
             Height: =Parent.Height*0.25
-            Size: =20
+            Size: =22
             Text: =User().FullName
             Width: =Parent.Width
             ZIndex: =2

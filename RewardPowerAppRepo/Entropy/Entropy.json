@@ -3,6 +3,7 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
+    "ApprovalScreen": 65,
     "BodyContainer": 30,
     "Button9": 21,
     "Container10": 16,
@@ -68,7 +69,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/26/2024 06:58:19",
+  "HeaderLastSavedDateTimeUTC": "04/26/2024 06:59:16",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "b7b7295d-881e-487e-9b09-2c6455248e20": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/ee873bcf1842400fa64d2a177fca4e5d\""
@@ -99,6 +100,7 @@
   },
   "OverridablePropertiesEntry": {
     "App": {},
+    "ApprovalScreen": {},
     "BodyContainer": {},
     "Button9": {},
     "Container10": {},
@@ -166,6 +168,7 @@
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
     "App": 0,
+    "ApprovalScreen": 0,
     "BodyContainer": 6,
     "Button9": 42,
     "Container10": 37,

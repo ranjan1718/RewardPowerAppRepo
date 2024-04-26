@@ -139,6 +139,7 @@
     "HomeScreen",
     "Screen2",
     "NomineeListScreen",
-    "RedemptionScreen"
+    "RedemptionScreen",
+    "ApprovalScreen"
   ]
 }

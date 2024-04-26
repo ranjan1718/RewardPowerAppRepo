@@ -5,6 +5,7 @@ RedemptionScreen As screen:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =Parent.Height*0.14
         LayoutMode: =LayoutMode.Auto
+        PaddingRight: =50
         Width: =Parent.Width
         Y: =(Parent.Height-Self.Height)/9
         ZIndex: =1
@@ -216,9 +217,11 @@ RedemptionScreen As screen:
 
     Icon6_1 As icon.Home:
         Color: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height*0.1
         Icon: =Icon.Home
         OnSelect: =Navigate(HomeScreen)
-        X: =1258
+        Width: =Parent.Width*0.05
+        X: =(Parent.Width-Self.Width)/1.05
         Y: =95
         ZIndex: =4
 

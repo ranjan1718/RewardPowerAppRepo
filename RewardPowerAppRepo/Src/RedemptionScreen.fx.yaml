@@ -3,13 +3,12 @@ RedemptionScreen As screen:
 
     HeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(0, 94, 146, 1)
-        Height: =Parent.Height*0.14
+        Height: =Parent.Height*0.23
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
         PaddingRight: =50
         Width: =Parent.Width
-        Y: =(Parent.Height-Self.Height)/9
         ZIndex: =1
 
         Icon1 As icon.Home:

@@ -622,9 +622,7 @@ ApprovalScreen As screen:
                     OnSelect: |-
                         =Patch(NomineeList,LookUp(NomineeList,NomineeEmail=User().Email),{Status:{Value:"Rejected"}})
                     Text: ="Reject"
-                    Visible: |-
-                        =//If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
-                        true
+                    Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
                     Width: =Parent.Width*0.15
                     ZIndex: =1
 

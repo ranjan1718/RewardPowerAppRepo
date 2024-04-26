@@ -97,11 +97,13 @@ RedemptionScreen As screen:
 
             Label8 As label:
                 Align: =Align.Center
+                Size: =20
                 Text: |-
                     ="Points:"
                 ZIndex: =2
 
             Label9 As label:
+                Size: =20
                 Text: =varEmployeeData.Points
                 ZIndex: =3
 

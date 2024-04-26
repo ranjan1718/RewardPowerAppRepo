@@ -646,7 +646,7 @@ ApprovalScreen As screen:
                     ZIndex: =4
 
     HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 76, 36, 1)
+        Fill: =RGBA(255, 82, 59, 1)
         Height: =Parent.Height*0.23
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End

@@ -234,6 +234,7 @@ RedemptionScreen As screen:
         OnSelect: =Navigate(HomeScreen)
         Width: =Parent.Width*0.05
         X: =(Parent.Width-Self.Width)/1.05
-        Y: =95
+        Y: |
+            =95
         ZIndex: =4
 

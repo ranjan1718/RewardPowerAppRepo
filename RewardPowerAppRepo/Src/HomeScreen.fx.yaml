@@ -87,7 +87,7 @@ HomeScreen As screen:
                 Height: =Parent.Height*0.1
                 Text: =""
                 Width: =Parent.Width*0.12
-                ZIndex: =4
+                ZIndex: =3
 
             Container6 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -101,7 +101,7 @@ HomeScreen As screen:
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Width: =Parent.Width*0.2
-                ZIndex: =5
+                ZIndex: =4
 
                 Icon5 As icon.ShoppingCart:
                     Icon: =Icon.ShoppingCart

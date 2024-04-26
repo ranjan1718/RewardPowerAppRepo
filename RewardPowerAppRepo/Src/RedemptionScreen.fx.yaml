@@ -4,11 +4,21 @@ RedemptionScreen As screen:
     HeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =Parent.Height*0.14
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
         PaddingRight: =50
         Width: =Parent.Width
         Y: =(Parent.Height-Self.Height)/9
         ZIndex: =1
+
+        Icon1 As icon.Home:
+            Color: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.Home
+            OnSelect: =Navigate(HomeScreen)
+            X: =(Parent.Width-Self.Width)
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
 
     ImageContainer_2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
@@ -42,7 +52,7 @@ RedemptionScreen As screen:
     RedemptionBodyContainer As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular
         Fill: =RGBA(167, 182, 203, 1)
-        Height: =536
+        Height: =Parent.Height*0.7
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =5
@@ -57,8 +67,8 @@ RedemptionScreen As screen:
         RadiusTopLeft: =10
         RadiusTopRight: =10
         Width: =1277
-        X: =45
-        Y: =202
+        X: =(Parent.Width-Self.Width)/2
+        Y: =(Parent.Height-Self.Height)/1.1
         ZIndex: =3
 
         ListHeaderContainer_1 As groupContainer.verticalAutoLayoutContainer:
@@ -110,6 +120,7 @@ RedemptionScreen As screen:
 
         Container19 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(227, 234, 243, 1)
+            Height: =Parent.Height
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
@@ -128,7 +139,7 @@ RedemptionScreen As screen:
                 DelayItemLoading: =true
                 Fill: =RGBA(167, 182, 203, 1)
                 FillPortions: =0
-                Height: =260
+                Height: =Parent.Height*0.7
                 Items: =PrizeList
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
@@ -227,15 +238,4 @@ RedemptionScreen As screen:
                     X: =418
                     Y: =30
                     ZIndex: =6
-
-    Icon6_1 As icon.Home:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =Parent.Height*0.1
-        Icon: =Icon.Home
-        OnSelect: =Navigate(HomeScreen)
-        Width: =Parent.Width*0.05
-        X: =(Parent.Width-Self.Width)/1.05
-        Y: |
-            =95
-        ZIndex: =4
 

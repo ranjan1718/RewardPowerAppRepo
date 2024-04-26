@@ -1,5 +1,5 @@
 NomineeListScreen As screen:
-    Fill: =RGBA(219, 219, 219, 1)
+    Fill: =RGBA(222, 222, 222, 1)
 
     HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(255, 78, 38, 1)

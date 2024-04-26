@@ -61,6 +61,7 @@ ApprovalScreen As screen:
             NominationContainer As groupContainer.horizontalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(128, 128, 128, 1)
+                BorderStyle: =BorderStyle.Dashed
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =Parent.Height*0.45
@@ -159,6 +160,7 @@ ApprovalScreen As screen:
                                 ChevronBackground: =RGBA(255, 255, 255, 1)
                                 ChevronFill: =RGBA(0, 0, 0, 1)
                                 DisplayFields: =["Value"]
+                                DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Height: =Parent.Height
                                 Items: =Choices('Managers&Approvers'.Users)
                                 SearchFields: =["Value"]
@@ -205,15 +207,15 @@ ApprovalScreen As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =20
-                                Text: ="Name of the Manager"
+                                Text: ="Email of the Nominee"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
 
                         TextInput1 As text:
                             BorderColor: =RGBA(116, 116, 116, 1)
-                            Default: =User().FullName
+                            Default: =""
                             DisabledColor: =RGBA(102, 102, 102, 1)
-                            DisplayMode: =DisplayMode.Disabled
+                            DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height*0.45
                             RadiusBottomLeft: =10
@@ -313,6 +315,7 @@ ApprovalScreen As screen:
 
                             TextInput2 As text:
                                 Default: =""
+                                DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Format: =TextFormat.Number
                                 Height: =Parent.Height
                                 Size: =15
@@ -397,6 +400,8 @@ ApprovalScreen As screen:
             ApprovalContainer As groupContainer.horizontalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(128, 128, 128, 1)
+                BorderStyle: =BorderStyle.Dashed
+                BorderThickness: =2
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =Parent.Height*0.27
@@ -421,7 +426,7 @@ ApprovalScreen As screen:
                     DropShadow: =DropShadow.Semilight
                     Fill: =RGBA(255, 255, 255, 1)
                     FillPortions: =0
-                    Height: =Parent.Height*0.7
+                    Height: =Parent.Height*0.8
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -482,7 +487,7 @@ ApprovalScreen As screen:
                             BorderThickness: =2
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =Parent.Height*0.45
+                            Height: =Parent.Height*0.4
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -498,7 +503,7 @@ ApprovalScreen As screen:
 
                             TextInput1_2 As text:
                                 BorderColor: =RGBA(116, 116, 116, 1)
-                                Default: =User().FullName
+                                Default: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),User().FullName,"Closed")
                                 DisabledColor: =RGBA(102, 102, 102, 1)
                                 DisplayMode: =DisplayMode.Disabled
                                 FontWeight: =FontWeight.Semibold
@@ -559,7 +564,7 @@ ApprovalScreen As screen:
                             BorderThickness: =2
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =Parent.Height*0.45
+                            Height: =Parent.Height*0.4
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -574,6 +579,7 @@ ApprovalScreen As screen:
                             ZIndex: =2
 
                             DatePicker1 As datepicker:
+                                DisplayMode: =DisplayMode.Disabled
                                 Height: =Parent.Height
                                 Width: =Parent.Width
                                 ZIndex: =1
@@ -613,7 +619,10 @@ ApprovalScreen As screen:
                 Button1 As button:
                     Fill: =RGBA(151, 0, 0, 1)
                     Height: =Parent.Height*0.4
+                    OnSelect: |-
+                        =Patch(NomineeList,LookUp(NomineeList,NomineeEmail=User().Email),{Status:{Value:"Rejected"}})
                     Text: ="Reject"
+                    Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
                     Width: =Parent.Width*0.15
                     ZIndex: =1
 
@@ -625,7 +634,9 @@ ApprovalScreen As screen:
                 Button2 As button:
                     Fill: =RGBA(40, 173, 62, 1)
                     Height: =Parent.Height*0.4
-                    Text: ="Approve"
+                    OnSelect: |-
+                        =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=User().FullName)),Patch(NomineeList,LookUp(NomineeList,NomineeEmail=User().Email),{Status:{Value:"Approved"}}),If(ComboBox1.Selected.Value=User().FullName,Notify("You can't put your name for nomination",NotificationType.Error,500),Patch(NomineeList,Defaults(NomineeList),{NomineeName:ComboBox1.Selected.Value,NomineeEmail:TextInput1.Text,Points:Value(TextInput2.Text),NominationDate:DatePicker2.SelectedDate})));     //If manager-> (false)check name should not be your Name, Patch data, (true) hr/ceo-> Up pending status to  approved
+                    Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"approve","Nominate")
                     Width: =Parent.Width*0.15
                     ZIndex: =3
 

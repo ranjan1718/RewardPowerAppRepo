@@ -755,6 +755,11 @@ ApprovalScreen As screen:
                     Text: ="Approve"
                     ZIndex: =3
 
+                Label5_5 As label:
+                    Text: =""
+                    Width: =Parent.Width*0.02
+                    ZIndex: =4
+
     HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =Parent.Height*0.14

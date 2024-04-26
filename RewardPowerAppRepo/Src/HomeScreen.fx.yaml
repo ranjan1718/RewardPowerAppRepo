@@ -193,7 +193,7 @@ HomeScreen As screen:
         Height: =Parent.Height*0.29
         HoverFill: =Color.Transparent
         OnSelect: |-
-            =Set(varEmployeeData,LookUp(NomineeList,NomineeEmail=User().Email));
+            =Set(varEmployeeData,LookUp(NomineeList,NomineeEmail=User().Email)); //Get user data for redemption
             Navigate(RedemptionScreen);
         PressedFill: =Color.Transparent
         Text: =""

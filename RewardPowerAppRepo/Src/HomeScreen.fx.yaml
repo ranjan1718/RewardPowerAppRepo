@@ -162,7 +162,7 @@ HomeScreen As screen:
                 ZIndex: =8
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 78, 38, 1)
+        Fill: =RGBA(0, 94, 146, 1)
         Height: =Parent.Height*0.14
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width

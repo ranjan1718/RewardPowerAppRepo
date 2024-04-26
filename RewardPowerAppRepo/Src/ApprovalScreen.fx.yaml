@@ -619,7 +619,12 @@ ApprovalScreen As screen:
                 Button1 As button:
                     Fill: =RGBA(151, 0, 0, 1)
                     Height: =Parent.Height*0.4
+                    OnSelect: |-
+                        =Patch(NomineeList,LookUp(NomineeList,NomineeEmail=User().Email),{Status:{Value:"Rejected"}})
                     Text: ="Reject"
+                    Visible: |-
+                        =//If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
+                        true
                     Width: =Parent.Width*0.15
                     ZIndex: =1
 

@@ -1,5 +1,5 @@
 HomeScreen As screen:
-    Fill: =RGBA(219, 219, 219, 1)
+    Fill: =RGBA(222, 222, 222, 1)
 
     BodyContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
@@ -179,7 +179,7 @@ HomeScreen As screen:
 
     DashboardLabelContainer As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Fill: =RGBA(219, 219, 219, 1)
+        Fill: =RGBA(222, 222, 222, 1)
         Height: =Parent.Height*0.14
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.Center

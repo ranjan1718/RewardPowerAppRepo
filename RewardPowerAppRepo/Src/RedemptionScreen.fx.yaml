@@ -69,6 +69,7 @@ RedemptionScreen As screen:
             FillPortions: =0
             Height: =Parent.Height*0.12
             LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =10
             LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -234,8 +235,7 @@ RedemptionScreen As screen:
         Icon: =Icon.Home
         OnSelect: =Navigate(HomeScreen)
         Width: =Parent.Width*0.05
-        X: =(Parent.Width-Self.Width)/1.05
-        Y: |
-            =95
+        X: =1239
+        Y: =88
         ZIndex: =4
 

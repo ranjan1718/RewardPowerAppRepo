@@ -104,6 +104,7 @@ RedemptionScreen As screen:
             Gallery1 As gallery.variableTemplateHeightGallery:
                 AlignInContainer: =AlignInContainer.Center
                 DelayItemLoading: =true
+                DisplayMode: =
                 Fill: =Color.LightGray
                 Items: =PrizeList
                 Layout: =Layout.Vertical
@@ -126,12 +127,4 @@ RedemptionScreen As screen:
                     X: =(Parent.TemplateWidth-Self.Width)/2
                     Y: =(Parent.TemplateHeight-Self.Height)/2
                     ZIndex: =2
-
-                Button1 As button:
-                    Fill: =RGBA(0, 121, 187, 1)
-                    OnSelect: =Select(Parent)
-                    Text: =Switch(ThisItem.Prize.Value,varEmployeeData.Points>199,"Redeem",varEmployeeData.Points>399,"Redeem",varEmployeeData.Points>499,"Reedeem","Next time")
-                    X: =(Parent.TemplateWidth-Self.Width)*0.95
-                    Y: =(Parent.TemplateHeight-Self.Height)/2
-                    ZIndex: =3
 

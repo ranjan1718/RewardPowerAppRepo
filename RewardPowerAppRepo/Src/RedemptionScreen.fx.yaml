@@ -79,6 +79,7 @@ RedemptionScreen As screen:
             FillPortions: =0
             Height: =Parent.Height*0.12
             LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =10
             LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250

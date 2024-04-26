@@ -60,6 +60,7 @@ ApprovalScreen As screen:
             NominationContainer As groupContainer.horizontalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(128, 128, 128, 1)
+                BorderThickness: =1
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =Parent.Height*0.8
@@ -76,7 +77,6 @@ ApprovalScreen As screen:
                 NameContainer As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(116, 116, 116, 1)
-                    BorderThickness: =1
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Parent.Height*0.4
@@ -230,7 +230,6 @@ ApprovalScreen As screen:
                 OthersContainer As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(116, 116, 116, 1)
-                    BorderThickness: =1
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Parent.Height*0.4

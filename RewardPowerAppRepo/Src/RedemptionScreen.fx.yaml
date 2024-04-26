@@ -95,6 +95,14 @@ RedemptionScreen As screen:
                 Width: =Parent.Width/3
                 ZIndex: =1
 
+            Label8 As label:
+                Text: =""
+                ZIndex: =2
+
+            Label9 As label:
+                Text: =varEmployeeData.Points
+                ZIndex: =3
+
         Container19 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(227, 234, 243, 1)
             LayoutAlignItems: =LayoutAlignItems.Center

@@ -397,7 +397,6 @@ ApprovalScreen As screen:
             ApprovalContainer As groupContainer.horizontalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(128, 128, 128, 1)
-                BorderThickness: =1
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =Parent.Height*0.27
@@ -613,7 +612,9 @@ ApprovalScreen As screen:
 
                 Button1 As button:
                     Fill: =RGBA(151, 0, 0, 1)
+                    Height: =Parent.Height*0.4
                     Text: ="Reject"
+                    Width: =Parent.Width*0.15
                     ZIndex: =1
 
                 Label5 As label:
@@ -623,7 +624,9 @@ ApprovalScreen As screen:
 
                 Button2 As button:
                     Fill: =RGBA(40, 173, 62, 1)
+                    Height: =Parent.Height*0.4
                     Text: ="Approve"
+                    Width: =Parent.Width*0.15
                     ZIndex: =3
 
                 Label5_5 As label:

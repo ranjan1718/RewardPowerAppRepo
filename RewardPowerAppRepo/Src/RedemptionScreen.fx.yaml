@@ -32,7 +32,7 @@ RedemptionScreen As screen:
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.'Courier New'
             FontWeight: =FontWeight.Bold
-            Height: =Parent.Height*0.25
+            Height: =Parent.Height*0.5
             Size: =22
             Text: =User().FullName
             Width: =Parent.Width

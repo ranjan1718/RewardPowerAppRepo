@@ -83,11 +83,36 @@ HomeScreen As screen:
                 Width: =Parent.Width*0.12
                 ZIndex: =2
 
+            Container6_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.Regular
+                FillPortions: =0
+                Height: =Parent.Height*0.5
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width*0.2
+                ZIndex: =3
+
+                Icon5_1 As icon.ShoppingCart:
+                    Icon: =Icon.ShoppingCart
+                    ZIndex: =1
+
+                Label6_1 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Semibold
+                    Size: =15
+                    Text: ="Redeemption"
+                    ZIndex: =2
+
             Label5_1 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
                 Width: =Parent.Width*0.12
-                ZIndex: =3
+                ZIndex: =4
 
             Container6 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -101,17 +126,17 @@ HomeScreen As screen:
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Width: =Parent.Width*0.2
-                ZIndex: =4
+                ZIndex: =5
 
                 Icon5 As icon.ShoppingCart:
-                    Icon: =Icon.ShoppingCart
+                    Icon: =Icon.CheckBadge
                     ZIndex: =1
 
                 Label6 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
                     Size: =15
-                    Text: ="Redeemption"
+                    Text: =If(
                     ZIndex: =2
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:

@@ -60,7 +60,6 @@ ApprovalScreen As screen:
             NominationContainer As groupContainer.horizontalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(128, 128, 128, 1)
-                BorderThickness: =2
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =Parent.Height*0.8
@@ -258,7 +257,7 @@ ApprovalScreen As screen:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width*0.5
+                        Width: =Parent.Width*0.48
                         ZIndex: =1
 
                         Container1_2 As groupContainer.horizontalAutoLayoutContainer:

@@ -97,6 +97,7 @@ RedemptionScreen As screen:
 
             Label8 As label:
                 Align: =Align.Center
+                FontWeight: =FontWeight.Bold
                 Size: =20
                 Text: |-
                     ="Points:"

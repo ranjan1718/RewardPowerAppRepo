@@ -403,19 +403,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.Container4_1.Container1.NomineeNameContainer.Container7.Dropdown2.AccessibleLabel"
+                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.Container4_1.NameContainer.NomineeNameContainer.Container7.ComboBox1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.Container4_1.Container1.NomineeNameContainer.Container7.Dropdown2.AccessibleLabel",
+                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.Container4_1.NameContainer.NomineeNameContainer.Container7.ComboBox1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.Container4_1.Container1.NomineeNameContainer.Container7.Dropdown2"
+                "type": "ApprovalScreen.BodyContainer_1.Container4_1.NameContainer.NomineeNameContainer.Container7.ComboBox1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.Container4_1.NameContainer.Container5_1.TextInput1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.Container4_1.NameContainer.Container5_1.TextInput1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ApprovalScreen",
+                "type": "ApprovalScreen.BodyContainer_1.Container4_1.NameContainer.Container5_1.TextInput1"
               }
             }
           ],

@@ -52,12 +52,13 @@ ApprovalScreen As screen:
             LayoutOverflowY: =LayoutOverflow.Scroll
             ZIndex: =3
 
-            Container1 As groupContainer.horizontalAutoLayoutContainer:
+            NameContainer As groupContainer.horizontalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(116, 116, 116, 1)
-                BorderThickness: =2
+                BorderThickness: =1
+                DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =Parent.Height*0.25
+                Height: =Parent.Height*0.3
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -71,10 +72,11 @@ ApprovalScreen As screen:
                 ZIndex: =1
 
                 NomineeNameContainer As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.Center
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Parent.Height
-                    LayoutAlignItems: =LayoutAlignItems.End
+                    LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
@@ -83,11 +85,21 @@ ApprovalScreen As screen:
                     Width: =Parent.Width*0.5
                     ZIndex: =1
 
+                    Label2 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height*0.35
+                        Size: =20
+                        Text: ="Name of the Nominee"
+                        Width: =Parent.Width*0.8
+                        ZIndex: =1
+
                     Container7 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(116, 116, 116, 1)
+                        BorderThickness: =2
                         DropShadow: =DropShadow.None
                         FillPortions: =0
-                        Height: =Parent.Height*0.4
+                        Height: =Parent.Height*0.45
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -98,18 +110,24 @@ ApprovalScreen As screen:
                         RadiusBottomRight: =10
                         RadiusTopLeft: =10
                         RadiusTopRight: =10
-                        Width: =Parent.Width*0.52
-                        ZIndex: =1
+                        Width: =Parent.Width*0.55
+                        ZIndex: =2
 
-                        Dropdown2 As dropdown:
-                            AllowEmptySelection: =true
+                        ComboBox1 As combobox:
                             ChevronBackground: =RGBA(255, 255, 255, 1)
                             ChevronFill: =RGBA(0, 0, 0, 1)
+                            DisplayFields: =["Value"]
+                            Height: =Parent.Height
                             Items: =Choices('Managers&Approvers'.Users)
+                            SearchFields: =["Value"]
+                            SearchItems: =Choices('Managers&Approvers'.Users,ComboBox1.SearchText)
+                            Size: =15
+                            Width: =Parent.Width
                             ZIndex: =1
 
                 Container5_1 As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.Center
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -120,6 +138,29 @@ ApprovalScreen As screen:
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width*0.5
                     ZIndex: =2
+
+                    Label2_2 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height*0.35
+                        Size: =20
+                        Text: ="Name of the Nominee"
+                        Width: =Parent.Width*0.8
+                        ZIndex: =1
+
+                    TextInput1 As text:
+                        BorderColor: =RGBA(116, 116, 116, 1)
+                        Default: =User().FullName
+                        DisabledColor: =RGBA(102, 102, 102, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height*0.45
+                        RadiusBottomLeft: =10
+                        RadiusBottomRight: =10
+                        RadiusTopLeft: =10
+                        RadiusTopRight: =10
+                        Size: =15
+                        Width: =Parent.Width*0.55
+                        ZIndex: =2
 
     HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(0, 94, 146, 1)

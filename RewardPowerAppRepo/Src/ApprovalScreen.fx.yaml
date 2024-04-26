@@ -8,6 +8,7 @@ ApprovalScreen As screen:
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
         RadiusBottomLeft: =10
         RadiusBottomRight: =10
         RadiusTopLeft: =10
@@ -49,7 +50,7 @@ ApprovalScreen As screen:
 
         FormBodyContainer As groupContainer.verticalAutoLayoutContainer:
             FillPortions: =0
-            Height: =Parent.Height*1.1
+            Height: =Parent.Height*1.6
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -63,7 +64,7 @@ ApprovalScreen As screen:
                 BorderThickness: =1
                 DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =Parent.Height*0.55
+                Height: =Parent.Height*0.36
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -381,6 +382,355 @@ ApprovalScreen As screen:
                                 Height: =Parent.Height
                                 Width: =Parent.Width
                                 ZIndex: =1
+
+            Label7_5 As label:
+                Height: =Parent.Height*0.05
+                Text: =""
+                Width: =Parent.Width
+                ZIndex: =2
+
+            ApprovalContainer As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(128, 128, 128, 1)
+                BorderThickness: =1
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =Parent.Height*0.36
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =50
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingTop: =Parent.Height*0.02
+                Width: =Parent.Width*0.98
+                ZIndex: =3
+
+                NameContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(116, 116, 116, 1)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height*0.4
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Width: =Parent.Width*0.98
+                    Y: =(Parent.Y)
+                    ZIndex: =1
+
+                    NomineeNameContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width*0.48
+                        ZIndex: =1
+
+                        Container1_4 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.35
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width*0.7
+                            ZIndex: =1
+
+                            Label4_4 As label:
+                                Color: =RGBA(255, 0, 0, 1)
+                                Size: =22
+                                Text: ="*"
+                                Width: =Parent.Width*0.06
+                                ZIndex: =1
+
+                            Label2_5 As label:
+                                Color: =RGBA(0, 94, 146, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.Height
+                                Size: =20
+                                Text: ="Name of the Nominee"
+                                Width: =Parent.Width*0.8
+                                ZIndex: =2
+
+                        Container7_3 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderColor: =RGBA(116, 116, 116, 1)
+                            BorderThickness: =2
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =10
+                            RadiusBottomRight: =10
+                            RadiusTopLeft: =10
+                            RadiusTopRight: =10
+                            Width: =Parent.Width*0.55
+                            ZIndex: =2
+
+                            ComboBox1_1 As combobox:
+                                ChevronBackground: =RGBA(255, 255, 255, 1)
+                                ChevronFill: =RGBA(0, 0, 0, 1)
+                                DisplayFields: =["Value"]
+                                Height: =Parent.Height
+                                Items: =Choices('Managers&Approvers'.Users)
+                                SearchFields: =["Value"]
+                                SearchItems: =Choices('Managers&Approvers'.Users,ComboBox1_1.SearchText)
+                                Size: =15
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                    NominatorContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width*0.5
+                        ZIndex: =2
+
+                        Container1_5 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.35
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width*0.7
+                            ZIndex: =1
+
+                            Label4_5 As label:
+                                Color: =RGBA(255, 0, 0, 1)
+                                Size: =22
+                                Text: ="*"
+                                Width: =Parent.Width*0.06
+                                ZIndex: =1
+
+                            Label2_6 As label:
+                                Color: =RGBA(0, 94, 146, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.Height
+                                Size: =20
+                                Text: ="Name of the Manager"
+                                Width: =Parent.Width*0.8
+                                ZIndex: =2
+
+                        TextInput1_1 As text:
+                            BorderColor: =RGBA(116, 116, 116, 1)
+                            Default: =User().FullName
+                            DisabledColor: =RGBA(102, 102, 102, 1)
+                            DisplayMode: =DisplayMode.Disabled
+                            FontWeight: =FontWeight.Semibold
+                            Height: =Parent.Height*0.45
+                            RadiusBottomLeft: =10
+                            RadiusBottomRight: =10
+                            RadiusTopLeft: =10
+                            RadiusTopRight: =10
+                            Size: =15
+                            Width: =Parent.Width*0.55
+                            ZIndex: =2
+
+                Label7_4 As label:
+                    Height: =Parent.Height*0.05
+                    Text: =""
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                OthersContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(116, 116, 116, 1)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height*0.4
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Width: =Parent.Width*0.98
+                    Y: =(Parent.Y)
+                    ZIndex: =3
+
+                    NomineeNameContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width*0.48
+                        ZIndex: =1
+
+                        Container1_6 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.35
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width*0.7
+                            ZIndex: =1
+
+                            Label4_6 As label:
+                                Color: =RGBA(255, 0, 0, 1)
+                                Size: =22
+                                Text: ="*"
+                                Width: =Parent.Width*0.06
+                                ZIndex: =1
+
+                            Label2_7 As label:
+                                Color: =RGBA(0, 94, 146, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.Height
+                                Size: =20
+                                Text: ="Points"
+                                Width: =Parent.Width*0.8
+                                ZIndex: =2
+
+                        Container7_4 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderColor: =RGBA(116, 116, 116, 1)
+                            BorderThickness: =2
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =10
+                            RadiusBottomRight: =10
+                            RadiusTopLeft: =10
+                            RadiusTopRight: =10
+                            Width: =Parent.Width*0.55
+                            ZIndex: =2
+
+                            TextInput2_1 As text:
+                                Default: =""
+                                Format: =TextFormat.Number
+                                Height: =Parent.Height
+                                Size: =15
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                    Container5_3 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width*0.5
+                        ZIndex: =2
+
+                        Container1_7 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.35
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width*0.7
+                            ZIndex: =1
+
+                            Label4_7 As label:
+                                Color: =RGBA(255, 0, 0, 1)
+                                Size: =22
+                                Text: ="*"
+                                Width: =Parent.Width*0.06
+                                ZIndex: =1
+
+                            Label2_8 As label:
+                                Color: =RGBA(0, 94, 146, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.Height
+                                Size: =20
+                                Text: ="Date of Nomination"
+                                Width: =Parent.Width*0.8
+                                ZIndex: =2
+
+                        Container7_5 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderColor: =RGBA(116, 116, 116, 1)
+                            BorderThickness: =2
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =10
+                            RadiusBottomRight: =10
+                            RadiusTopLeft: =10
+                            RadiusTopRight: =10
+                            Width: =Parent.Width*0.55
+                            ZIndex: =2
+
+                            DatePicker2_1 As datepicker:
+                                DisabledColor: =RGBA(51, 51, 51, 1)
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =Parent.Height
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+            Label7_6 As label:
+                Height: =Parent.Height*0.07
+                Text: =""
+                Width: =Parent.Width
+                ZIndex: =4
+
+            SubmitContainer As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(116, 116, 116, 1)
+                BorderThickness: =1
+                Fill: =RGBA(237, 237, 237, 1)
+                FillPortions: =0
+                Height: =Parent.Height*0.15
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
 
     HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(0, 94, 146, 1)

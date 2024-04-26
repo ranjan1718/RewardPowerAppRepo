@@ -49,7 +49,7 @@ ApprovalScreen As screen:
 
         FormBodyContainer As groupContainer.verticalAutoLayoutContainer:
             FillPortions: =0
-            Height: =Parent.Height*0.75
+            Height: =Parent.Height*1.1
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -63,7 +63,7 @@ ApprovalScreen As screen:
                 BorderThickness: =1
                 DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =Parent.Height*0.8
+                Height: =Parent.Height*0.55
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -202,7 +202,7 @@ ApprovalScreen As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =20
-                                Text: ="Name of the Nominee"
+                                Text: ="Name of the Manager"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
 

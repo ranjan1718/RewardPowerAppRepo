@@ -2,7 +2,7 @@ RedemptionScreen As screen:
     Fill: =RGBA(202, 202, 202, 1)
 
     HeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(0, 94, 146, 1)
+        Fill: =RGBA(255, 76, 36, 1)
         Height: =Parent.Height*0.23
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
@@ -26,7 +26,7 @@ RedemptionScreen As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
-        Width: =Parent.Width*0.18
+        Width: =Parent.Width*0.24
         ZIndex: =2
 
         Image1_2 As image:
@@ -42,7 +42,7 @@ RedemptionScreen As screen:
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.'Courier New'
             FontWeight: =FontWeight.Bold
-            Height: =Parent.Height*0.5
+            Height: =Parent.Height*0.28
             Size: =22
             Text: =User().FullName
             Width: =Parent.Width

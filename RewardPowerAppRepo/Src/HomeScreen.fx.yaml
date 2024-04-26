@@ -52,19 +52,12 @@ HomeScreen As screen:
             LayoutOverflowY: =LayoutOverflow.Scroll
             ZIndex: =3
 
-            Label5_5 As label:
-                Height: =Parent.Height*0.1
-                Text: =""
-                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),true,false)
-                Width: =Parent.Width*0.12
-                ZIndex: =1
-
             Label5_2 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
                 Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)),false,true)
                 Width: =Parent.Width*0.05
-                ZIndex: =2
+                ZIndex: =1
 
             Container3 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -78,7 +71,7 @@ HomeScreen As screen:
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Width: =Parent.Width*0.2
-                ZIndex: =3
+                ZIndex: =2
 
                 Icon2 As icon.AddUser:
                     Icon: =Icon.AddUser
@@ -95,7 +88,7 @@ HomeScreen As screen:
                 Height: =Parent.Height*0.1
                 Text: =""
                 Width: =Parent.Width*0.12
-                ZIndex: =4
+                ZIndex: =3
 
             Container6_1 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -109,7 +102,7 @@ HomeScreen As screen:
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Width: =Parent.Width*0.2
-                ZIndex: =5
+                ZIndex: =4
 
                 Icon5_1 As icon.ShoppingCart:
                     Icon: =Icon.ShoppingCart
@@ -126,7 +119,7 @@ HomeScreen As screen:
                 Height: =Parent.Height*0.1
                 Text: =""
                 Width: =Parent.Width*0.12
-                ZIndex: =6
+                ZIndex: =5
 
             Container6 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -139,9 +132,9 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),false,true)
+                Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)) || IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),true,false)
                 Width: =Parent.Width*0.2
-                ZIndex: =7
+                ZIndex: =6
 
                 Icon5 As icon.ShoppingCart:
                     Icon: =Icon.CheckBadge
@@ -159,7 +152,7 @@ HomeScreen As screen:
                 Text: =""
                 Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)),false,true)
                 Width: =Parent.Width*0.05
-                ZIndex: =8
+                ZIndex: =7
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(0, 94, 146, 1)

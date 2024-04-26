@@ -7,7 +7,6 @@ RedemptionScreen As screen:
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
-        PaddingRight: =50
         Width: =Parent.Width
         ZIndex: =1
 
@@ -18,6 +17,12 @@ RedemptionScreen As screen:
             X: =(Parent.Width-Self.Width)
             Y: =(Parent.Height-Self.Height)/2
             ZIndex: =1
+
+        Label11_2 As label:
+            Text: =""
+            Width: =Parent.Width*0.04
+            X: =(Parent.Width-Self.Width)
+            ZIndex: =2
 
     ImageContainer_2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None

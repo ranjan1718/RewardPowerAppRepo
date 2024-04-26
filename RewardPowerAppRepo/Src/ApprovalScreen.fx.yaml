@@ -63,7 +63,7 @@ ApprovalScreen As screen:
                 BorderThickness: =2
                 DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =Parent.Height*0.96
+                Height: =Parent.Height*0.8
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -80,7 +80,7 @@ ApprovalScreen As screen:
                     BorderThickness: =1
                     DropShadow: =DropShadow.None
                     FillPortions: =0
-                    Height: =Parent.Height*0.3
+                    Height: =Parent.Height*0.4
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -234,7 +234,7 @@ ApprovalScreen As screen:
                     BorderThickness: =1
                     DropShadow: =DropShadow.None
                     FillPortions: =0
-                    Height: =Parent.Height*0.3
+                    Height: =Parent.Height*0.4
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250

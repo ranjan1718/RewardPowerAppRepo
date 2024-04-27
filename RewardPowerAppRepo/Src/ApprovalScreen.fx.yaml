@@ -78,7 +78,7 @@ ApprovalScreen As screen:
                 NameContainer As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(116, 116, 116, 1)
-                    DropShadow: =DropShadow.Semilight
+                    DropShadow: =DropShadow.None
                     Fill: =RGBA(255, 255, 255, 1)
                     FillPortions: =0
                     Height: =Parent.Height*0.4
@@ -714,7 +714,7 @@ ApprovalScreen As screen:
         Label10_1 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Size: =28
+            Size: =22
             Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
             Width: =Parent.Width
             ZIndex: =1

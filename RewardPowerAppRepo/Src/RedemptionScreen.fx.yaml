@@ -85,7 +85,7 @@ RedemptionScreen As screen:
             Height: =Parent.Height*0.12
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutGap: =10
-            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutJustifyContent: =LayoutJustifyContent.End
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -97,19 +97,6 @@ RedemptionScreen As screen:
             X: =Parent.X
             Y: =(Parent.Height-Self.Height)/2
             ZIndex: =2
-
-            Label12_1 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 1)
-                BorderThickness: =3
-                Fill: =RGBA(214, 223, 238, 1)
-                Font: =Font.'Courier New'
-                FontWeight: =FontWeight.Semibold
-                Height: =Parent.Height
-                Size: =18
-                Text: ="Gifts"
-                Width: =Parent.Width/3
-                ZIndex: =1
 
             Label8 As label:
                 Align: =Align.Center
@@ -128,6 +115,8 @@ RedemptionScreen As screen:
             Fill: =RGBA(227, 234, 243, 1)
             Height: =Parent.Height
             LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =15
             LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -139,13 +128,27 @@ RedemptionScreen As screen:
             Width: =Parent.Width
             ZIndex: =3
 
+            Label14 As label:
+                Align: =Align.Center
+                BorderThickness: =3
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(15, 124, 219, 0.78)
+                Font: =Font.'Courier New'
+                FontWeight: =FontWeight.Bold
+                Height: |
+                    =Parent.Height*0.14
+                Size: =20
+                Text: ="Gifts"
+                Width: =Parent.Width*0.3
+                ZIndex: =1
+
             "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderThickness: =3
                 DelayItemLoading: =true
                 Fill: =RGBA(167, 182, 203, 1)
                 FillPortions: =0
-                Height: =Parent.Height*0.7
+                Height: =Parent.Height*0.65
                 Items: =PrizeList
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
@@ -153,7 +156,7 @@ RedemptionScreen As screen:
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
                 TemplateSize: =90
-                ZIndex: =1
+                ZIndex: =2
 
                 Title10 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)

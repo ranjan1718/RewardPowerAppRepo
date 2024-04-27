@@ -183,7 +183,7 @@ HomeScreen As screen:
         ZIndex: =3
 
         Image1 As image:
-            Height: =Parent.Height*0.5
+            Height: =Parent.Height*0.7
             Image: =User().Image
             RadiusBottomLeft: =40
             RadiusBottomRight: =40

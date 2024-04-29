@@ -656,20 +656,19 @@ ApprovalScreen As screen:
                                 NomineeList,
                                 LookUp(
                                     NomineeList,
-                                    NomineeName = ComboBox1.Selected.DisplayName,
+                                    NomineeName = ComboBox1.Selected.DisplayName),
                                     {
                                         Points: varEmployeeData.Points + 200,
                                         Status: {Value: "Approved"}
                                     }
-                                )
-                            );
+                                );
                             Notify(
-                                "Success",
+                                "Success1",
                                 NotificationType.Success,
                                 1000
                             ),
                             If(
-                                IsBlank(ComboBox1) || IsBlank(TextInput1) || IsBlank(TextInput2) || IsBlank(ComboBox2),
+                                IsBlank(ComboBox1.Selected) || IsBlank(TextInput1.Text) || IsBlank(TextInput2.Text) || IsBlank(ComboBox2.Selected),
                                 Notify(
                                     "Some fields are blank",
                                     NotificationType.Error,
@@ -682,21 +681,31 @@ ApprovalScreen As screen:
                                         NotificationType.Error,
                                         500
                                     ),
+                                    Notify(
+                                "Start Patching",
+                                NotificationType.Information,
+                                1000
+                                    );
                                     Patch(
                                         NomineeList,
                                         Defaults(NomineeList),
                                         {
-                                            NomineeName: ComboBox1.Selected.DisplayName,
-                                            NomineeEmail: TextInput1.Text,
-                                            Points: Value(TextInput2.Text),
-                                            NominationDate: Today(),
-                                            Justification:ComboBox2.SelectedItems
+                                            NominationDate:Today()
+                                            //NomineeName: ComboBox1.Selected.DisplayName
+                                           // NomineeEmail: TextInput1.Text
+                                            //Points: Value(TextInput2.Text)
+                                           //NominationDate: Today(),
+                                            //Justification:ComboBox2.SelectedItems
                                         }
-                                    )
+                                    );Notify(
+                                "Success3",
+                                NotificationType.Success,
+                                1000
+                                    );
                                 )
                             );
                             Notify(
-                                "Success",
+                                "Success2",
                                 NotificationType.Success,
                                 1000
                             );

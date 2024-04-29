@@ -215,7 +215,9 @@ HomeScreen As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Switch(HomeScreen.Size,1,Parent.Height*0.2,2,Parent.Height*0.2,3,Parent.Height*0.29,4,Parent.Height*0.29,Parent.Height*0.29)
         HoverFill: =Color.Transparent
-        OnSelect: =Navigate(NomineeListScreen);
+        OnSelect: |-
+            =Refresh(NomineeList);
+            Navigate(NomineeListScreen);
         PressedFill: =Color.Transparent
         Text: =""
         Width: =Switch(HomeScreen.Size,1,Parent.Width*0.2,2,Parent.Width*0.2,3,Parent.Width*0.19,4,Parent.Width*0.19,Parent.Width*0.19)

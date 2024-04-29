@@ -165,9 +165,7 @@ ApprovalScreen As screen:
                                 Height: =Parent.Height
                                 Items: =Office365Users.SearchUser()
                                 SearchFields: =["DisplayName"]
-                                SearchItems: |-
-                                    =Search(/*If(!IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),Office365Users.SearchUser(),Filter(NomineeList,Status.Value="Pending"))*/
-                                    Office365Users.SearchUser(),ComboBox1.SearchText,DisplayName)
+                                SearchItems: =Search(Office365Users.SearchUser(),ComboBox1.SearchText,DisplayName)
                                 SelectMultiple: =false
                                 Size: =15
                                 Width: =Parent.Width

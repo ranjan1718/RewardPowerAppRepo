@@ -683,7 +683,7 @@ ApprovalScreen As screen:
         ZIndex: =3
 
         Image1_3 As image:
-            Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.7,3,Parent.Height*0.7,4,Parent.Height*0.7,Parent.Height*0.7)
+            Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.6,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
             Image: =User().Image
             RadiusBottomLeft: =40
             RadiusBottomRight: =40

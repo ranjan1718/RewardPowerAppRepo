@@ -183,7 +183,7 @@ HomeScreen As screen:
         ZIndex: =3
 
         Image1 As image:
-            Height: =Parent.Height*0.7
+            Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.6,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
             Image: =User().Image
             RadiusBottomLeft: =45
             RadiusBottomRight: =45

@@ -207,7 +207,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Email of the Nominee"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -289,7 +289,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Points"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -360,7 +360,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Date of Nomination"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -477,7 +477,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Name of the Approver"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -554,7 +554,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Date of Approval"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2

@@ -90,7 +90,7 @@ HomeScreen As screen:
                 Label3 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
-                    Size: =18
+                    Size: =Switch(HomeScreen.Size,1,15,2,18,3,20,4,20)
                     Text: ="Nominee List"
                     Width: =Parent.Width
                     ZIndex: =2
@@ -124,7 +124,7 @@ HomeScreen As screen:
                 Label6 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
-                    Size: =18
+                    Size: =Switch(HomeScreen.Size,1,15,2,18,3,20,4,20)
                     Text: ="Redemption"
                     Width: =Parent.Width
                     ZIndex: =2
@@ -157,7 +157,7 @@ HomeScreen As screen:
                 Label15 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
-                    Size: =18
+                    Size: =Switch(HomeScreen.Size,1,15,2,18,3,20,4,20)
                     Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
                     Width: =Parent.Width
                     ZIndex: =2

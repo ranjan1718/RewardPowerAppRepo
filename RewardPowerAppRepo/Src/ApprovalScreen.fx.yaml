@@ -641,7 +641,7 @@ ApprovalScreen As screen:
                         Reset(TextInput1);
                         Reset(TextInput2);
                         Reset(DatePicker2);
-                    Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"approve","Nominate")
+                    Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
                     Width: =Parent.Width*0.15
                     ZIndex: =3
 

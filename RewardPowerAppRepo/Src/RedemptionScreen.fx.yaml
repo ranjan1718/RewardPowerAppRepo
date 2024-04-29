@@ -237,7 +237,7 @@ RedemptionScreen As screen:
                                 RedeemedPrizes,
                                 { NomineeName: User().FullName, Redeemed: ThisItem.Prize }
                             );
-                            
+                         
                             // Add the redeemed gift to the RedeemedPrizes collection
                             Notify("Gift redeemed successfully", NotificationType.Success)
                             // Show a success message

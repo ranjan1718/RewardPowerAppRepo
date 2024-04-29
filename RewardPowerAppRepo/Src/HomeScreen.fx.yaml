@@ -190,6 +190,7 @@ HomeScreen As screen:
             RadiusBottomRight: =45
             RadiusTopLeft: =45
             RadiusTopRight: =45
+            Width: =Parent.Width*0.5
             ZIndex: =1
 
         Label1 As label:

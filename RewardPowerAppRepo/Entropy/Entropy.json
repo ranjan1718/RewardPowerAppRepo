@@ -128,7 +128,6 @@
     "RedemptionBodyContainer": 122,
     "RedemptionContainer": 82,
     "RedemptionScreen": 115,
-    "Screen2": 136,
     "Separator9": 135,
     "SubmitButton": 64,
     "SubmitContainer": 62,
@@ -140,7 +139,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/29/2024 08:20:09",
+  "HeaderLastSavedDateTimeUTC": "04/29/2024 08:22:51",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "b7b7295d-881e-487e-9b09-2c6455248e20": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/ee873bcf1842400fa64d2a177fca4e5d\""
@@ -300,7 +299,6 @@
     "RedemptionBodyContainer": {},
     "RedemptionContainer": {},
     "RedemptionScreen": {},
-    "Screen2": {},
     "Separator9": {},
     "SubmitButton": {},
     "SubmitContainer": {},
@@ -439,7 +437,6 @@
     "RedemptionBodyContainer": 117,
     "RedemptionContainer": 82,
     "RedemptionScreen": 114,
-    "Screen2": 135,
     "Separator9": 134,
     "SubmitButton": 63,
     "SubmitContainer": 21,

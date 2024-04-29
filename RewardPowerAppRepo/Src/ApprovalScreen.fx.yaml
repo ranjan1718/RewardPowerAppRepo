@@ -389,9 +389,10 @@ ApprovalScreen As screen:
                             ComboBox2 As combobox:
                                 DisplayFields: =["Value"]
                                 Height: =Parent.Height
+                                IsSearchable: =false
                                 Items: =Choices(NomineeList.Justification)
                                 SearchFields: =["Value"]
-                                SearchItems: =Choices(NomineeList.Justification,ComboBox2.SearchText)
+                                SearchItems: =[]
                                 Width: =Parent.Width
                                 ZIndex: =1
 

@@ -620,7 +620,9 @@ ApprovalScreen As screen:
                     Fill: =RGBA(151, 0, 0, 1)
                     Height: =Parent.Height*0.4
                     OnSelect: |-
-                        =Patch(NomineeList,LookUp(NomineeList,NomineeEmail=User().Email),{Status:{Value:"Rejected"}})
+                        =Patch(NomineeList,LookUp(NomineeList,NomineeEmail=User().Email),{Status:{Value:"Rejected"}});
+                        Notify("Success",NotificationType.Success,1000);
+                        Navigate(HomeScreen);
                     Text: ="Reject"
                     Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
                     Width: =Parent.Width*0.15

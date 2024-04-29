@@ -185,10 +185,10 @@ HomeScreen As screen:
         Image1 As image:
             Height: =Parent.Height*0.7
             Image: =User().Image
-            RadiusBottomLeft: =40
-            RadiusBottomRight: =40
-            RadiusTopLeft: =40
-            RadiusTopRight: =40
+            RadiusBottomLeft: =45
+            RadiusBottomRight: =45
+            RadiusTopLeft: =45
+            RadiusTopRight: =45
             ZIndex: =1
 
         Label1 As label:

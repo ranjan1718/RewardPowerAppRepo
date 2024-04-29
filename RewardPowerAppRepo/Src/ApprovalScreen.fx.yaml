@@ -49,6 +49,7 @@ ApprovalScreen As screen:
             ZIndex: =3
 
         FormBodyContainer As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
             FillPortions: =0
             Height: =Parent.Height*1.15
             LayoutDirection: =LayoutDirection.Vertical
@@ -116,7 +117,7 @@ ApprovalScreen As screen:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.7
+                            Width: =Parent.Width*0.8
                             ZIndex: =1
 
                             Label4 As label:
@@ -131,7 +132,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Name of the Nominee"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -191,7 +192,7 @@ ApprovalScreen As screen:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.7
+                            Width: =Parent.Width*0.8
                             ZIndex: =1
 
                             Label4_1 As label:
@@ -206,7 +207,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Email of the Nominee"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -273,7 +274,7 @@ ApprovalScreen As screen:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.7
+                            Width: =Parent.Width*0.8
                             ZIndex: =1
 
                             Label4_2 As label:
@@ -288,7 +289,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Points"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -344,7 +345,7 @@ ApprovalScreen As screen:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.7
+                            Width: =Parent.Width*0.8
                             ZIndex: =1
 
                             Label4_3 As label:
@@ -359,7 +360,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Date of Nomination"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -461,7 +462,7 @@ ApprovalScreen As screen:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.7
+                            Width: =Parent.Width*0.8
                             ZIndex: =1
 
                             Label4_4 As label:
@@ -476,7 +477,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Name of the Approver"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -538,7 +539,7 @@ ApprovalScreen As screen:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.7
+                            Width: =Parent.Width*0.8
                             ZIndex: =1
 
                             Label4_5 As label:
@@ -553,7 +554,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =20
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
                                 Text: ="Date of Approval"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2

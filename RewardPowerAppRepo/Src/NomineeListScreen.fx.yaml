@@ -98,8 +98,10 @@ NomineeListScreen As screen:
 
             Label12 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(77, 77, 77, 1)
+                BorderColor: =RGBA(116, 116, 116, 1)
                 BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(196, 45, 45, 1)
                 Font: =Font.'Courier New'
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height
@@ -112,6 +114,8 @@ NomineeListScreen As screen:
                 Align: =Align.Center
                 BorderColor: =RGBA(77, 77, 77, 1)
                 BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(196, 45, 45, 1)
                 Font: =Font.'Courier New'
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height
@@ -124,6 +128,8 @@ NomineeListScreen As screen:
                 Align: =Align.Center
                 BorderColor: =RGBA(102, 102, 102, 1)
                 BorderThickness: =1
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(196, 45, 45, 1)
                 Font: =Font.'Courier New'
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height

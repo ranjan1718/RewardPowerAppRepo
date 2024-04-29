@@ -213,7 +213,7 @@ ApprovalScreen As screen:
 
                         TextInput1 As text:
                             BorderColor: =RGBA(116, 116, 116, 1)
-                            Default: =""
+                            Default: =varNomineeUser.NomineeEmail
                             DisabledColor: =RGBA(102, 102, 102, 1)
                             DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                             FontWeight: =FontWeight.Semibold

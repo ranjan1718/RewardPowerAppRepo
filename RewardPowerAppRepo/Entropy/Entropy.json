@@ -139,7 +139,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/29/2024 12:59:51",
+  "HeaderLastSavedDateTimeUTC": "04/29/2024 13:37:48",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "5bc64a2b-c103-47ba-bc83-64c2f14d7350": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/34b6fa5ea7aa4789b0d44212094d6128\"",
@@ -155,9 +155,9 @@
     "CustomGallerySample": 2,
     "DropDownSample": 3,
     "Managers&Approvers": 4,
-    "NomineeList": 5,
+    "NomineeListNew": 6,
     "Office365Users": 0,
-    "PrizeList": 6
+    "PrizeList": 5
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},

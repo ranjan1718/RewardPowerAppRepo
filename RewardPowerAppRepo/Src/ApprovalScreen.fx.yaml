@@ -646,9 +646,9 @@ ApprovalScreen As screen:
                     HoverFill: =RGBA(40, 173, 62, 1)
                     OnSelect: |
                         =Patch(
-                            NomineeList,
-                            Defaults(NomineeList),
-                            {Title: "TestTitle"}
+                            NomineeListNew,
+                            Defaults(NomineeListNew),
+                            {Title: "TestTitfdghle"}
                         );
                     Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
                     Width: =Parent.Width*0.15

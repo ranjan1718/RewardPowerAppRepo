@@ -53,7 +53,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "NomineeList",
+    "Name": "NomineeListNew",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

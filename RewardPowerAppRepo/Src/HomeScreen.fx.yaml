@@ -216,7 +216,7 @@ HomeScreen As screen:
         Height: =Switch(HomeScreen.Size,1,Parent.Height*0.2,2,Parent.Height*0.2,3,Parent.Height*0.29,4,Parent.Height*0.29,Parent.Height*0.29)
         HoverFill: =Color.Transparent
         OnSelect: |-
-            =Refresh(NomineeList);
+            =Refresh('Nominee List');
             Navigate(NomineeListScreen);
         PressedFill: =Color.Transparent
         Text: =""
@@ -230,7 +230,7 @@ HomeScreen As screen:
         Height: =Parent.Height*0.29
         HoverFill: =Color.Transparent
         OnSelect: |-
-            =Set(varEmployeeData,LookUp(NomineeList,NomineeEmail=User().Email)); //Get user data for redemption
+            =Set(varEmployeeData,LookUp('Nominee List',NomineeEmail=User().Email)); //Get user data for redemption
             Navigate(RedemptionScreen);
         PressedFill: =Color.Transparent
         Text: =""
@@ -269,7 +269,7 @@ HomeScreen As screen:
         HoverFill: =Color.Transparent
         OnSelect: |-
             =Navigate(ApprovalScreen);
-            ClearCollect(varPendingUsers,ForAll(NomineeList,Status.Value="Pending")) //Get all users who has pending status
+            ClearCollect(varPendingUsers,ForAll('Nominee List',Status.Value="Pending")) //Get all users who has pending status
         PressedFill: =Color.Transparent
         Text: =""
         Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)

@@ -244,7 +244,7 @@ RedemptionScreen As screen:
                             // Add the redeemed gift to the RedeemedPrizes collection
                             Notify("Gift redeemed successfully", NotificationType.Success)
                             // Show a success message   
-                        )
+                        );
                     Text: ="Redeem"
                     X: =418
                     Y: =30

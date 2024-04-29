@@ -258,7 +258,7 @@ HomeScreen As screen:
         HoverFill: =Color.Transparent
         OnSelect: |-
             =Navigate(ApprovalScreen);
-            Set(varPendingUsers,ForAll(NomineeList,Status.Value="Pending")) //Get all users who has pending status
+            ClearCollect(varPendingUsers,ForAll(NomineeList,Status.Value="Pending")) //Get all users who has pending status
         PressedFill: =Color.Transparent
         Text: =""
         Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)

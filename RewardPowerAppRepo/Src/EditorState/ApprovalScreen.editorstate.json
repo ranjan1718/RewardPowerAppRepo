@@ -1026,7 +1026,14 @@
           "NameMapSourceSchema": "?"
         },
         "MoreItemsButtonColor",
-        "DisplayFields",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "[\"NomineeN\"]",
+          "InvariantPropertyName": "DisplayFields",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "SearchFields",
         {
           "AFDDataSourceName": "",

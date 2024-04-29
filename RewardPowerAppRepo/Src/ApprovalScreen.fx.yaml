@@ -160,11 +160,11 @@ ApprovalScreen As screen:
                             ComboBox1 As combobox:
                                 ChevronBackground: =RGBA(255, 255, 255, 1)
                                 ChevronFill: =RGBA(0, 0, 0, 1)
-                                DisplayFields: =["Value"]
+                                DisplayFields: =["NomineeName"]
                                 Height: =Parent.Height
-                                Items: =ForAll(Choices(NomineeList.NomineeName,Status.Value="Pending")
-                                SearchFields: =["Value"]
-                                SearchItems: =Search(ForAll(NomineeList,Status.Value="Pending"),ComboBox1.SearchText,Value)
+                                Items: =Filter(NomineeList,Status.Value="Pending")
+                                SearchFields: =["NomineeName"]
+                                SearchItems: =Search(Filter(NomineeList,Status.Value="Pending"),ComboBox1.SearchText,NomineeName)
                                 Size: =15
                                 Width: =Parent.Width
                                 ZIndex: =1

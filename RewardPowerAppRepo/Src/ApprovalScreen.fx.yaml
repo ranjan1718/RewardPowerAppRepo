@@ -132,7 +132,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Name of the Nominee"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -210,14 +210,14 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Email of the Nominee"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
 
                         TextInput1 As text:
                             BorderColor: =RGBA(116, 116, 116, 1)
-                            Default: =""
+                            Default: =LookUp(Office365Users.SearchUser(),DisplayName=ComboBox1.Selected.DisplayName,Mail)
                             DisabledColor: =RGBA(102, 102, 102, 1)
                             DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                             FontWeight: =FontWeight.Semibold
@@ -292,7 +292,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Points"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -363,7 +363,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Date of Nomination"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -480,7 +480,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Name of the Approver"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -557,7 +557,7 @@ ApprovalScreen As screen:
                                 Font: =Font.Arial
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,20)
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Date of Approval"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -620,9 +620,10 @@ ApprovalScreen As screen:
                 Width: =Parent.Width*0.98
                 ZIndex: =5
 
-                Button1 As button:
+                RejectButton As button:
                     Fill: =RGBA(151, 0, 0, 1)
                     Height: =Parent.Height*0.4
+                    HoverFill: =RGBA(151, 0, 0, 1)
                     OnSelect: |-
                         =Patch(NomineeList,LookUp(NomineeList,NomineeEmail=User().Email),{Status:{Value:"Rejected"}});
                         Notify("Success",NotificationType.Success,1000);
@@ -640,6 +641,7 @@ ApprovalScreen As screen:
                 SubmitButton As button:
                     Fill: =RGBA(40, 173, 62, 1)
                     Height: =Parent.Height*0.4
+                    HoverFill: =RGBA(40, 173, 62, 1)
                     OnSelect: |
                         =If(
                             IsBlank(

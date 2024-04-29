@@ -3,7 +3,14 @@
     "Button19": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(\n    LookUp(NomineeList, NomineeName = User().FullName).Points >= ThisItem.point,\n    // If the user has enough points to redeem the gift\n    Patch(\n        NomineeList,\n        LookUp(NomineeList, NomineeName = User().FullName),\n        { \n            Points: LookUp(NomineeList, NomineeName = User().FullName).Points - ThisItem.point\n        }\n    );\n    // Deduct the points from the user's points\n    Collect(\n        RedeemedPrizes,\n        { NomineeName: User().FullName, Redeemed: ThisItem.Prize }\n    );\n \n    // Add the redeemed gift to the RedeemedPrizes collection\n    Notify(\"Gift redeemed successfully\", NotificationType.Success)\n    // Show a success message\n)\n\n",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Text",
         "BorderColor",
         "DisabledBorderColor",
@@ -239,7 +246,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",

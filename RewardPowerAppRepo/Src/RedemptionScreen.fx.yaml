@@ -110,7 +110,7 @@ RedemptionScreen As screen:
 
             Label9 As label:
                 Size: =20
-                Text: =varEmployeeData.Points
+                Text: =LookUp(NomineeList, NomineeName=User().FullName,Points)
                 Width: =If(RedemptionScreen.Size=2,100,RedemptionScreen.Size=3,140,150)
                 ZIndex: =3
 
@@ -238,16 +238,18 @@ RedemptionScreen As screen:
                                 }
                             );
                             // Deduct the points from the user's points
-                            
+                        
                             Collect(
                                 RedeemedPrizes,
                                 { NomineeName: User().FullName, Redeemed: ThisItem.Prize }
                             );
                          
                             // Add the redeemed gift to the RedeemedPrizes collection
-                            Notify("Gift redeemed successfully", NotificationType.Success)
+                            Notify("Gift redeemed successfully", NotificationType.Success);
                             // Show a success message   
+                           
                         );
+                        
                         Refresh(NomineeList);
                     Text: ="Redeem"
                     X: =418

@@ -696,7 +696,7 @@ ApprovalScreen As screen:
             Font: =Font.'Courier New'
             FontWeight: =FontWeight.Bold
             Height: =Parent.Height*0.25
-            Size: =18
+            Size: =Switch(ApprovalScreen.Size,1,12,2,15,3,17,4,18)
             Text: =User().FullName
             Width: =Parent.Width
             ZIndex: =2

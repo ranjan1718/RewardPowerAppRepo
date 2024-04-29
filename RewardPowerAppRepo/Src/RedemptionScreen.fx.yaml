@@ -115,6 +115,7 @@ RedemptionScreen As screen:
                 ZIndex: =3
 
         Container19 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Semibold
             Fill: =RGBA(227, 234, 243, 1)
             Height: =Parent.Height
             LayoutAlignItems: =LayoutAlignItems.Center

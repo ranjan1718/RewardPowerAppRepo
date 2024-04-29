@@ -41,6 +41,7 @@ RedemptionScreen As screen:
             RadiusBottomRight: =40
             RadiusTopLeft: =40
             RadiusTopRight: =40
+            Width: =Parent.Width*0.5
             ZIndex: =1
 
         Label1_2 As label:

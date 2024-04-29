@@ -137,7 +137,6 @@
   },
   "ScreenOrder": [
     "HomeScreen",
-    "Screen2",
     "NomineeListScreen",
     "RedemptionScreen",
     "ApprovalScreen"

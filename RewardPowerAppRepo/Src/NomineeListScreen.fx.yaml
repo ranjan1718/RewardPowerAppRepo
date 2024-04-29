@@ -40,6 +40,7 @@ NomineeListScreen As screen:
             RadiusBottomRight: =40
             RadiusTopLeft: =40
             RadiusTopRight: =40
+            Width: =Parent.Width*0.7
             ZIndex: =1
 
         Label1_1 As label:

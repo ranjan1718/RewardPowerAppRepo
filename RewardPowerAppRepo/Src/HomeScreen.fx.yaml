@@ -239,6 +239,7 @@ HomeScreen As screen:
         RadiusBottomRight: =20
         RadiusTopLeft: =20
         RadiusTopRight: =20
+        Width: =Parent.Width*0.35
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/3.6
         ZIndex: =7
@@ -246,7 +247,7 @@ HomeScreen As screen:
         Label10 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Size: =Switch(ApprovalScreen.Size,1,18,2,20,3,22,4,25)
+            Size: =Switch(ApprovalScreen.Size,1,18,2,24,3,24,4,25)
             Text: ="Dashboard"
             Width: =Parent.Width
             ZIndex: =1

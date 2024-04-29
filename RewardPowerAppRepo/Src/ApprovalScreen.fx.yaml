@@ -713,6 +713,7 @@ ApprovalScreen As screen:
         RadiusBottomRight: =20
         RadiusTopLeft: =20
         RadiusTopRight: =20
+        Width: =Parent.Width*0.35
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/3.6
         ZIndex: =6

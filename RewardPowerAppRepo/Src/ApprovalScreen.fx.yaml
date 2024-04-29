@@ -388,6 +388,7 @@ ApprovalScreen As screen:
 
                             ComboBox2 As combobox:
                                 DisplayFields: =["Value"]
+                                DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Height: =Parent.Height
                                 IsSearchable: =false
                                 Items: =Choices(NomineeList.Justification)

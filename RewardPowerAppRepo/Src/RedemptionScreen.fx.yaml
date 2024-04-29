@@ -236,6 +236,7 @@ RedemptionScreen As screen:
                                 }
                             );
                             // Deduct the points from the user's points
+                            
                             Collect(
                                 RedeemedPrizes,
                                 { NomineeName: User().FullName, Redeemed: ThisItem.Prize }
@@ -245,6 +246,7 @@ RedemptionScreen As screen:
                             Notify("Gift redeemed successfully", NotificationType.Success)
                             // Show a success message   
                         );
+                        Refresh(NomineeList);
                     Text: ="Redeem"
                     X: =418
                     Y: =30

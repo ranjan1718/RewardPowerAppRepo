@@ -50,6 +50,7 @@ HomeScreen As screen:
             LayoutMinWidth: =50
             LayoutMode: =LayoutMode.Auto
             LayoutOverflowY: =LayoutOverflow.Scroll
+            Width: =Parent.Width
             ZIndex: =3
 
             EssentialLabel5_5 As label:

@@ -183,7 +183,7 @@ HomeScreen As screen:
         ZIndex: =3
 
         Image1 As image:
-            Height: =Parent.Height*0.7
+            Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.55,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
             Image: =User().Image
             RadiusBottomLeft: =45
             RadiusBottomRight: =45
@@ -239,6 +239,7 @@ HomeScreen As screen:
         RadiusBottomRight: =20
         RadiusTopLeft: =20
         RadiusTopRight: =20
+        Width: =Parent.Width*0.35
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/3.6
         ZIndex: =7
@@ -246,7 +247,7 @@ HomeScreen As screen:
         Label10 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Size: =28
+            Size: =Switch(ApprovalScreen.Size,1,18,2,24,3,24,4,25)
             Text: ="Dashboard"
             Width: =Parent.Width
             ZIndex: =1

@@ -661,6 +661,7 @@ ApprovalScreen As screen:
 
         HomeIcon As icon.Home:
             Color: =RGBA(255, 255, 255, 1)
+            Height: =Switch(ApprovalScreen.Size,1,40,2,58,3,60,4,64,64)
             Icon: =Icon.Home
             OnSelect: =Navigate(HomeScreen);
             ZIndex: =1
@@ -682,7 +683,7 @@ ApprovalScreen As screen:
         ZIndex: =3
 
         Image1_3 As image:
-            Height: =Parent.Height*0.7
+            Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.6,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
             Image: =User().Image
             RadiusBottomLeft: =40
             RadiusBottomRight: =40
@@ -712,6 +713,7 @@ ApprovalScreen As screen:
         RadiusBottomRight: =20
         RadiusTopLeft: =20
         RadiusTopRight: =20
+        Width: =Parent.Width*0.35
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/3.6
         ZIndex: =6

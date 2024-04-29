@@ -81,6 +81,20 @@ HomeScreen As screen:
                 Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
                 ZIndex: =3
 
+                Icon2 As icon.AddUser:
+                    Height: =Parent.Height*0.35
+                    Icon: =Icon.AddUser
+                    Width: =Parent.Width*0.4
+                    ZIndex: =1
+
+                Label3 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Semibold
+                    Size: =18
+                    Text: ="Nominee List"
+                    Width: =Parent.Width
+                    ZIndex: =2
+
             Label5_1 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
@@ -100,6 +114,20 @@ HomeScreen As screen:
                 LayoutMode: =LayoutMode.Auto
                 Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
                 ZIndex: =5
+
+                Icon3 As icon.ShoppingCart:
+                    Height: =Parent.Height*0.35
+                    Icon: =Icon.ShoppingCart
+                    Width: =Parent.Width*0.4
+                    ZIndex: =1
+
+                Label6 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Semibold
+                    Size: =18
+                    Text: ="Redemption"
+                    Width: =Parent.Width
+                    ZIndex: =2
 
             Label5_4 As label:
                 Height: =Parent.Height*0.1
@@ -121,6 +149,18 @@ HomeScreen As screen:
                 Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)
                 Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
                 ZIndex: =7
+
+                Icon4 As icon.CheckBadge:
+                    Icon: =Icon.CheckBadge
+                    ZIndex: =1
+
+                Label15 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Semibold
+                    Size: =18
+                    Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
+                    Width: =Parent.Width
+                    ZIndex: =2
 
             Label5_3 As label:
                 Height: =Parent.Height*0.1

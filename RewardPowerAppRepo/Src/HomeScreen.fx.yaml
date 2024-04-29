@@ -204,7 +204,7 @@ HomeScreen As screen:
 
     NiomineeButton As button:
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Parent.Height*0.29
+        Height: =Switch(HomeScreen.Size,1,Parent.Height*0.2,2,Parent.Height*0.2,3,Parent.Height*0.29,4,Parent.Height*0.29,Parent.Height*0.29)
         HoverFill: =Color.Transparent
         OnSelect: =Navigate(NomineeListScreen);
         PressedFill: =Color.Transparent

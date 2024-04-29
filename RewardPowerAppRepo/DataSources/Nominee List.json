@@ -39,7 +39,7 @@
       "Modified": "Modified",
       "NominationDate": "NominationDate",
       "NomineeEmail": "NomineeEmail",
-      "NomineeName": "NomineeName",
+      "NomineeName": "Nominee Name",
       "OData__ColorTag": "Color Tag",
       "Points": "Points",
       "Redeemed": "Redeemed",
@@ -53,7 +53,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "NomineeListNew",
+    "Name": "Nominee List",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

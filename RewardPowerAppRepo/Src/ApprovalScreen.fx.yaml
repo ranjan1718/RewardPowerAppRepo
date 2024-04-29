@@ -620,9 +620,10 @@ ApprovalScreen As screen:
                 Width: =Parent.Width*0.98
                 ZIndex: =5
 
-                Button1 As button:
+                RejectButton As button:
                     Fill: =RGBA(151, 0, 0, 1)
                     Height: =Parent.Height*0.4
+                    HoverFill: =RGBA(151, 0, 0, 1)
                     OnSelect: |-
                         =Patch(NomineeList,LookUp(NomineeList,NomineeEmail=User().Email),{Status:{Value:"Rejected"}});
                         Notify("Success",NotificationType.Success,1000);
@@ -640,6 +641,7 @@ ApprovalScreen As screen:
                 SubmitButton As button:
                     Fill: =RGBA(40, 173, 62, 1)
                     Height: =Parent.Height*0.4
+                    HoverFill: =RGBA(40, 173, 62, 1)
                     OnSelect: |
                         =If(
                             IsBlank(

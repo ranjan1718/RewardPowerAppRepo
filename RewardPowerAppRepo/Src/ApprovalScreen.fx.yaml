@@ -162,9 +162,9 @@ ApprovalScreen As screen:
                                 ChevronFill: =RGBA(0, 0, 0, 1)
                                 DisplayFields: =["Value"]
                                 Height: =Parent.Height
-                                Items: =Choices(NomineeList.Status)
+                                Items: =ForAll(Choices(NomineeList.NomineeName,Status.Value="Pending")
                                 SearchFields: =["Value"]
-                                SearchItems: =Choices(NomineeList.Status,ComboBox1.SearchText)
+                                SearchItems: =Search(ForAll(NomineeList,Status.Value="Pending"),ComboBox1.SearchText,Value)
                                 Size: =15
                                 Width: =Parent.Width
                                 ZIndex: =1

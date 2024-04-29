@@ -71,20 +71,19 @@ RedemptionScreen As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
-        Width: =1277
+        Width: =Parent.Width*0.9
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/1.1
         ZIndex: =3
 
         ListHeaderContainer_1 As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.Start
+            AlignInContainer: =AlignInContainer.Center
             BorderColor: =RGBA(128, 128, 128, 1)
             DropShadow: =DropShadow.None
             Fill: =RGBA(167, 182, 203, 1)
             FillPortions: =0
             Height: =Parent.Height*0.12
             LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutGap: =10
             LayoutJustifyContent: =LayoutJustifyContent.End
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -101,14 +100,17 @@ RedemptionScreen As screen:
             Label8 As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Bold
+                Height: =If(RedemptionScreen.Size=2,40,RedemptionScreen.Size=3,30,40)
                 Size: =20
                 Text: |-
                     ="Points:"
+                Width: =If(RedemptionScreen.Size=2,110,RedemptionScreen.Size=3,140,150)
                 ZIndex: =2
 
             Label9 As label:
                 Size: =20
                 Text: =varEmployeeData.Points
+                Width: =If(RedemptionScreen.Size=2,100,RedemptionScreen.Size=3,140,150)
                 ZIndex: =3
 
         Container19 As groupContainer.horizontalAutoLayoutContainer:

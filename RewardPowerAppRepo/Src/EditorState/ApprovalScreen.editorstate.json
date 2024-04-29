@@ -1001,7 +1001,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Behavior",
@@ -1112,7 +1112,8 @@
           "InvariantPropertyName": "Size",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "DefaultSelectedItems"
       ],
       "DynamicProperties": [
         {
@@ -1166,6 +1167,11 @@
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "DefaultSelectedItems",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Data",
           "PropertyName": "NavigateFields",
@@ -7366,7 +7372,7 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -17183,7 +17189,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultButtonStyle",
@@ -17809,7 +17815,7 @@
         {
           "Category": "Design",
           "PropertyName": "DisplayMode",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -18051,7 +18057,7 @@
         {
           "Category": "Data",
           "PropertyName": "Default",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -18511,7 +18517,7 @@
         {
           "Category": "Design",
           "PropertyName": "DisplayMode",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",

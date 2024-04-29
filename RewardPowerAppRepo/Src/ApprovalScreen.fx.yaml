@@ -49,6 +49,7 @@ ApprovalScreen As screen:
             ZIndex: =3
 
         FormBodyContainer As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
             FillPortions: =0
             Height: =Parent.Height*1.15
             LayoutDirection: =LayoutDirection.Vertical

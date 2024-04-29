@@ -386,10 +386,12 @@ ApprovalScreen As screen:
                             Width: =Parent.Width*0.55
                             ZIndex: =2
 
-                            DatePicker2 As datepicker:
-                                DisabledColor: =RGBA(51, 51, 51, 1)
-                                DisplayMode: =DisplayMode.Disabled
+                            ComboBox2 As combobox:
+                                DisplayFields: =["Value"]
                                 Height: =Parent.Height
+                                Items: =Choices(NomineeList.Justification)
+                                SearchFields: =["Value"]
+                                SearchItems: =Choices(NomineeList.Justification,ComboBox2.SearchText)
                                 Width: =Parent.Width
                                 ZIndex: =1
 

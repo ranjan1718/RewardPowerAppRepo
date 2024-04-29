@@ -246,7 +246,7 @@ HomeScreen As screen:
         Label10 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Size: =28
+            Size: =Switch(ApprovalScreen.Size,1,18,2,20,3,22,4,25)
             Text: ="Dashboard"
             Width: =Parent.Width
             ZIndex: =1

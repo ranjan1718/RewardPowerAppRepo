@@ -362,7 +362,7 @@ ApprovalScreen As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
-                                Text: ="Date of Nomination"
+                                Text: ="Justifications"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
 
@@ -669,7 +669,7 @@ ApprovalScreen As screen:
                                 1000
                             ),
                             If(
-                                IsBlank(ComboBox1) || IsBlank(TextInput1) || IsBlank(TextInput2) || IsBlank(DatePicker2),
+                                IsBlank(ComboBox1) || IsBlank(TextInput1) || IsBlank(TextInput2) || IsBlank(ComboBox2),
                                 Notify(
                                     "Some fields are blank",
                                     NotificationType.Error,
@@ -689,7 +689,8 @@ ApprovalScreen As screen:
                                             NomineeName: ComboBox1.Selected.DisplayName,
                                             NomineeEmail: TextInput1.Text,
                                             Points: Value(TextInput2.Text),
-                                            NominationDate: DatePicker2.SelectedDate
+                                            NominationDate: Today(),
+                                            Justification:ComboBox2.SelectedItems
                                         }
                                     )
                                 )
@@ -705,7 +706,7 @@ ApprovalScreen As screen:
                         Reset(ComboBox1);
                         Reset(TextInput1);
                         Reset(TextInput2);
-                        Reset(DatePicker2);
+                        Reset(ComboBox2);
                     Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
                     Width: =Parent.Width*0.15
                     ZIndex: =3

@@ -37,7 +37,8 @@
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
       "Title": "Title",
-      "Users": "Users"
+      "Users": "Users",
+      "Users#Id": "Users Id"
     },
     "DatasetName": "https://sigilotech.sharepoint.com/sites/RewardEmployees",
     "EncodeDataset": true,

@@ -2,7 +2,7 @@ RedemptionScreen As screen:
     Fill: =RGBA(202, 202, 202, 1)
 
     HeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 82, 59, 1)
+        Fill: =RGBA(232, 75, 70, 1)
         Height: =Parent.Height*0.23
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End

@@ -756,7 +756,7 @@ ApprovalScreen As screen:
 
     HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(232, 75, 70, 1)
-        Height: =Parent.Height*0.23
+        Height: =Parent.Height*0.22
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto

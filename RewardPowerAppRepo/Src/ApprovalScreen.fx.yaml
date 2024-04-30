@@ -159,9 +159,10 @@ ApprovalScreen As screen:
                             ComboBox1 As combobox:
                                 ChevronBackground: =RGBA(255, 255, 255, 1)
                                 ChevronFill: =RGBA(0, 0, 0, 1)
-                                DefaultSelectedItems: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),Filter('Nominee List',Status.Value="Pending"),Office365Users.SearchUser())    //True-> manager get all employee names, False-> Approver get pending names
+                                DefaultSelectedItems: =
                                 DisplayFields: =["DisplayName"]
                                 Height: =Parent.Height
+                                IsSearchable: =false
                                 Items: =Office365Users.SearchUser()
                                 SearchFields: =["DisplayName"]
                                 SearchItems: =Search(Office365Users.SearchUser(),ComboBox1.SearchText,DisplayName)
@@ -213,7 +214,7 @@ ApprovalScreen As screen:
 
                         TextInput1 As text:
                             BorderColor: =RGBA(116, 116, 116, 1)
-                            Default: =LookUp(Office365Users.SearchUser(),DisplayName=ComboBox1.Selected.DisplayName,Mail)
+                            Default: =If(!IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),LookUp(Office365Users.SearchUser(),DisplayName=ComboBox1.Selected.DisplayName,Mail))
                             DisabledColor: =RGBA(102, 102, 102, 1)
                             DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                             FontWeight: =FontWeight.Semibold

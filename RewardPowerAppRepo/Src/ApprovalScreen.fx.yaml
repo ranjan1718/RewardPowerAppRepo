@@ -656,7 +656,7 @@ ApprovalScreen As screen:
                                 'Nominee List',
                                 LookUp(
                                     'Nominee List',
-                                    NomineeName = ComboBox1.Selected.DisplayName),
+                                    'Nominee Name' = ComboBox1.Selected.DisplayName),
                                     {
                                         Points: varEmployeeData.Points + 200,
                                         Status: {Value: "Approved"}
@@ -685,7 +685,7 @@ ApprovalScreen As screen:
                                         'Nominee List',
                                         Defaults('Nominee List'),
                                         {
-                                            NomineeName: ComboBox1.Selected.DisplayName,
+                                            'Nominee Name': ComboBox1.Selected.DisplayName,
                                             NomineeEmail: TextInput1.Text,
                                             Points: Value(TextInput2.Text),
                                             NominationDate: Today(),
@@ -712,7 +712,7 @@ ApprovalScreen As screen:
                     ZIndex: =4
 
     HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 82, 59, 1)
+        Fill: =RGBA(232, 75, 70, 1)
         Height: =Parent.Height*0.23
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End

@@ -170,7 +170,7 @@ HomeScreen As screen:
                 ZIndex: =8
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 82, 59, 1)
+        Fill: =RGBA(232, 75, 70, 1)
         Height: =Parent.Height*0.22
         LayoutMode: =LayoutMode.Auto
         RadiusBottomLeft: =8
@@ -219,6 +219,7 @@ HomeScreen As screen:
             =Refresh('Nominee List');
             Navigate(NomineeListScreen);
         PressedFill: =Color.Transparent
+        Size: =Switch(HomeScreen.Size,1,12,2,13,3,15,4,15)
         Text: =""
         Width: =Switch(HomeScreen.Size,1,Parent.Width*0.2,2,Parent.Width*0.2,3,Parent.Width*0.19,4,Parent.Width*0.19,Parent.Width*0.19)
         X: =If(IsBlank(LookUp('Managers&Approvers',Manager.Email=varCurrUserData.Email)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),(Parent.Width-Self.Width)/3.2,(Parent.Width-Self.Width)/8)
@@ -258,7 +259,7 @@ HomeScreen As screen:
         Label10 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Size: =Switch(HomeScreen.Size,1,18,2,24,3,24,4,25)
+            Size: =Switch(HomeScreen.Size,1,15,2,24,3,24,4,25)
             Text: ="Dashboard"
             Width: =Parent.Width
             ZIndex: =1

@@ -2,7 +2,7 @@ NomineeListScreen As screen:
     Fill: =RGBA(222, 222, 222, 1)
 
     HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(255, 82, 59, 1)
+        Fill: =RGBA(232, 75, 70, 1)
         Height: =Parent.Height*0.23
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
@@ -150,7 +150,7 @@ NomineeListScreen As screen:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(0, 0, 0, 1)
                 DelayItemLoading: =true
-                Items: =NomineeList
+                Items: ='Nominee List'
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
@@ -177,7 +177,7 @@ NomineeListScreen As screen:
                     FontWeight: =FontWeight.Semibold
                     OnSelect: =Select(Parent)
                     Size: =15
-                    Text: =ThisItem.NomineeName
+                    Text: =ThisItem.'Nominee Name'
                     Width: =Parent.Width/3
                     X: =Parent.X
                     Y: =(Parent.TemplateHeight-Self.Height)/2

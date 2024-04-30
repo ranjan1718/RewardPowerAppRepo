@@ -159,7 +159,7 @@ ApprovalScreen As screen:
                             ComboBox1 As combobox:
                                 ChevronBackground: =RGBA(255, 255, 255, 1)
                                 ChevronFill: =RGBA(0, 0, 0, 1)
-                                DefaultSelectedItems: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),Office365Users.SearchUser(),Filter('Nominee List',Status.Value="Pending"))
+                                DefaultSelectedItems: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),Filter('Nominee List',Status.Value="Pending"),Office365Users.SearchUser())    //True-> manager get all employee names, False-> Approver get pending names
                                 DisplayFields: =["DisplayName"]
                                 Height: =Parent.Height
                                 Items: =Office365Users.SearchUser()

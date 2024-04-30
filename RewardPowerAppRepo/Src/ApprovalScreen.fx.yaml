@@ -136,7 +136,7 @@ ApprovalScreen As screen:
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
 
-                        Container7 As groupContainer.verticalAutoLayoutContainer:
+                        NameOfNomineeContainer As groupContainer.verticalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             BorderColor: =RGBA(116, 116, 116, 1)
                             BorderThickness: =2
@@ -153,20 +153,38 @@ ApprovalScreen As screen:
                             RadiusBottomRight: =10
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
+                            Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),false,true)
                             Width: =Parent.Width*0.55
                             ZIndex: =2
 
-                            ComboBox1 As combobox:
+                        NomineeName2ApproveContainer As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =10
+                            RadiusBottomRight: =10
+                            RadiusTopLeft: =10
+                            RadiusTopRight: =10
+                            Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
+                            Width: =Parent.Width*0.55
+                            ZIndex: =3
+
+                            ComboBox3 As combobox:
                                 ChevronBackground: =RGBA(255, 255, 255, 1)
                                 ChevronFill: =RGBA(0, 0, 0, 1)
-                                DefaultSelectedItems: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),Filter('Nominee List',Status.Value="Pending"),Office365Users.SearchUser())    //True-> manager get all employee names, False-> Approver get pending names
-                                DisplayFields: =["DisplayName"]
+                                DisplayFields: =["NomineeName"]
                                 Height: =Parent.Height
-                                Items: =Office365Users.SearchUser()
-                                SearchFields: =["DisplayName"]
-                                SearchItems: =Search(Office365Users.SearchUser(),ComboBox1.SearchText,DisplayName)
+                                Items: =Filter('Nominee List',Status.Value="Pending")
+                                SearchFields: =["NomineeName"]
+                                SearchItems: =Search(Filter('Nominee List',Status.Value="Pending"),ComboBox3.SearchText,'Nominee Name')
                                 SelectMultiple: =false
-                                Size: =15
                                 Width: =Parent.Width
                                 ZIndex: =1
 
@@ -211,9 +229,9 @@ ApprovalScreen As screen:
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
 
-                        TextInput1 As text:
+                        NomineeEmail1TextInput As text:
                             BorderColor: =RGBA(116, 116, 116, 1)
-                            Default: =LookUp(Office365Users.SearchUser(),DisplayName=ComboBox1.Selected.DisplayName,Mail)
+                            Default: =If(!IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),LookUp(Office365Users.SearchUser(),DisplayName=ComboBox1.Selected.DisplayName,Mail))
                             DisabledColor: =RGBA(102, 102, 102, 1)
                             DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                             FontWeight: =FontWeight.Semibold
@@ -223,8 +241,22 @@ ApprovalScreen As screen:
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
                             Size: =15
+                            Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),false,true)
                             Width: =Parent.Width*0.55
                             ZIndex: =2
+
+                        Nominee2EmailTextInput As text:
+                            BorderColor: =RGBA(116, 116, 116, 1)
+                            Default: =LookUp('Nominee List','Nominee Name'=ComboBox3.Selected.'Nominee Name',NomineeEmail)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =Parent.Height*0.45
+                            RadiusBottomLeft: =10
+                            RadiusBottomRight: =10
+                            RadiusTopLeft: =10
+                            RadiusTopRight: =10
+                            Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
+                            Width: =Parent.Width*0.55
+                            ZIndex: =3
 
                 Label7_3 As label:
                     Height: =Parent.Height*0.05
@@ -638,7 +670,7 @@ ApprovalScreen As screen:
                     Fill: =RGBA(40, 173, 62, 1)
                     Height: =Parent.Height*0.4
                     HoverFill: =RGBA(40, 173, 62, 1)
-                    OnSelect: |-
+                    OnSelect: |
                         =If(
                             IsBlank(
                                 LookUp(
@@ -650,19 +682,20 @@ ApprovalScreen As screen:
                                 'Nominee List',
                                 LookUp(
                                     'Nominee List',
-                                    'Nominee Name' = ComboBox1.Selected.DisplayName),
-                                    {
-                                        Points: varEmployeeData.Points + 200,
-                                        Status: {Value: "Approved"}
-                                    }
-                                );
+                                    'Nominee Name' = ComboBox3.Selected.'Nominee Name'
+                                ),
+                                {
+                                    Points: varEmployeeData.Points + 200,
+                                    Status: {Value: "Approved"}
+                                }
+                            );
                             Notify(
                                 "Success",
                                 NotificationType.Success,
                                 1000
                             ),
                             If(
-                                IsBlank(ComboBox1.Selected) || IsBlank(TextInput1.Text) || IsBlank(TextInput2.Text) || IsBlank(ComboBox2.Selected),
+                                IsBlank(ComboBox1.Selected) || IsBlank(NomineeEmail1TextInput.Text) || IsBlank(TextInput2.Text) || IsBlank(ComboBox2.Selected),
                                 Notify(
                                     "Some fields are blank",
                                     NotificationType.Error,
@@ -680,20 +713,24 @@ ApprovalScreen As screen:
                                         Defaults('Nominee List'),
                                         {
                                             'Nominee Name': ComboBox1.Selected.DisplayName,
-                                            NomineeEmail: TextInput1.Text,
+                                            NomineeEmail: NomineeEmail1TextInput.Text,
                                             Points: Value(TextInput2.Text),
                                             NominationDate: Today(),
-                                            Justification:ComboBox2.SelectedItems
+                                            Justification: ComboBox2.SelectedItems
                                         }
                                     );
-                                    Notify("Success",NotificationType.Success,1000);
+                                    Notify(
+                                        "Success",
+                                        NotificationType.Success,
+                                        1000
+                                    );
                                     Navigate(HomeScreen)
                                 )
                             )
                         );
                         //If manager-> (false)check name should not be your Name, Patch data, (true) hr/ceo-> Up pending status to  approved & give extra 200 points on approve
                         Reset(ComboBox1);
-                        Reset(TextInput1);
+                        Reset(NomineeEmail1TextInput);
                         Reset(TextInput2);
                         Reset(ComboBox2);
                     Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")

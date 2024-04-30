@@ -774,7 +774,15 @@
         "ZIndex",
         "BorderThickness",
         "FocusedBorderThickness",
-        "Size"
+        "Size",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "SelectMultiple",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -852,6 +860,11 @@
           "Category": "Data",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "SelectMultiple",
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -1880,7 +1893,7 @@
       "MetaDataIDKey": "",
       "Name": "Container1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2113,7 +2126,7 @@
       "MetaDataIDKey": "",
       "Name": "Container1_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14904,7 +14917,7 @@
       "MetaDataIDKey": "",
       "Name": "NameOfNomineeContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16040,7 +16053,7 @@
       "MetaDataIDKey": "",
       "Name": "Nominee2EmailTextInput",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16425,7 +16438,7 @@
       "MetaDataIDKey": "",
       "Name": "NomineeEmail1TextInput",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16788,7 +16801,7 @@
       "MetaDataIDKey": "",
       "Name": "NomineeName2ApproveContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

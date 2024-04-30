@@ -165,6 +165,7 @@ ApprovalScreen As screen:
                                 Items: =Office365Users.SearchUser()
                                 SearchFields: =["DisplayName"]
                                 SearchItems: =Search(Office365Users.SearchUser(),ComboBox1.SearchText,DisplayName)
+                                SelectMultiple: =false
                                 Width: =Parent.Width
                                 ZIndex: =1
 

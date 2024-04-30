@@ -687,9 +687,9 @@ ApprovalScreen As screen:
                                         }
                                     );
                                     Notify("Success",NotificationType.Success,1000);
+                                    Navigate(HomeScreen)
                                 )
-                            );
-                            Navigate(HomeScreen)
+                            )
                         );
                         //If manager-> (false)check name should not be your Name, Patch data, (true) hr/ceo-> Up pending status to  approved & give extra 200 points on approve
                         Reset(ComboBox1);

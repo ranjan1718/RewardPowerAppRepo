@@ -238,7 +238,7 @@ HomeScreen As screen:
         RadiusTopRight: =20
         Width: =Parent.Width*0.35
         X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/5.5
+        Y: =(Parent.Height-Self.Height)/5.8
         ZIndex: =7
 
         Label10 As label:

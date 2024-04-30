@@ -130,7 +130,6 @@ ApprovalScreen As screen:
                             Label2 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Name of the Nominee"
@@ -160,7 +159,7 @@ ApprovalScreen As screen:
                             ComboBox1 As combobox:
                                 ChevronBackground: =RGBA(255, 255, 255, 1)
                                 ChevronFill: =RGBA(0, 0, 0, 1)
-                                DefaultSelectedItems: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),Office365Users.SearchUser(),Filter('Nominee List',Status.Value="Pending"))
+                                DefaultSelectedItems: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),Filter('Nominee List',Status.Value="Pending"),Office365Users.SearchUser())    //True-> manager get all employee names, False-> Approver get pending names
                                 DisplayFields: =["DisplayName"]
                                 Height: =Parent.Height
                                 Items: =Office365Users.SearchUser()
@@ -206,7 +205,6 @@ ApprovalScreen As screen:
                             Label2_2 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Email of the Nominee"
@@ -288,7 +286,6 @@ ApprovalScreen As screen:
                             Label2_3 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Points"
@@ -359,7 +356,6 @@ ApprovalScreen As screen:
                             Label2_4 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Justifications"
@@ -480,7 +476,6 @@ ApprovalScreen As screen:
                             Label2_5 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Name of the Approver"
@@ -557,7 +552,6 @@ ApprovalScreen As screen:
                             Label2_6 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Date of Approval"
@@ -693,9 +687,9 @@ ApprovalScreen As screen:
                                         }
                                     );
                                     Notify("Success",NotificationType.Success,1000);
+                                    Navigate(HomeScreen)
                                 )
-                            );
-                            Navigate(HomeScreen)
+                            )
                         );
                         //If manager-> (false)check name should not be your Name, Patch data, (true) hr/ceo-> Up pending status to  approved & give extra 200 points on approve
                         Reset(ComboBox1);

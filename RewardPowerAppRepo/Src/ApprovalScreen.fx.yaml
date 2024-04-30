@@ -263,6 +263,7 @@ ApprovalScreen As screen:
                         Nominee2EmailTextInput As text:
                             BorderColor: =RGBA(116, 116, 116, 1)
                             Default: =LookUp('Nominee List','Nominee Name'=ComboBox3.Selected.'Nominee Name',NomineeEmail)
+                            DisplayMode: =DisplayMode.Disabled
                             Height: =Parent.Height*0.45
                             RadiusBottomLeft: =10
                             RadiusBottomRight: =10
@@ -696,7 +697,7 @@ ApprovalScreen As screen:
                                 'Nominee List',
                                 LookUp(
                                     'Nominee List',
-                                    'Nominee Name' = ComboBox1.Selected.DisplayName),
+                                    'Nominee Name' = ComboBox3.Selected.'Nominee Name'),
                                     {
                                         Points: varEmployeeData.Points + 200,
                                         Status: {Value: "Approved"}

@@ -3,7 +3,7 @@ RedemptionScreen As screen:
 
     HeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(232, 75, 70, 1)
-        Height: =Parent.Height*0.23
+        Height: =Parent.Height*0.21
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
@@ -26,7 +26,7 @@ RedemptionScreen As screen:
 
     ImageContainer_2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =Parent.Height*0.22
+        Height: =Parent.Height*0.21
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center

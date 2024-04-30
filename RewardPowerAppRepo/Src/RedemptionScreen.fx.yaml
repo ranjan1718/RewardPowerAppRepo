@@ -147,12 +147,12 @@ RedemptionScreen As screen:
                 ZIndex: =1
 
             "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
-                AlignInContainer: =AlignInContainer.SetByContainer
+                AlignInContainer: =AlignInContainer.Center
                 BorderThickness: =3
                 DelayItemLoading: =true
                 Fill: =RGBA(167, 182, 203, 1)
                 FillPortions: =0
-                Height: =Parent.Height*0.65
+                Height: =Parent.Height*0.6
                 Items: =PrizeList
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287

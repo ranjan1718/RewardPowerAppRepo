@@ -804,8 +804,7 @@
           "InvariantPropertyName": "SelectMultiple",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        "IsSearchable"
+        }
       ],
       "DynamicProperties": [
         {
@@ -893,11 +892,6 @@
           "Category": "Data",
           "PropertyName": "SelectMultiple",
           "RuleProviderType": "User"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "IsSearchable",
-          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",

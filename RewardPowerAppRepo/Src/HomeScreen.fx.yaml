@@ -171,7 +171,7 @@ HomeScreen As screen:
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(232, 75, 70, 1)
-        Height: =Parent.Height*0.22
+        Height: =Parent.Height*0.2
         LayoutMode: =LayoutMode.Auto
         RadiusBottomLeft: =8
         RadiusBottomRight: =8
@@ -182,7 +182,7 @@ HomeScreen As screen:
 
     ImageContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =Parent.Height*0.22
+        Height: =Parent.Height*0.2
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center

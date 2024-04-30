@@ -157,21 +157,6 @@ ApprovalScreen As screen:
                             Width: =Parent.Width*0.55
                             ZIndex: =2
 
-                            ComboBox1 As combobox:
-                                ChevronBackground: =RGBA(255, 255, 255, 1)
-                                ChevronFill: =RGBA(0, 0, 0, 1)
-                                DefaultSelectedItems: =
-                                DisplayFields: =["DisplayName"]
-                                Height: =Parent.Height
-                                IsSearchable: =false
-                                Items: =Office365Users.SearchUser()
-                                SearchFields: =["DisplayName"]
-                                SearchItems: =Search(Office365Users.SearchUser(),ComboBox1.SearchText,DisplayName)
-                                SelectMultiple: =false
-                                Size: =15
-                                Width: =Parent.Width
-                                ZIndex: =1
-
                         NomineeName2ApproveContainer As groupContainer.verticalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Center
                             DropShadow: =DropShadow.None
@@ -436,7 +421,7 @@ ApprovalScreen As screen:
                                 IsSearchable: =false
                                 Items: =Choices('Nominee List'.Justification)
                                 SearchFields: =["Value"]
-                                SearchItems: =[]
+                                SearchItems: =Choices('Nominee List'.Justification,ComboBox2.SearchText)
                                 Width: =Parent.Width
                                 ZIndex: =1
 

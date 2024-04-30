@@ -198,7 +198,7 @@ ApprovalScreen As screen:
                                 Height: =Parent.Height
                                 Items: =Filter('Nominee List',Status.Value="Pending")
                                 SearchFields: =["NomineeName"]
-                                SearchItems: =Search(Filter('Nominee List',Status.Value="Pending"),ComboBox3.SearchText,NomineeName)
+                                SearchItems: =Search(Filter('Nominee List',Status.Value="Pending"),ComboBox3.SearchText,'Nominee Name')
                                 SelectMultiple: =false
                                 Width: =Parent.Width
                                 ZIndex: =1
@@ -685,7 +685,7 @@ ApprovalScreen As screen:
                     Fill: =RGBA(40, 173, 62, 1)
                     Height: =Parent.Height*0.4
                     HoverFill: =RGBA(40, 173, 62, 1)
-                    OnSelect: |-
+                    OnSelect: |
                         =If(
                             IsBlank(
                                 LookUp(
@@ -697,12 +697,13 @@ ApprovalScreen As screen:
                                 'Nominee List',
                                 LookUp(
                                     'Nominee List',
-                                    'Nominee Name' = ComboBox3.Selected.'Nominee Name'),
-                                    {
-                                        Points: varEmployeeData.Points + 200,
-                                        Status: {Value: "Approved"}
-                                    }
-                                );
+                                    'Nominee Name' = ComboBox3.Selected.'Nominee Name'
+                                ),
+                                {
+                                    Points: varEmployeeData.Points + 200,
+                                    Status: {Value: "Approved"}
+                                }
+                            );
                             Notify(
                                 "Success",
                                 NotificationType.Success,
@@ -730,10 +731,14 @@ ApprovalScreen As screen:
                                             NomineeEmail: NomineeEmail1TextInput.Text,
                                             Points: Value(TextInput2.Text),
                                             NominationDate: Today(),
-                                            Justification:ComboBox2.SelectedItems
+                                            Justification: ComboBox2.SelectedItems
                                         }
                                     );
-                                    Notify("Success",NotificationType.Success,1000);
+                                    Notify(
+                                        "Success",
+                                        NotificationType.Success,
+                                        1000
+                                    );
                                     Navigate(HomeScreen)
                                 )
                             )

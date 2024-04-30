@@ -227,6 +227,8 @@ HomeScreen As screen:
         ZIndex: =4
 
     RedeemButton As button:
+        DisabledFill: =RGBA(0, 0, 0, 0.1)
+        DisplayMode: =If(!IsBlank(LookUp('Nominee List','Nominee Name'=User().FullName)),DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Parent.Height*0.29
         HoverFill: =Color.Transparent

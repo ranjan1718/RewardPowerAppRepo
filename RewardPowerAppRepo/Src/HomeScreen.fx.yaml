@@ -65,7 +65,7 @@ HomeScreen As screen:
                 ZIndex: =3
 
                 Icon2 As icon.AddUser:
-                    Height: =Parent.Height*0.35
+                    Height: =Parent.Height*0.3
                     Icon: =Icon.AddUser
                     Width: =Parent.Width*0.4
                     ZIndex: =1
@@ -73,7 +73,7 @@ HomeScreen As screen:
                 Label3 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
-                    Size: =Switch(HomeScreen.Size,1,15,2,18,3,20,4,20)
+                    Size: =Switch(HomeScreen.Size,1,13,2,16,3,18,4,18)
                     Text: ="Nominee List"
                     Width: =Parent.Width
                     ZIndex: =2
@@ -99,7 +99,7 @@ HomeScreen As screen:
                 ZIndex: =5
 
                 Icon3 As icon.ShoppingCart:
-                    Height: =Parent.Height*0.35
+                    Height: =Parent.Height*0.3
                     Icon: =Icon.ShoppingCart
                     Width: =Parent.Width*0.4
                     ZIndex: =1
@@ -107,7 +107,7 @@ HomeScreen As screen:
                 Label6 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
-                    Size: =Switch(HomeScreen.Size,1,15,2,18,3,20,4,20)
+                    Size: =Switch(HomeScreen.Size,1,13,2,16,3,18,4,18)
                     Text: ="Redemption"
                     Width: =Parent.Width
                     ZIndex: =2
@@ -134,13 +134,14 @@ HomeScreen As screen:
                 ZIndex: =7
 
                 Icon4 As icon.CheckBadge:
+                    Height: =Parent.Height*0.3
                     Icon: =Icon.CheckBadge
                     ZIndex: =1
 
                 Label15 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
-                    Size: =Switch(HomeScreen.Size,1,15,2,18,3,20,4,20)
+                    Size: =Switch(HomeScreen.Size,1,13,2,16,3,18,4,18)
                     Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
                     Width: =Parent.Width
                     ZIndex: =2
@@ -153,7 +154,7 @@ HomeScreen As screen:
                 ZIndex: =8
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(232, 75, 70, 1)
+        Fill: =RGBA(114, 45, 173, 0.96)
         Height: =Parent.Height*0.15
         LayoutMode: =LayoutMode.Auto
         RadiusBottomLeft: =8
@@ -180,7 +181,7 @@ HomeScreen As screen:
             RadiusBottomRight: =45
             RadiusTopLeft: =45
             RadiusTopRight: =45
-            Width: =Parent.Width*0.5
+            Width: =Parent.Width*0.2
             ZIndex: =1
 
         Label1 As label:
@@ -189,7 +190,7 @@ HomeScreen As screen:
             Font: =Font.'Courier New'
             FontWeight: =FontWeight.Bold
             Height: =Parent.Height*0.28
-            Size: =Switch(HomeScreen.Size,1,14,2,18,3,18,4,18)
+            Size: =Switch(HomeScreen.Size,1,12,2,15,3,15,4,15)
             Text: =User().FullName
             Width: =Parent.Width
             ZIndex: =2
@@ -227,7 +228,7 @@ HomeScreen As screen:
     DashboardLabelContainer As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.None
         Fill: =RGBA(222, 222, 222, 1)
-        Height: =Parent.Height*0.14
+        Height: =Parent.Height*0.1
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
@@ -237,7 +238,7 @@ HomeScreen As screen:
         RadiusTopRight: =20
         Width: =Parent.Width*0.35
         X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/5
+        Y: =(Parent.Height-Self.Height)/5.5
         ZIndex: =7
 
         Label10 As label:

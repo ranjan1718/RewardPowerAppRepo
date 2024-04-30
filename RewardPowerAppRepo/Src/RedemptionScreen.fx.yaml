@@ -110,7 +110,7 @@ RedemptionScreen As screen:
 
             Label9 As label:
                 Size: =20
-                Text: =LookUp(NomineeList, NomineeName=User().FullName,Points)
+                Text: =LookUp('Nominee List', 'Nominee Name'=User().FullName,Points)
                 Width: =If(RedemptionScreen.Size=2,100,RedemptionScreen.Size=3,140,150)
                 ZIndex: =3
 
@@ -224,24 +224,24 @@ RedemptionScreen As screen:
                     ZIndex: =5
 
                 Button19 As button:
-                    DisplayMode: =If(LookUp(NomineeList, NomineeName=User().FullName).Points>= ThisItem.point,DisplayMode.Edit,DisplayMode.Disabled)
+                    DisplayMode: =If(LookUp('Nominee List', 'Nominee Name'=User().FullName).Points>= ThisItem.point,DisplayMode.Edit,DisplayMode.Disabled)
                     OnSelect: |-
                         =
                         If(
-                            LookUp(NomineeList, NomineeName = User().FullName).Points >= ThisItem.point,
+                            LookUp('Nominee List', 'Nominee Name' = User().FullName).Points >= ThisItem.point,
                             // If the user has enough points to redeem the gift
                             Patch(
-                                NomineeList,
-                                LookUp(NomineeList, NomineeName = User().FullName),
+                                'Nominee List',
+                                LookUp('Nominee List', 'Nominee Name' = User().FullName),
                                 { 
-                                    Points: LookUp(NomineeList, NomineeName = User().FullName).Points - ThisItem.point
+                                    Points: LookUp('Nominee List', 'Nominee Name' = User().FullName).Points - ThisItem.point
                                 }
                             );
                             // Deduct the points from the user's points
                         
                             Collect(
                                 RedeemedPrizes,
-                                { NomineeName: User().FullName, Redeemed: ThisItem.Prize }
+                                { 'Nominee Name': User().FullName, Redeemed: ThisItem.Prize }
                             );
                          
                             // Add the redeemed gift to the RedeemedPrizes collection
@@ -250,7 +250,7 @@ RedemptionScreen As screen:
                            
                         );
                         
-                        Refresh(NomineeList);
+                        Refresh('Nominee List');
                     Text: ="Redeem"
                     X: =418
                     Y: =30

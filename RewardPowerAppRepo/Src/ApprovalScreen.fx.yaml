@@ -130,7 +130,6 @@ ApprovalScreen As screen:
                             Label2 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Name of the Nominee"
@@ -206,7 +205,6 @@ ApprovalScreen As screen:
                             Label2_2 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Email of the Nominee"
@@ -288,7 +286,6 @@ ApprovalScreen As screen:
                             Label2_3 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Points"
@@ -359,7 +356,6 @@ ApprovalScreen As screen:
                             Label2_4 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Justifications"
@@ -480,7 +476,6 @@ ApprovalScreen As screen:
                             Label2_5 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Name of the Approver"
@@ -557,7 +552,6 @@ ApprovalScreen As screen:
                             Label2_6 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
-                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height
                                 Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
                                 Text: ="Date of Approval"

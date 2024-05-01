@@ -700,30 +700,7 @@ ApprovalScreen As screen:
                     Height: =Parent.Height*0.5
                     HoverFill: =RGBA(40, 173, 62, 1)
                     OnSelect: |
-                        =If(
-                            IsBlank(
-                                LookUp(
-                                    'Managers&Approvers',
-                                    'Name (Manager)'.DisplayName = User().FullName
-                                )
-                            ),
-                            Patch(
-                                'Nominee List',
-                                LookUp(
-                                    'Nominee List',
-                                    'Nominee Name' = ComboBox3.Selected.'Nominee Name'
-                                ),
-                                {
-                                    Points: varEmployeeData.Points + 200,
-                                    Status: {Value: "Approved"}
-                                }
-                            );
-                            Notify(
-                                "Success",
-                                NotificationType.Success,
-                                1000
-                            ),
-                            If(
+                        = If(
                                 IsBlank(ComboBox1.Selected) || IsBlank(NomineeEmail1TextInput.Text) || IsBlank(TextInput2.Text) || IsBlank(ComboBox2.Selected),
                                 Notify(
                                     "Some fields are blank",
@@ -755,15 +732,14 @@ ApprovalScreen As screen:
                                     );
                                     Navigate(HomeScreen)
                                 )
-                            )
-                        );
+                         );
                         //If manager-> (false)check name should not be your Name, Patch data, (true) hr/ceo-> Up pending status to  approved & give extra 200 points on approve
                         Reset(ComboBox1);
                         Reset(NomineeEmail1TextInput);
                         Reset(TextInput2);
                         Reset(ComboBox2);
                     Size: =Switch(ApprovalScreen.Size,1,9,2,11,3,12,4,12)
-                    Text: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
+                    Text: ="Nominate"
                     Width: =Parent.Width*0.14
                     ZIndex: =3
 

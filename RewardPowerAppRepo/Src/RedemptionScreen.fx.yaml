@@ -13,7 +13,7 @@ RedemptionScreen As screen:
         Icon7 As icon.Folder:
             Color: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height
-            Icon: =Icon.Folder
+            Icon: =Icon.AddUser
             OnSelect: =Navigate(ProfileScreen,ScreenTransition.Fade)
             Width: =If(RedemptionScreen.Size=2||RedemptionScreen.Size=3,50, 64)
             ZIndex: =1

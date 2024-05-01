@@ -200,11 +200,11 @@ ApprovalScreen As screen:
                             ComboBox3 As combobox:
                                 ChevronBackground: =RGBA(255, 255, 255, 1)
                                 ChevronFill: =RGBA(0, 0, 0, 1)
-                                DisplayFields: =["NomineeName"]
+                                DisplayFields: =["Approver"]
                                 Height: =Parent.Height
                                 Items: =Filter('Nominee List',Status.Value="Pending")
-                                SearchFields: =["NomineeName"]
-                                SearchItems: =Search(Filter('Nominee List',Status.Value="Pending"),ComboBox3.SearchText,NomineeName)
+                                SearchFields: =["Approver"]
+                                SearchItems: =Search(Filter('Nominee List',Status.Value="Pending"),ComboBox3.SearchText,Approver)
                                 SelectMultiple: =false
                                 Width: =Parent.Width
                                 ZIndex: =1

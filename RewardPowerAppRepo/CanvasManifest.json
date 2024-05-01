@@ -116,13 +116,13 @@
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
-    "Name": "Reward_Employees - copy",
+    "Name": "Reward_Employees cp - copy - copy",
     "OriginatingVersion": "1.341",
     "ParserErrorCount": 1,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "06d154f0-6bac-4ac9-993a-a6e8916f1a3d",
+    "AppName": "60fbb847-49cf-474a-a677-46d4b9489e0f",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -136,6 +136,7 @@
     "HomeScreen",
     "NomineeListScreen",
     "RedemptionScreen",
-    "ApprovalScreen"
+    "ApprovalScreen",
+    "ProfileScreen"
   ]
 }

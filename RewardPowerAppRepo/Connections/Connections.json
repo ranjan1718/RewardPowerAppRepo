@@ -22,8 +22,8 @@
     "datasets": {
       "https://sigilotech.sharepoint.com/sites/RewardEmployees": {
         "dataSources": {
-          "Managers&Approvers": {
-            "tableName": "afab1cb8-d6b5-4444-944a-57c2626d1ede"
+          "EmployeeRoles": {
+            "tableName": "7d803e2b-5827-4318-93ad-a6012a7c1768"
           },
           "Nominee List": {
             "tableName": "9cc7df91-4b1a-4608-bcce-ffb8edd2c535"
@@ -40,8 +40,8 @@
     "dataSources": [
       "NomineeList",
       "PrizeList",
-      "Managers&Approvers",
-      "Nominee List"
+      "Nominee List",
+      "EmployeeRoles"
     ],
     "dependencies": {},
     "dependents": [],

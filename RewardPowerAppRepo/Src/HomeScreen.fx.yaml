@@ -46,7 +46,7 @@ HomeScreen As screen:
             Label5_2 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
+                Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
                 Width: =Parent.Width*0.05
                 ZIndex: =2
 
@@ -215,7 +215,7 @@ HomeScreen As screen:
         Size: =Switch(HomeScreen.Size,1,12,2,13,3,15,4,15)
         Text: =""
         Width: =Switch(HomeScreen.Size,1,Parent.Width*0.2,2,Parent.Width*0.2,3,Parent.Width*0.19,4,Parent.Width*0.19,Parent.Width*0.19)
-        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/3.2,(Parent.Width-Self.Width)/6.7)
+        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/3.2,(Parent.Width-Self.Width)/8)
         Y: =(Parent.Height-Self.Height)/1.4
         ZIndex: =4
 
@@ -230,7 +230,7 @@ HomeScreen As screen:
         PressedFill: =Color.Transparent
         Text: =""
         Width: =Parent.Width*0.19
-        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.9)
+        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/2)
         Y: =(Parent.Height-Self.Height)/1.4
         ZIndex: =5
 
@@ -269,7 +269,7 @@ HomeScreen As screen:
         Text: =""
         Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
         Width: =Parent.Width*0.19
-        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.1)
+        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.14)
         Y: =(Parent.Height-Self.Height)/1.4
         ZIndex: =7
 

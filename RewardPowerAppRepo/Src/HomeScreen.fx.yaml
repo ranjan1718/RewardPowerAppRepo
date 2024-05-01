@@ -129,7 +129,7 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)
+                Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager")),false,true)
                 Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
                 ZIndex: =7
 
@@ -149,7 +149,7 @@ HomeScreen As screen:
             Label5_3 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
-                Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.Email=varCurrUserData.Email)),false,true)
+                Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager")),false,true)
                 Width: =Parent.Width*0.05
                 ZIndex: =8
 
@@ -258,7 +258,7 @@ HomeScreen As screen:
             ClearCollect(varPendingUsers,ForAll('Nominee List',Status.Value="Pending")) //Get all users who has pending status
         PressedFill: =Color.Transparent
         Text: =""
-        Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)
+        Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager")),false,true)
         Width: =Parent.Width*0.19
         X: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.Email=varCurrUserData.Email)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.14)
         Y: =(Parent.Height-Self.Height)/1.4

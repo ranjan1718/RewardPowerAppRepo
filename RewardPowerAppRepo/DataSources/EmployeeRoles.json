@@ -17,7 +17,7 @@
       "{Link}": "Link to item",
       "{ModerationComment}": "Comments associated with the content approval of this list item",
       "{ModerationStatus}": "Content approval status",
-      "{Name}": "Name",
+      "{Name}": "Name ({Name})",
       "{Path}": "Folder path",
       "{Thumbnail}": "Thumbnail",
       "{TriggerWindowEndToken}": "Trigger Window End Token",
@@ -29,21 +29,20 @@
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
-      "HR_x002f_CEO": "HR/CEO",
-      "HR_x002f_CEO#Claims": "HR/CEO Claims",
       "ID": "ID",
-      "Manager": "Manager",
-      "Manager#Claims": "Manager Claims",
+      "Mail": "Mail",
       "Modified": "Modified",
+      "Name": "Name",
+      "Name#Claims": "Name Claims",
       "OData__ColorTag": "Color Tag",
-      "Title": "Title",
-      "Users": "Users"
+      "Role": "Role",
+      "Title": "Title"
     },
     "DatasetName": "https://sigilotech.sharepoint.com/sites/RewardEmployees",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "Managers&Approvers",
+    "Name": "EmployeeRoles",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

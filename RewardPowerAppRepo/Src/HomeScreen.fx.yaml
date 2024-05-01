@@ -145,7 +145,7 @@ HomeScreen As screen:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
                     Size: =Switch(HomeScreen.Size,1,8,2,13,3,13,4,13)
-                    Text: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),"Approve","Nominate")
+                    Text: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),"Approve","Nominate")
                     Width: =Parent.Width
                     ZIndex: =2
 

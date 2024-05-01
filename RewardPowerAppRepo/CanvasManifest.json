@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 6,
+    "BindingErrorCount": 66,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -122,7 +122,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "60fbb847-49cf-474a-a677-46d4b9489e0f",
+    "AppName": "06d154f0-6bac-4ac9-993a-a6e8916f1a3d",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",

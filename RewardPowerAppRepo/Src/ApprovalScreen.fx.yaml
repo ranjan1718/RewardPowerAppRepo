@@ -193,7 +193,6 @@ ApprovalScreen As screen:
                             RadiusBottomRight: =10
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
-                            Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),true,false)
                             Width: =Parent.Width*0.55
                             ZIndex: =3
 

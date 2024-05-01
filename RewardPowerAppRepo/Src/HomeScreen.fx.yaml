@@ -264,8 +264,8 @@ HomeScreen As screen:
         Height: =Switch(HomeScreen.Size,1,Parent.Height*0.22,2,Parent.Height*0.22,3,Parent.Height*0.31,4,Parent.Height*0.31,Parent.Height*0.31)
         HoverFill: =Color.Transparent
         OnSelect: |-
-            =Navigate(ApprovalScreen);
-            ClearCollect(varPendingUsers,ForAll('Nominee List',Status.Value="Pending")) //Get all users who has pending status
+            =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" )),Navigate(ApprovalScreen),If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR","Nominate")),Navigate(ApproveByHRScreen)));
+            ClearCollect(varPendingUsers,ForAll('Nominee List',Status.Value="Pending")); //Get all users who has pending status
         PressedFill: =Color.Transparent
         Text: =""
         Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)

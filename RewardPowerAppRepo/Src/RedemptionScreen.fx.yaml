@@ -56,203 +56,47 @@ RedemptionScreen As screen:
             ZIndex: =2
 
     RedemptionBodyContainer As groupContainer.horizontalAutoLayoutContainer:
-        DropShadow: =DropShadow.Regular
-        Fill: =RGBA(167, 182, 203, 1)
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height*0.7
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =5
-        LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
-        PaddingBottom: =10
-        PaddingLeft: =10
-        PaddingRight: =10
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
         PaddingTop: =10
-        RadiusBottomLeft: =10
-        RadiusBottomRight: =10
-        RadiusTopLeft: =10
-        RadiusTopRight: =10
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
         Width: =Parent.Width*0.9
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/1.1
         ZIndex: =3
 
-        ListHeaderContainer_1 As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.Center
-            BorderColor: =RGBA(128, 128, 128, 1)
-            DropShadow: =DropShadow.None
-            Fill: =RGBA(167, 182, 203, 1)
+        SubCN As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(214, 223, 238, 1)
             FillPortions: =0
-            Height: =Parent.Height*0.12
-            LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutJustifyContent: =LayoutJustifyContent.End
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Width: =Parent.Width
-            X: =Parent.X
-            Y: =(Parent.Height-Self.Height)/2
-            ZIndex: =2
-
-            Label8 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Bold
-                Height: =If(RedemptionScreen.Size=2,40,RedemptionScreen.Size=3,30,40)
-                Size: =20
-                Text: |-
-                    ="Points:"
-                Width: =If(RedemptionScreen.Size=2,110,RedemptionScreen.Size=3,140,150)
-                ZIndex: =2
-
-            Label9 As label:
-                Size: =20
-                Text: =LookUp('Nominee List', 'Nominee Name'=User().FullName,Points)
-                Width: =If(RedemptionScreen.Size=2,100,RedemptionScreen.Size=3,140,150)
-                ZIndex: =3
-
-        Container19 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Semibold
-            Fill: =RGBA(227, 234, 243, 1)
-            Height: =Parent.Height
-            LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutGap: =15
+            Height: =Parent.Height/7
             LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Width: =Parent.Width
-            ZIndex: =3
+            Width: =Parent.Width*0.2
+            ZIndex: =1
 
-            Label14 As label:
+            Label9 As label:
                 Align: =Align.Center
-                BorderThickness: =3
-                Color: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(15, 124, 219, 0.78)
-                Font: =Font.'Courier New'
+                AlignInContainer: =AlignInContainer.Stretch
+                Fill: =RGBA(214, 223, 238, 1)
                 FontWeight: =FontWeight.Bold
-                Height: |
-                    =Parent.Height*0.14
-                Size: =20
+                Height: |-
+                    =If(RedemptionScreen.Size=1,40,RedemptionScreen.Size=2||RedemptionScreen.Size=3,50,50
+                    )
+                LayoutMinHeight: =0
+                Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
                 Text: ="Gifts"
-                Width: =Parent.Width*0.3
+                Width: =If(RedemptionScreen.Size=1,100,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,150)
                 ZIndex: =1
-
-            "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
-                AlignInContainer: =AlignInContainer.Center
-                BorderThickness: =3
-                DelayItemLoading: =true
-                Fill: =RGBA(167, 182, 203, 1)
-                FillPortions: =0
-                Height: =Parent.Height*0.6
-                Items: =PrizeList
-                Layout: =Layout.Vertical
-                LayoutMinHeight: =287
-                LayoutMinWidth: =320
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplatePadding: =0
-                TemplateSize: =90
-                ZIndex: =2
-
-                Title10 As label:
-                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                    Height: =Self.Size * 1.8
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =ThisItem.Title
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =Parent.TemplateWidth - 86
-                    X: =16
-                    Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle9.Size * 1.8)) / 2
-                    ZIndex: =1
-
-                Subtitle9 As label:
-                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                    Height: =50
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =20
-                    Text: =ThisItem.Prize.Value
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =312
-                    X: =135
-                    Y: =25
-                    ZIndex: =2
-
-                NextArrow9 As icon.ChevronRight:
-                    AccessibleLabel: =Self.Tooltip
-                    Color: =RGBA(166, 166, 166, 1)
-                    Height: =50
-                    Icon: =Icon.ChevronRight
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =16
-                    PaddingLeft: =16
-                    PaddingRight: =16
-                    PaddingTop: =16
-                    Tooltip: ="View item details"
-                    Width: =50
-                    X: =Parent.TemplateWidth - Self.Width - 12
-                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                    ZIndex: =3
-
-                Separator9 As rectangle:
-                    Height: =8
-                    OnSelect: =Select(Parent)
-                    Width: =Parent.TemplateWidth
-                    Y: =Parent.TemplateHeight - Self.Height
-                    ZIndex: =4
-
-                Rectangle10 As rectangle:
-                    Height: =Parent.TemplateHeight - Separator9.Height
-                    OnSelect: =Select(Parent)
-                    Visible: =ThisItem.IsSelected
-                    Width: =4
-                    ZIndex: =5
-
-                Button19 As button:
-                    DisplayMode: =If(LookUp('Nominee List', 'Nominee Name'=User().FullName).Points>= ThisItem.point,DisplayMode.Edit,DisplayMode.Disabled)
-                    OnSelect: |-
-                        =
-                        If(
-                            LookUp('Nominee List', 'Nominee Name' = User().FullName).Points >= ThisItem.point,
-                            // If the user has enough points to redeem the gift
-                            Patch(
-                                'Nominee List',
-                                LookUp('Nominee List', 'Nominee Name' = User().FullName),
-                                { 
-                                    Points: LookUp('Nominee List', 'Nominee Name' = User().FullName).Points - ThisItem.point
-                                }
-                            );
-                            // Deduct the points from the user's points
-                        
-                            Collect(
-                                RedeemedPrizes,
-                                { 'Nominee Name': User().FullName, Redeemed: ThisItem.Prize }
-                            );
-                         
-                            // Add the redeemed gift to the RedeemedPrizes collection
-                            Notify("Gift redeemed successfully", NotificationType.Success);
-                            // Show a success message   
-                           
-                        );
-                        
-                        Refresh('Nominee List');
-                    Text: ="Redeem"
-                    X: =418
-                    Y: =30
-                    ZIndex: =6
 

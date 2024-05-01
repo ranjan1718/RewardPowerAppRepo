@@ -153,7 +153,7 @@ ApprovalScreen As screen:
                             RadiusBottomRight: =10
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
-                            Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),false,true)
+                            Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),false,true)
                             Width: =Parent.Width*0.55
                             ZIndex: =2
 
@@ -184,7 +184,7 @@ ApprovalScreen As screen:
                             RadiusBottomRight: =10
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
-                            Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
+                            Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),true,false)
                             Width: =Parent.Width*0.55
                             ZIndex: =3
 
@@ -243,9 +243,9 @@ ApprovalScreen As screen:
 
                         NomineeEmail1TextInput As text:
                             BorderColor: =RGBA(116, 116, 116, 1)
-                            Default: =If(!IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),LookUp(Office365Users.SearchUser(),DisplayName=ComboBox1.Selected.DisplayName,Mail))
+                            Default: =If(!IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),LookUp(Office365Users.SearchUser(),DisplayName=ComboBox1.Selected.DisplayName,Mail))
                             DisabledColor: =RGBA(102, 102, 102, 1)
-                            DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
+                            DisplayMode: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height*0.45
                             RadiusBottomLeft: =10
@@ -253,7 +253,7 @@ ApprovalScreen As screen:
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
                             Size: =15
-                            Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),false,true)
+                            Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),false,true)
                             Width: =Parent.Width*0.55
                             ZIndex: =2
 
@@ -266,7 +266,7 @@ ApprovalScreen As screen:
                             RadiusBottomRight: =10
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
-                            Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
+                            Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),true,false)
                             Width: =Parent.Width*0.55
                             ZIndex: =3
 
@@ -358,7 +358,7 @@ ApprovalScreen As screen:
 
                             TextInput2 As text:
                                 Default: =""
-                                DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
+                                DisplayMode: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Format: =TextFormat.Number
                                 Height: =Parent.Height
                                 Size: =15
@@ -428,7 +428,7 @@ ApprovalScreen As screen:
 
                             ComboBox2 As combobox:
                                 DisplayFields: =["Value"]
-                                DisplayMode: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
+                                DisplayMode: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Height: =Parent.Height
                                 IsSearchable: =false
                                 Items: =Choices('Nominee List'.Justification)
@@ -548,7 +548,7 @@ ApprovalScreen As screen:
 
                             TextInput1_2 As text:
                                 BorderColor: =RGBA(116, 116, 116, 1)
-                                Default: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),User().FullName,"Closed")
+                                Default: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),User().FullName,"Closed")
                                 DisabledColor: =RGBA(102, 102, 102, 1)
                                 DisplayMode: =DisplayMode.Disabled
                                 FontWeight: =FontWeight.Semibold
@@ -669,7 +669,7 @@ ApprovalScreen As screen:
                         Notify("Success",NotificationType.Success,1000);
                         Navigate(HomeScreen);
                     Text: ="Reject"
-                    Visible: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),true,false)
+                    Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),true,false)
                     Width: =Parent.Width*0.15
                     ZIndex: =1
 
@@ -687,7 +687,7 @@ ApprovalScreen As screen:
                             IsBlank(
                                 LookUp(
                                     'Managers&Approvers',
-                                    Manager.DisplayName = User().FullName
+                                    'Name (Manager)'.DisplayName = User().FullName
                                 )
                             ),
                             Patch(
@@ -745,7 +745,7 @@ ApprovalScreen As screen:
                         Reset(NomineeEmail1TextInput);
                         Reset(TextInput2);
                         Reset(ComboBox2);
-                    Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
+                    Text: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
                     Width: =Parent.Width*0.15
                     ZIndex: =3
 
@@ -826,7 +826,7 @@ ApprovalScreen As screen:
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
             Size: =22
-            Text: =If(IsBlank(LookUp('Managers&Approvers',Manager.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
+            Text: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
             Width: =Parent.Width
             ZIndex: =1
 

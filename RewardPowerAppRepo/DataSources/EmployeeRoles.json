@@ -30,19 +30,19 @@
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
       "ID": "ID",
-      "Manager": "Name (Manager)",
-      "Manager#Claims": "Name Claims",
+      "Mail": "Mail",
       "Modified": "Modified",
+      "Name": "Name",
+      "Name#Claims": "Name Claims",
       "OData__ColorTag": "Color Tag",
       "Role": "Role",
-      "Title": "Title",
-      "Users": "Mail"
+      "Title": "Title"
     },
     "DatasetName": "https://sigilotech.sharepoint.com/sites/RewardEmployees",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "Managers&Approvers",
+    "Name": "EmployeeRoles",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

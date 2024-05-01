@@ -258,7 +258,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -268,7 +268,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -453,7 +453,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -1655,7 +1655,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultLabelStyle",
@@ -3903,7 +3903,7 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -4536,7 +4536,7 @@
       "MetaDataIDKey": "",
       "Name": "Label5_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4859,7 +4859,7 @@
       "MetaDataIDKey": "",
       "Name": "Label5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5507,7 +5507,7 @@
       "MetaDataIDKey": "",
       "Name": "Label5_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6588,7 +6588,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -7175,7 +7175,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

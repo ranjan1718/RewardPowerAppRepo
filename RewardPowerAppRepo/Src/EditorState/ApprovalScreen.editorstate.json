@@ -162,8 +162,7 @@
           "InvariantPropertyName": "BorderThickness",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        "Visible"
+        }
       ],
       "DynamicProperties": [
         {
@@ -238,11 +237,6 @@
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
-          "RuleProviderType": "Unknown"
-        },
         {
           "Category": "Design",
           "PropertyName": "BorderThickness",
@@ -3311,7 +3305,7 @@
       "MetaDataIDKey": "",
       "Name": "Container5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16158,7 +16152,7 @@
       "MetaDataIDKey": "",
       "Name": "NominatorContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17689,7 +17683,7 @@
       "MetaDataIDKey": "",
       "Name": "NomineeNameContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17936,7 +17930,7 @@
       "MetaDataIDKey": "",
       "Name": "NomineeNameContainer_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

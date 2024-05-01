@@ -5456,8 +5456,7 @@
         "PaddingTop",
         "PaddingRight",
         "PaddingBottom",
-        "PaddingLeft",
-        "Visible"
+        "PaddingLeft"
       ],
       "DynamicProperties": [
         {
@@ -5524,11 +5523,6 @@
         {
           "Category": "Data",
           "PropertyName": "Role",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         },
         {

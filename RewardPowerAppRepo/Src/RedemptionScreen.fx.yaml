@@ -79,6 +79,8 @@ RedemptionScreen As screen:
             Fill: =RGBA(214, 223, 238, 1)
             FillPortions: =0
             Height: =Parent.Height/7
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =If(RedemptionScreen.Size=4,150,If(RedemptionScreen.Size=2,50,100))
             LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -88,11 +90,124 @@ RedemptionScreen As screen:
 
             Label8 As label:
                 Align: =Align.Center
-                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Bold
+                Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,10,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Text: ="Gifts"
+                Width: =If(RedemptionScreen.Size=1,Parent.Width/4,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
+                ZIndex: =1
+
+            Label8_2 As label:
+                Align: =Align.Center
                 FontWeight: =FontWeight.Bold
                 Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
                 Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
-                Text: ="Gifts"
-                Width: =If(RedemptionScreen.Size=1,100,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,150)
+                Text: ="Points"
+                Width: |
+                    =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
+                ZIndex: =2
+
+            Label8_3 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Text: =""
+                Width: |
+                    =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
+                ZIndex: =3
+
+        DataCN As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =2
+
+            Gallery1 As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =Parent.Height-SubCN.Height
+                Items: =PrizeList
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =0
+                LayoutMinWidth: =0
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =70
+                Width: =If(RedemptionScreen.Size=1,200,RedemptionScreen.Size=2||RedemptionScreen.Size=3,350,500)
                 ZIndex: =1
+
+                SubCN_1 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =Parent.Height/5
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutGap: =If(RedemptionScreen.Size=4,150,If(RedemptionScreen.Size=2,50,100))
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =5
+                    Width: =Parent.TemplateWidth
+                    X: =
+                    ZIndex: =1
+
+                    Label8_4 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Height: =If(RedemptionScreen.Size=1,40,RedemptionScreen.Size=2||RedemptionScreen.Size=3,70,25)
+                        Size: =If(RedemptionScreen.Size=1,8,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,20)
+                        Text: =ThisItem.Prize.Value
+                        Width: =If(RedemptionScreen.Size=1,120,RedemptionScreen.Size=2,138,RedemptionScreen.Size=3,180,190)
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =(Parent.Height
+                        ZIndex: =1
+
+                    Label8_5 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Height: =If(RedemptionScreen.Size=1,40,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                        Size: =If(RedemptionScreen.Size=1,8,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,20)
+                        Text: =ThisItem.point
+                        Width: =If(RedemptionScreen.Size=1,120,RedemptionScreen.Size=2,135,RedemptionScreen.Size=3,180,180)
+                        ZIndex: =2
+
+                    Button12 As button:
+                        AlignInContainer: =AlignInContainer.Center
+                        DisplayMode: =If(LookUp('Nominee List', 'Nominee Name'=User().FullName).Points>= ThisItem.point,DisplayMode.Edit,DisplayMode.Disabled)
+                        LayoutMinWidth: =0
+                        OnSelect: |-
+                            =
+                            If(
+                                LookUp('Nominee List', 'Nominee Name' = User().FullName).Points >= ThisItem.point,
+                                // If the user has enough points to redeem the gift
+                                Patch(
+                                    'Nominee List',
+                                    LookUp('Nominee List', 'Nominee Name' = User().FullName),
+                                    { 
+                                        Points: LookUp('Nominee List', 'Nominee Name' = User().FullName).Points - ThisItem.point,
+                                        Redeemed:[ThisItem.Prize]
+                            
+                                    }
+                                );
+                                  
+                               
+                                // Deduct the points from the user's points
+                                Collect(
+                                    RedeemedPrizes,
+                                    { 'Nominee Name': User().FullName, Redeemed: ThisItem.Prize }
+                                );
+                             
+                                // Add the redeemed gift to the RedeemedPrizes collection
+                                Notify("Gift redeemed successfully", NotificationType.Success)
+                                // Show a success message   
+                            
+                            
+                            )
+                        Size: =If(RedemptionScreen.Size=1,10,RedemptionScreen.Size=2,20,RedemptionScreen.Size=3,20,20)
+                        Text: ="Click"
+                        Width: =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2,90,RedemptionScreen.Size=3,110,180)
+                        ZIndex: =3
 

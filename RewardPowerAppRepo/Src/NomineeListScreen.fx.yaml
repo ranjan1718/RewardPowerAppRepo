@@ -2,62 +2,71 @@ NomineeListScreen As screen:
     Fill: =RGBA(222, 222, 222, 1)
 
     HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(232, 75, 70, 1)
-        Height: =Parent.Height*0.21
+        Fill: =RGBA(114, 45, 173, 0.96)
+        Height: =Parent.Height*0.15
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
         ZIndex: =1
 
+        ImageContainer_1 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Center
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width*0.15
+            ZIndex: =1
+
+            Image1_1 As image:
+                Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.5,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
+                Image: =User().Image
+                RadiusBottomLeft: =45
+                RadiusBottomRight: =45
+                RadiusTopLeft: =45
+                RadiusTopRight: =45
+                Width: =Parent.Width*0.2
+                ZIndex: =1
+
+            Label1_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Courier New'
+                FontWeight: =FontWeight.Bold
+                Height: =Parent.Height*0.28
+                Size: =Switch(HomeScreen.Size,1,12,2,15,3,15,4,15)
+                Text: =User().FullName
+                Width: =Parent.Width
+                ZIndex: =2
+
+        Label11_3 As label:
+            Text: =""
+            Width: =Parent.Width*0.7
+            X: =(Parent.Width-Self.Width)
+            ZIndex: =2
+
         Icon6 As icon.Home:
             Color: =RGBA(255, 255, 255, 1)
             Icon: =Icon.Home
             OnSelect: =Navigate(HomeScreen)
             X: =(Parent.Width-Self.Width)/2
-            ZIndex: =1
+            ZIndex: =3
 
         Label11_1 As label:
             Text: =""
             Width: =Parent.Width*0.04
             X: =(Parent.Width-Self.Width)
-            ZIndex: =2
-
-    ImageContainer_1 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.None
-        Height: =Parent.Height*0.21
-        LayoutAlignItems: =LayoutAlignItems.Center
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutJustifyContent: =LayoutJustifyContent.Center
-        LayoutMode: =LayoutMode.Auto
-        Width: =Parent.Width*0.18
-        ZIndex: =2
-
-        Image1_1 As image:
-            Height: =Parent.Height*0.7
-            Image: =User().Image
-            RadiusBottomLeft: =40
-            RadiusBottomRight: =40
-            RadiusTopLeft: =40
-            RadiusTopRight: =40
-            Width: =Parent.Width*0.7
-            ZIndex: =1
-
-        Label1_1 As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Courier New'
-            FontWeight: =FontWeight.Bold
-            Height: =Parent.Height*0.25
-            Size: =18
-            Text: =User().FullName
-            Width: =Parent.Width
-            ZIndex: =2
+            ZIndex: =4
 
     ListBodyContainer As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =Parent.Height*0.7
+        Height: =Parent.Height*0.8
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
@@ -79,7 +88,6 @@ NomineeListScreen As screen:
         ListHeaderContainer As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.Start
             BorderColor: =RGBA(128, 128, 128, 1)
-            BorderThickness: =3
             DropShadow: =DropShadow.None
             FillPortions: =0
             Height: =Parent.Height*0.12
@@ -99,10 +107,10 @@ NomineeListScreen As screen:
 
             Label12 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(116, 116, 116, 1)
+                BorderColor: =RGBA(255, 255, 255, 1)
                 BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(196, 45, 45, 1)
+                Fill: =RGBA(0, 121, 187, 1)
                 Font: =Font.'Courier New'
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height
@@ -113,10 +121,10 @@ NomineeListScreen As screen:
 
             Label13 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(77, 77, 77, 1)
+                BorderColor: =RGBA(255, 255, 255, 1)
                 BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(196, 45, 45, 1)
+                Fill: =RGBA(0, 121, 187, 1)
                 Font: =Font.'Courier New'
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height
@@ -127,10 +135,10 @@ NomineeListScreen As screen:
 
             Label13_1 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(102, 102, 102, 1)
-                BorderThickness: =1
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(196, 45, 45, 1)
+                Fill: =RGBA(0, 121, 187, 1)
                 Font: =Font.'Courier New'
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height
@@ -155,7 +163,7 @@ NomineeListScreen As screen:
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =Parent.Height*0.4
+                TemplateSize: =Parent.Height*0.45
                 Width: =Parent.Width
                 Y: =(Parent.Height-Self.Height)/2
                 ZIndex: =1
@@ -183,22 +191,6 @@ NomineeListScreen As screen:
                     Y: =(Parent.TemplateHeight-Self.Height)/2
                     ZIndex: =2
 
-                Label18_1 As label:
-                    Align: =Align.Center
-                    Font: =Font.Verdana
-                    FontWeight: =FontWeight.Semibold
-                    Height: =Parent.TemplateHeight*0.9
-                    OnSelect: =Select(Parent)
-                    Overflow: =Overflow.Scroll
-                    Text: |-
-                        =Concat(ThisItem.Justification,Value,"
-                        
-                        ")
-                    Width: =Parent.Width/3.1
-                    X: =(Parent.Width-Self.Width)/2
-                    Y: =(Parent.TemplateHeight-Self.Height)/2
-                    ZIndex: =3
-
                 Button9 As button:
                     Fill: =Switch(CountRows(ThisItem.Justification),1,Color.LimeGreen,2,RGBA(227, 41, 41, 1),3,Color.BlueViolet,4,Color.BurlyWood,5,Color.SkyBlue,Color.Transparent)
                     Height: =Parent.Height*0.12
@@ -209,4 +201,30 @@ NomineeListScreen As screen:
                     X: =(Parent.Width-Self.Width)*0.95
                     Y: =(Parent.TemplateHeight-Self.Height)/2
                     ZIndex: =4
+
+                Container2 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =Parent.TemplateHeight*0.95
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    Width: =Parent.TemplateWidth/3
+                    X: =(Parent.TemplateWidth-Self.Width)/2
+                    ZIndex: =5
+
+                    Label18_1 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =15
+                        Text: |-
+                            =Concat(ThisItem.Justification,Value,"
+                            
+                            ")
+                        Width: =Parent.Width
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =1
 

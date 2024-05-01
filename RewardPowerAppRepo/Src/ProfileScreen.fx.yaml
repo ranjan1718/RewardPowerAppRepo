@@ -3,7 +3,116 @@ ProfileScreen As screen:
     Container3 As groupContainer.verticalAutoLayoutContainer:
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =50
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
         ZIndex: =1
+
+        HeaderContainer_3 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(114, 45, 173, 0.96)
+            FillPortions: =0
+            Height: =Parent.Height*0.15
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =1
+
+        HeaderContainer_4 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =Parent.Height*0.15
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =If(ProfileScreen.Size=4,150,If(ProfileScreen.Size=2,50,100))
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =2
+
+            Label8_7 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Bold
+                Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Text: ="Gifts"
+                Width: |
+                    =If(ProfileScreen.Size=1,Parent.Width/3,ProfileScreen.Size=2||ProfileScreen.Size=3,150,180)
+                ZIndex: =1
+
+            Label8_8 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Bold
+                Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Text: ="Points"
+                Width: |
+                    =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
+                ZIndex: =2
+
+        Container7 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            Gallery2 As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Items: ='Nominee List'
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                ZIndex: =1
+
+                Label9 As label:
+                    Height: =66
+                    OnSelect: =Select(Parent)
+                    Text: =
+                    X: =434
+                    ZIndex: =1
+
+    ImageContainer_4 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height*0.15
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width*0.24
+        ZIndex: =2
+
+        Image1_1 As image:
+            Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.5,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
+            Image: =User().Image
+            RadiusBottomLeft: =45
+            RadiusBottomRight: =45
+            RadiusTopLeft: =45
+            RadiusTopRight: =45
+            Width: =Parent.Width*0.2
+            ZIndex: =1
+
+        Label1_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height*0.28
+            Size: =Switch(HomeScreen.Size,1,12,2,15,3,15,4,15)
+            Text: =User().FullName
+            Width: =Parent.Width
+            ZIndex: =2
 

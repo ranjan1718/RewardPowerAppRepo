@@ -88,15 +88,6 @@ RedemptionScreen As screen:
             Width: =Parent.Width*0.2
             ZIndex: =1
 
-            Label8 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Bold
-                Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
-                Size: =If(RedemptionScreen.Size=1,10,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
-                Text: ="Gifts"
-                Width: =If(RedemptionScreen.Size=1,Parent.Width/4,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
-                ZIndex: =1
-
             Label8_2 As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Bold

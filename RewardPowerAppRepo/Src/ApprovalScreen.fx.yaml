@@ -3,8 +3,8 @@ ApprovalScreen As screen:
 
     BodyContainer_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Fill: =RGBA(245, 245, 245, 1)
-        Height: =Parent.Height*0.7
+        Fill: =RGBA(240, 240, 240, 1)
+        Height: =Parent.Height*0.72
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
@@ -29,7 +29,7 @@ ApprovalScreen As screen:
             BorderColor: =RGBA(219, 219, 219, 1)
             DropShadow: =DropShadow.None
             FillPortions: =0
-            Height: =Parent.Height*0.15
+            Height: =Parent.Height*0.05
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -43,7 +43,7 @@ ApprovalScreen As screen:
             ZIndex: =2
 
         Label7_1 As label:
-            Height: =Parent.Height*0.05
+            Height: =Parent.Height*0.02
             Text: =""
             Width: =Parent.Width
             ZIndex: =3
@@ -51,7 +51,7 @@ ApprovalScreen As screen:
         FormBodyContainer As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.None
             FillPortions: =0
-            Height: =Parent.Height*1.15
+            Height: =Parent.Height*0.88
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -65,9 +65,10 @@ ApprovalScreen As screen:
                 BorderStyle: =BorderStyle.Dashed
                 DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =Parent.Height*0.45
+                Height: =Parent.Height*0.72
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
                 LayoutMinHeight: =100
                 LayoutMinWidth: =50
                 LayoutMode: =LayoutMode.Auto
@@ -82,7 +83,7 @@ ApprovalScreen As screen:
                     DropShadow: =DropShadow.None
                     Fill: =RGBA(255, 255, 255, 1)
                     FillPortions: =0
-                    Height: =Parent.Height*0.4
+                    Height: =Parent.Height/2.5
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -94,6 +95,12 @@ ApprovalScreen As screen:
                     Width: =Parent.Width*0.98
                     Y: =(Parent.Y)
                     ZIndex: =1
+
+                    Label8 As label:
+                        Height: =Parent.Height
+                        Text: =""
+                        Width: =Parent.Width*0.05
+                        ZIndex: =1
 
                     NomineeNameContainer As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
@@ -107,31 +114,32 @@ ApprovalScreen As screen:
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         Width: =Parent.Width*0.48
-                        ZIndex: =1
+                        ZIndex: =2
 
                         Container1 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Center
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =Parent.Height*0.35
+                            Height: =Parent.Height*0.4
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.8
+                            Width: =Parent.Width*0.75
                             ZIndex: =1
 
                             Label4 As label:
                                 Color: =RGBA(255, 0, 0, 1)
-                                Size: =22
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,12,3,14,4,14)
                                 Text: ="*"
-                                Width: =Parent.Width*0.06
+                                Width: =Parent.Width*0.04
                                 ZIndex: =1
 
                             Label2 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,11,3,13,4,13)
                                 Text: ="Name of the Nominee"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -142,7 +150,7 @@ ApprovalScreen As screen:
                             BorderThickness: =2
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =Parent.Height*0.45
+                            Height: =Parent.Height*0.35
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -166,6 +174,7 @@ ApprovalScreen As screen:
                                 SearchFields: =["DisplayName"]
                                 SearchItems: =Search(Office365Users.SearchUser(),ComboBox1.SearchText,DisplayName)
                                 SelectMultiple: =false
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,11,3,13,4,13)
                                 Width: =Parent.Width
                                 ZIndex: =1
 
@@ -211,8 +220,8 @@ ApprovalScreen As screen:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width*0.5
-                        ZIndex: =2
+                        Width: =Parent.Width*0.42
+                        ZIndex: =3
 
                         Container1_1 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Center
@@ -222,21 +231,21 @@ ApprovalScreen As screen:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.8
+                            Width: =Parent.Width*0.65
                             ZIndex: =1
 
                             Label4_1 As label:
                                 Color: =RGBA(255, 0, 0, 1)
-                                Size: =22
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,12,3,14,4,14)
                                 Text: ="*"
-                                Width: =Parent.Width*0.06
+                                Width: =Parent.Width*0.04
                                 ZIndex: =1
 
                             Label2_2 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,11,3,13,4,13)
                                 Text: ="Email of the Nominee"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -247,12 +256,12 @@ ApprovalScreen As screen:
                             DisabledColor: =RGBA(102, 102, 102, 1)
                             DisplayMode: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                             FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height*0.45
+                            Height: =Parent.Height*0.35
                             RadiusBottomLeft: =10
                             RadiusBottomRight: =10
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
-                            Size: =15
+                            Size: =Switch(ApprovalScreen.Size,1,8,2,11,3,13,4,13)
                             Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),false,true)
                             Width: =Parent.Width*0.55
                             ZIndex: =2
@@ -282,7 +291,7 @@ ApprovalScreen As screen:
                     DropShadow: =DropShadow.None
                     Fill: =RGBA(255, 255, 255, 1)
                     FillPortions: =0
-                    Height: =Parent.Height*0.4
+                    Height: =Parent.Height/2.5
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -294,6 +303,12 @@ ApprovalScreen As screen:
                     Width: =Parent.Width*0.98
                     Y: =(Parent.Y)
                     ZIndex: =3
+
+                    Label8_1 As label:
+                        Height: =Parent.Height
+                        Text: =""
+                        Width: =Parent.Width*0.05
+                        ZIndex: =1
 
                     NomineeNameContainer_1 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
@@ -307,7 +322,7 @@ ApprovalScreen As screen:
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         Width: =Parent.Width*0.48
-                        ZIndex: =1
+                        ZIndex: =2
 
                         Container1_2 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Center
@@ -317,21 +332,21 @@ ApprovalScreen As screen:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.8
+                            Width: =Parent.Width*0.65
                             ZIndex: =1
 
                             Label4_2 As label:
                                 Color: =RGBA(255, 0, 0, 1)
-                                Size: =22
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,12,3,14,4,14)
                                 Text: ="*"
-                                Width: =Parent.Width*0.06
+                                Width: =Parent.Width*0.04
                                 ZIndex: =1
 
                             Label2_3 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,11,3,13,4,13)
                                 Text: ="Points"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -342,7 +357,7 @@ ApprovalScreen As screen:
                             BorderThickness: =2
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =Parent.Height*0.45
+                            Height: =Parent.Height*0.35
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -361,7 +376,7 @@ ApprovalScreen As screen:
                                 DisplayMode: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Format: =TextFormat.Number
                                 Height: =Parent.Height
-                                Size: =15
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,11,3,13,4,13)
                                 Width: =Parent.Width
                                 ZIndex: =1
 
@@ -376,8 +391,8 @@ ApprovalScreen As screen:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width*0.5
-                        ZIndex: =2
+                        Width: =Parent.Width*0.42
+                        ZIndex: =3
 
                         Container1_3 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Center
@@ -387,21 +402,21 @@ ApprovalScreen As screen:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            Width: =Parent.Width*0.8
+                            Width: =Parent.Width*0.65
                             ZIndex: =1
 
                             Label4_3 As label:
                                 Color: =RGBA(255, 0, 0, 1)
-                                Size: =22
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,12,3,14,4,14)
                                 Text: ="*"
-                                Width: =Parent.Width*0.06
+                                Width: =Parent.Width*0.04
                                 ZIndex: =1
 
                             Label2_4 As label:
                                 Color: =RGBA(0, 94, 146, 1)
                                 Font: =Font.Arial
                                 Height: =Parent.Height
-                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,11,3,13,4,13)
                                 Text: ="Justifications"
                                 Width: =Parent.Width*0.8
                                 ZIndex: =2
@@ -412,7 +427,7 @@ ApprovalScreen As screen:
                             BorderThickness: =2
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =Parent.Height*0.45
+                            Height: =Parent.Height*0.35
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -427,6 +442,8 @@ ApprovalScreen As screen:
                             ZIndex: =2
 
                             ComboBox2 As combobox:
+                                ChevronBackground: =RGBA(255, 255, 255, 1)
+                                ChevronFill: =RGBA(0, 0, 0, 1)
                                 DisplayFields: =["Value"]
                                 DisplayMode: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Height: =Parent.Height
@@ -434,6 +451,7 @@ ApprovalScreen As screen:
                                 Items: =Choices('Nominee List'.Justification)
                                 SearchFields: =["Value"]
                                 SearchItems: =Choices('Nominee List'.Justification,ComboBox2.SearchText)
+                                Size: =Switch(ApprovalScreen.Size,1,8,2,11,3,13,4,13)
                                 Width: =Parent.Width
                                 ZIndex: =1
 
@@ -463,6 +481,7 @@ ApprovalScreen As screen:
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8
                 RadiusTopRight: =8
+                Visible: =false
                 Width: =Parent.Width*0.98
                 ZIndex: =3
 
@@ -635,7 +654,7 @@ ApprovalScreen As screen:
                     ZIndex: =2
 
             Label7_6 As label:
-                Height: =Parent.Height*0.06
+                Height: =Parent.Height*0.02
                 Text: =""
                 Width: =Parent.Width
                 ZIndex: =4
@@ -643,13 +662,12 @@ ApprovalScreen As screen:
             SubmitContainer As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(116, 116, 116, 1)
-                BorderThickness: =1
                 DropShadow: =DropShadow.None
-                Fill: =RGBA(237, 237, 237, 1)
+                Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =0
-                Height: =Parent.Height*0.18
+                Height: =Parent.Height*0.22
                 LayoutAlignItems: =LayoutAlignItems.Center
-                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutJustifyContent: =LayoutJustifyContent.Center
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
@@ -657,7 +675,7 @@ ApprovalScreen As screen:
                 RadiusBottomRight: =10
                 RadiusTopLeft: =10
                 RadiusTopRight: =10
-                Width: =Parent.Width*0.98
+                Width: =Parent.Width*0.96
                 ZIndex: =5
 
                 RejectButton As button:
@@ -680,7 +698,7 @@ ApprovalScreen As screen:
 
                 SubmitButton As button:
                     Fill: =RGBA(40, 173, 62, 1)
-                    Height: =Parent.Height*0.4
+                    Height: =Parent.Height*0.5
                     HoverFill: =RGBA(40, 173, 62, 1)
                     OnSelect: |
                         =If(
@@ -745,8 +763,9 @@ ApprovalScreen As screen:
                         Reset(NomineeEmail1TextInput);
                         Reset(TextInput2);
                         Reset(ComboBox2);
+                    Size: =Switch(ApprovalScreen.Size,1,9,2,11,3,12,4,12)
                     Text: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
-                    Width: =Parent.Width*0.15
+                    Width: =Parent.Width*0.14
                     ZIndex: =3
 
                 Label5_5 As label:
@@ -819,13 +838,13 @@ ApprovalScreen As screen:
         RadiusTopRight: =20
         Width: =Parent.Width*0.35
         X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/3.6
+        Y: =(Parent.Height-Self.Height)/4
         ZIndex: =6
 
         Label10_1 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Size: =22
+            Size: =Switch(HomeScreen.Size,1,10,2,14,3,14,4,14)
             Text: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
             Width: =Parent.Width
             ZIndex: =1

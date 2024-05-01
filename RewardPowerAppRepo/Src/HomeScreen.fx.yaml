@@ -39,7 +39,7 @@ HomeScreen As screen:
             EssentialLabel5_5 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),true,false)
+                Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),true,false)
                 Width: =Parent.Width*0.12
                 ZIndex: =1
 
@@ -129,7 +129,7 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
+                Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)
                 Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
                 ZIndex: =7
 
@@ -206,7 +206,7 @@ HomeScreen As screen:
         Size: =Switch(HomeScreen.Size,1,12,2,13,3,15,4,15)
         Text: =""
         Width: =Switch(HomeScreen.Size,1,Parent.Width*0.2,2,Parent.Width*0.2,3,Parent.Width*0.19,4,Parent.Width*0.19,Parent.Width*0.19)
-        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/3.2,(Parent.Width-Self.Width)/8)
+        X: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.Email=varCurrUserData.Email)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),(Parent.Width-Self.Width)/3.2,(Parent.Width-Self.Width)/8)
         Y: =(Parent.Height-Self.Height)/1.4
         ZIndex: =4
 
@@ -221,7 +221,7 @@ HomeScreen As screen:
         PressedFill: =Color.Transparent
         Text: =""
         Width: =Parent.Width*0.19
-        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/2)
+        X: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.Email=varCurrUserData.Email)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/2)
         Y: =(Parent.Height-Self.Height)/1.4
         ZIndex: =6
 
@@ -258,9 +258,9 @@ HomeScreen As screen:
             ClearCollect(varPendingUsers,ForAll('Nominee List',Status.Value="Pending")) //Get all users who has pending status
         PressedFill: =Color.Transparent
         Text: =""
-        Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),true,false)
+        Visible: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.DisplayName=varCurrUserData.FullName)),false,true)
         Width: =Parent.Width*0.19
-        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.14)
+        X: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.Email=varCurrUserData.Email)) && IsBlank(LookUp('Managers&Approvers','HR/CEO'.Email=varCurrUserData.Email)),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.14)
         Y: =(Parent.Height-Self.Height)/1.4
         ZIndex: =8
 

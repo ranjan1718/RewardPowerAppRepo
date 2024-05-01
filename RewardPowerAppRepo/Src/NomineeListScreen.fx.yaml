@@ -23,27 +23,6 @@ NomineeListScreen As screen:
             Width: =Parent.Width*0.15
             ZIndex: =1
 
-            Image1_1 As image:
-                Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.5,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
-                Image: =User().Image
-                RadiusBottomLeft: =45
-                RadiusBottomRight: =45
-                RadiusTopLeft: =45
-                RadiusTopRight: =45
-                Width: =Parent.Width*0.2
-                ZIndex: =1
-
-            Label1_1 As label:
-                Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
-                Font: =Font.'Courier New'
-                FontWeight: =FontWeight.Bold
-                Height: =Parent.Height*0.28
-                Size: =Switch(HomeScreen.Size,1,12,2,15,3,15,4,15)
-                Text: =User().FullName
-                Width: =Parent.Width
-                ZIndex: =2
-
         Label11_3 As label:
             Text: =""
             Width: =Parent.Width*0.7

@@ -1100,10 +1100,24 @@
           "NameMapSourceSchema": "?"
         },
         "SelectionColor",
-        "ChevronFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "ChevronFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ChevronHoverFill",
         "ChevronDisabledFill",
-        "ChevronBackground",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "ChevronBackground",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ChevronHoverBackground",
         "ChevronDisabledBackground",
         "SelectionFill",
@@ -19185,7 +19199,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

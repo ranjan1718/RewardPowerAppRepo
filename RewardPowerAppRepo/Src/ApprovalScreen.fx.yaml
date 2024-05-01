@@ -442,6 +442,8 @@ ApprovalScreen As screen:
                             ZIndex: =2
 
                             ComboBox2 As combobox:
+                                ChevronBackground: =RGBA(255, 255, 255, 1)
+                                ChevronFill: =RGBA(0, 0, 0, 1)
                                 DisplayFields: =["Value"]
                                 DisplayMode: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),DisplayMode.Disabled,DisplayMode.Edit)
                                 Height: =Parent.Height
@@ -665,7 +667,7 @@ ApprovalScreen As screen:
                 FillPortions: =0
                 Height: =Parent.Height*0.22
                 LayoutAlignItems: =LayoutAlignItems.Center
-                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutJustifyContent: =LayoutJustifyContent.Center
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
@@ -696,7 +698,7 @@ ApprovalScreen As screen:
 
                 SubmitButton As button:
                     Fill: =RGBA(40, 173, 62, 1)
-                    Height: =Parent.Height*0.45
+                    Height: =Parent.Height*0.5
                     HoverFill: =RGBA(40, 173, 62, 1)
                     OnSelect: |
                         =If(
@@ -763,7 +765,7 @@ ApprovalScreen As screen:
                         Reset(ComboBox2);
                     Size: =Switch(ApprovalScreen.Size,1,9,2,11,3,12,4,12)
                     Text: =If(IsBlank(LookUp('Managers&Approvers','Name (Manager)'.DisplayName=varCurrUserData.FullName)),"Approve","Nominate")
-                    Width: =Parent.Width*0.15
+                    Width: =Parent.Width*0.14
                     ZIndex: =3
 
                 Label5_5 As label:

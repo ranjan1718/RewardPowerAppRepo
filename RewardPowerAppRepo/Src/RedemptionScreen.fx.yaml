@@ -173,7 +173,7 @@ RedemptionScreen As screen:
                         Text: =ThisItem.Prize.Value
                         Width: =If(RedemptionScreen.Size=1,120,RedemptionScreen.Size=2,138,RedemptionScreen.Size=3,180,190)
                         X: =(Parent.Width-Self.Width)/2
-                        Y: =(Parent.Height
+                        Y: =(Parent.Height)
                         ZIndex: =1
 
                     Label8_5 As label:

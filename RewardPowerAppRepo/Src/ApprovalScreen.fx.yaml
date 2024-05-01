@@ -204,7 +204,7 @@ ApprovalScreen As screen:
                                 Height: =Parent.Height
                                 Items: =Filter('Nominee List',Status.Value="Pending")
                                 SearchFields: =["NomineeName"]
-                                SearchItems: =Search(Filter('Nominee List',Status.Value="Pending"),ComboBox3.SearchText,'Nominee Name')
+                                SearchItems: =Search(Filter('Nominee List',Status.Value="Pending"),ComboBox3.SearchText,NomineeName)
                                 SelectMultiple: =false
                                 Width: =Parent.Width
                                 ZIndex: =1

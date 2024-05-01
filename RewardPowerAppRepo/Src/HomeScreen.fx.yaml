@@ -62,6 +62,7 @@ HomeScreen As screen:
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
+                X: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.5,(Parent.Width-Self.Width)/2)
                 ZIndex: =3
 
                 Icon2 As icon.AddUser:
@@ -151,7 +152,7 @@ HomeScreen As screen:
             Label5_3 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager")),false,true)
+                Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
                 Width: =Parent.Width*0.05
                 ZIndex: =8
 

@@ -4,7 +4,7 @@ ApprovalScreen As screen:
     BodyContainer_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
         Fill: =RGBA(240, 240, 240, 1)
-        Height: =Parent.Height*0.72
+        Height: =Parent.Height*0.8
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
@@ -495,37 +495,50 @@ ApprovalScreen As screen:
                     Width: =Parent.Width*0.02
                     ZIndex: =4
 
-    HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(232, 75, 70, 1)
-        Height: =Parent.Height*0.22
+    DashboardLabelContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Fill: =RGBA(222, 222, 222, 1)
+        Height: =Parent.Height*0.1
         LayoutAlignItems: =LayoutAlignItems.Center
-        LayoutJustifyContent: =LayoutJustifyContent.End
+        LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
-        Width: =Parent.Width
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Width: =Parent.Width*0.35
+        X: =(Parent.Width-Self.Width)/2
+        Y: =(Parent.Height-Self.Height)/4
         ZIndex: =2
 
-        HomeIcon As icon.Home:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =Switch(ApprovalScreen.Size,1,40,2,58,3,60,4,64,64)
-            Icon: =Icon.Home
-            OnSelect: =Navigate(HomeScreen);
+        Label10_1 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Size: =Switch(HomeScreen.Size,1,10,2,14,3,14,4,14)
+            Text: ="Nominate"
+            Width: =Parent.Width
             ZIndex: =1
 
-        Label11 As label:
-            Text: =""
-            Width: =Parent.Width*0.04
-            X: =(Parent.Width-Self.Width)
-            ZIndex: =2
+    HeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(114, 45, 173, 0.96)
+        Height: =Parent.Height*0.15
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =Parent.Width
+        ZIndex: =3
 
     ImageContainer_3 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =Parent.Height*0.22
+        Height: =Parent.Height*0.15
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width*0.24
-        ZIndex: =3
+        ZIndex: =4
 
         Image1_3 As image:
             Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.6,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
@@ -546,28 +559,4 @@ ApprovalScreen As screen:
             Text: =User().FullName
             Width: =Parent.Width
             ZIndex: =2
-
-    DashboardLabelContainer_1 As groupContainer.horizontalAutoLayoutContainer:
-        DropShadow: =DropShadow.None
-        Fill: =RGBA(222, 222, 222, 1)
-        Height: =Parent.Height*0.1
-        LayoutAlignItems: =LayoutAlignItems.Center
-        LayoutJustifyContent: =LayoutJustifyContent.Center
-        LayoutMode: =LayoutMode.Auto
-        RadiusBottomLeft: =20
-        RadiusBottomRight: =20
-        RadiusTopLeft: =20
-        RadiusTopRight: =20
-        Width: =Parent.Width*0.35
-        X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/4
-        ZIndex: =6
-
-        Label10_1 As label:
-            Align: =Align.Center
-            FontWeight: =FontWeight.Bold
-            Size: =Switch(HomeScreen.Size,1,10,2,14,3,14,4,14)
-            Text: ="Nominate"
-            Width: =Parent.Width
-            ZIndex: =1
 

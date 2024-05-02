@@ -17,6 +17,7 @@ ApproveByHRScreen As screen:
         Icon5 As icon.BackArrow:
             Color: =RGBA(255, 255, 255, 1)
             Icon: =Icon.BackArrow
+            OnSelect: =Navigate(HomeScreen)
             Tooltip: ="Exit to Dashboard"
             Width: =Switch(HomeScreen.Size,1,20,2,35,3,40,4,40)
             ZIndex: =1
@@ -51,17 +52,20 @@ ApproveByHRScreen As screen:
             ZIndex: =1
 
         DashboardContainer_2 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             BorderColor: =RGBA(219, 219, 219, 1)
             DropShadow: =DropShadow.None
+            FillPortions: =0
             Height: =Parent.Height*0.02
             LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =15
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Width: =Parent.Width*0.4
-            Y: =Parent.Y
             ZIndex: =2
 
         Label7_8 As label:
@@ -136,7 +140,7 @@ ApproveByHRScreen As screen:
                 Gallery3 As gallery.variableTemplateHeightGallery:
                     DelayItemLoading: =true
                     FillPortions: =0
-                    Height: =Parent.Height*0.85
+                    Height: =Parent.Height*0.86
                     Items: ='Nominee List'
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
@@ -163,7 +167,8 @@ ApproveByHRScreen As screen:
                         HoverBorderColor: =RGBA(118, 0, 0, 1)
                         HoverColor: =RGBA(118, 0, 0, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Select(Parent)
+                        OnSelect: |-
+                            =Patch('Nominee List',LookUp('Nominee List','Nominee Name'=ThisItem.Name,{Status:{Value:"Rejected"}}))
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                         Text: ="Reject"
                         Width: =Parent.TemplateWidth*0.1
@@ -176,7 +181,9 @@ ApproveByHRScreen As screen:
                         Height: =Parent.TemplateHeight*0.4
                         HoverColor: =RGBA(37, 148, 55, 1)
                         HoverFill: =Color.White
-                        OnSelect: =Patch('Nominee List',
+                        OnSelect: |-
+                            =Set(varEmployeeData,LookUp('Nominee List','Nominee Name'=ThisItem.'Nominee Name'));
+                            Patch('Nominee List',LookUp('Nominee List','Nominee Name'=ThisItem.Name,{Status:{Value:"Approved"},Points:varEmployeeData.Points+200}))
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                         Text: ="Approve"
                         Width: =Parent.TemplateWidth*0.1
@@ -460,7 +467,7 @@ ApproveByHRScreen As screen:
             Font: =Font.'Courier New'
             FontWeight: =FontWeight.Bold
             Height: =Parent.Height*0.25
-            Size: =Switch(ApprovalScreen.Size,1,12,2,15,3,17,4,18)
+            Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
             Text: =User().FullName
             Width: =Parent.Width
             ZIndex: =2
@@ -472,13 +479,13 @@ ApproveByHRScreen As screen:
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
-        RadiusBottomLeft: =20
-        RadiusBottomRight: =20
-        RadiusTopLeft: =20
-        RadiusTopRight: =20
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
         Width: =Parent.Width*0.35
         X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/5.8
+        Y: =(Parent.Height-Self.Height)/5.9
         ZIndex: =4
 
         Label10_2 As label:

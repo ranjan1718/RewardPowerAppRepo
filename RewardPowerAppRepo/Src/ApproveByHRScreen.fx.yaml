@@ -91,7 +91,7 @@ ApproveByHRScreen As screen:
                 BorderStyle: =BorderStyle.Dashed
                 DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =Parent.Height*0.83
+                Height: =Parent.Height*0.98
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -237,57 +237,6 @@ ApproveByHRScreen As screen:
                 Text: =""
                 Width: =Parent.Width
                 ZIndex: =4
-
-            SubmitContainer_1 As groupContainer.verticalAutoLayoutContainer:
-                AlignInContainer: =AlignInContainer.Center
-                BorderColor: =RGBA(116, 116, 116, 1)
-                DropShadow: =DropShadow.None
-                Fill: =RGBA(255, 255, 255, 1)
-                FillPortions: =0
-                Height: =Parent.Height*0.15
-                LayoutAlignItems: =LayoutAlignItems.Center
-                LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =10
-                RadiusBottomRight: =10
-                RadiusTopLeft: =10
-                RadiusTopRight: =10
-                Width: =Parent.Width*0.96
-                ZIndex: =5
-
-                RejectButton_1 As button:
-                    Fill: =RGBA(151, 0, 0, 1)
-                    Height: =Parent.Height*0.4
-                    HoverBorderColor: =Color.Red
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: =
-                    Size: =Switch(ApprovalScreen.Size,1,9,2,11,3,12,4,12)
-                    Text: ="Reject"
-                    Width: =Parent.Width*0.12
-                    ZIndex: =1
-
-                Label5_6 As label:
-                    Text: =""
-                    Width: =Parent.Width*0.05
-                    ZIndex: =2
-
-                SubmitButton_1 As button:
-                    Fill: =RGBA(40, 173, 62, 1)
-                    Height: =Parent.Height*0.4
-                    HoverFill: =RGBA(40, 173, 62, 1)
-                    OnSelect: =
-                    Size: =Switch(ApprovalScreen.Size,1,9,2,11,3,12,4,12)
-                    Text: ="Nominate"
-                    Width: =Parent.Width*0.12
-                    ZIndex: =3
-
-                Label5_7 As label:
-                    Text: =""
-                    Width: =Parent.Width*0.02
-                    ZIndex: =4
 
     ImageContainer_5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None

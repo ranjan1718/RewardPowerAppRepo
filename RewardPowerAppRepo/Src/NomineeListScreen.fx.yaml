@@ -10,19 +10,6 @@ NomineeListScreen As screen:
         Width: =Parent.Width
         ZIndex: =1
 
-        ImageContainer_1 As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.Center
-            DropShadow: =DropShadow.None
-            Height: =Parent.Height
-            LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutJustifyContent: =LayoutJustifyContent.Center
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            Width: =Parent.Width*0.15
-            ZIndex: =1
-
         Label11_3 As label:
             Text: =""
             Width: =Parent.Width*0.7
@@ -58,12 +45,6 @@ NomineeListScreen As screen:
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/1.1
         ZIndex: =3
-
-        Label17 As label:
-            Height: =Parent.Height*0.05
-            Text: =""
-            Width: =Parent.Width*0.5
-            ZIndex: =1
 
         ListHeaderContainer As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.Start
@@ -138,20 +119,6 @@ NomineeListScreen As screen:
                 Y: =(Parent.Height-Self.Height)/2
                 ZIndex: =1
 
-                Rectangle1 As rectangle:
-                    BorderColor: =RGBA(77, 77, 77, 1)
-                    BorderThickness: =1
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =Parent.TemplateHeight
-                    OnSelect: =Select(Parent)
-                    Visible: |-
-                        =//If(IsBlank(Gallery4),false,true)
-                        false
-                    Width: =Parent.TemplateWidth
-                    X: =Parent.X
-                    Y: =Parent.Y
-                    ZIndex: =1
-
                 Label18 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
@@ -163,35 +130,6 @@ NomineeListScreen As screen:
                     X: =Parent.X
                     Y: =(Parent.TemplateHeight-Self.Height)/2
                     ZIndex: =2
-
-                Button9 As button:
-                    Fill: =Switch(CountRows(ThisItem.Justification),1,Color.LimeGreen,2,RGBA(227, 41, 41, 1),3,Color.BlueViolet,4,Color.BurlyWood,5,Color.SkyBlue,Color.Transparent)
-                    Height: =Parent.Height*0.12
-                    HoverFill: =Switch(CountRows(ThisItem.Justification),1,Color.LimeGreen,2,RGBA(227, 41, 41, 1),3,Color.BlueViolet,4,Color.BurlyWood,5,Color.SkyBlue,Color.Transparent)
-                    OnSelect: =Select(Parent)
-                    Text: =Switch(CountRows(ThisItem.Justification),1,"Looks like just started",2,"Quite experienced",3,"Professional",4,"Excellent",5,"Master")
-                    Visible: =false
-                    Width: =Parent.Width/4
-                    X: =(Parent.Width-Self.Width)*0.95
-                    Y: =(Parent.TemplateHeight-Self.Height)/2
-                    ZIndex: =4
-
-                Label18_1 As label:
-                    Align: =Align.Center
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Semibold
-                    Height: =Parent.Height
-                    Overflow: =Overflow.Scroll
-                    Size: =15
-                    Text: |-
-                        =Concat(ThisItem.Justification,Value,"
-                        
-                        ")
-                    Visible: =false
-                    Width: =Parent.Width/3.2
-                    X: =(Parent.Width-Self.Width)/2
-                    Y: =(Parent.TemplateHeight-Self.Height)/2
-                    ZIndex: =5
 
                 Container2 As groupContainer.horizontalAutoLayoutContainer:
                     Height: =Label18_3.Height*1.2

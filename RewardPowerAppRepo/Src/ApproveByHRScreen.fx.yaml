@@ -119,20 +119,47 @@ ApproveByHRScreen As screen:
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =Parent.Height
-                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         Width: =Parent.Width/2
                         ZIndex: =2
 
+                        Label9_2 As label:
+                            Text: =""
+                            Width: =Parent.Width*0.2
+                            ZIndex: =1
+
                         Label16_1 As label:
                             Align: =Align.Center
                             Color: =RGBA(255, 255, 255, 1)
                             FontWeight: =FontWeight.Semibold
-                            Text: ="Nominee Email"
+                            Text: ="Nominee Name"
                             VerticalAlign: =VerticalAlign.Top
                             Width: =Parent.Width*0.5
+                            ZIndex: =2
+
+                    Container5_3 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width/2
+                        ZIndex: =3
+
+                        Label16_2 As label:
+                            Align: =Align.Center
+                            Color: =RGBA(255, 255, 255, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Text: ="Justifications"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.Width*0.4
                             ZIndex: =1
 
                 Gallery3 As gallery.variableTemplateHeightGallery:
@@ -145,36 +172,11 @@ ApproveByHRScreen As screen:
                     LayoutMinWidth: =50
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateFill: =Color.LightGray
-                    TemplateSize: =Parent.Height*0.22
+                    TemplateSize: =Max(Parent.Height*0.18,GalleryHeightSetterContainer.Height)
                     Transition: =Transition.Pop
                     ZIndex: =2
 
-                    Label20 As label:
-                        Align: =Align.Center
-                        FontWeight: =FontWeight.Semibold
-                        OnSelect: =Select(Parent)
-                        Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
-                        Text: =ThisItem.'Nominee Name'
-                        X: =(Parent.Width-Self.Width)/2.8
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =1
-
-                    Button3 As button:
-                        BorderThickness: =1
-                        Fill: =RGBA(118, 0, 0, 1)
-                        Height: =Parent.TemplateHeight*0.4
-                        HoverBorderColor: =RGBA(118, 0, 0, 1)
-                        HoverColor: =RGBA(118, 0, 0, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Set(varPopRejectHR,true)
-                        Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
-                        Text: ="Reject"
-                        Width: =Parent.TemplateWidth*0.1
-                        X: =(Parent.TemplateWidth-Self.Width)/1.024
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =2
-
-                    Button3_1 As button:
+                    ApprovedButton_2 As button:
                         BorderColor: =RGBA(20, 156, 97, 1)
                         BorderThickness: =1
                         Fill: =RGBA(19, 171, 105, 1)
@@ -188,21 +190,57 @@ ApproveByHRScreen As screen:
                             Notify("User Approved",NotificationType.Success,1000);
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                         Text: ="Approve"
-                        Width: =Parent.TemplateWidth*0.1
-                        X: =(Parent.TemplateWidth-Self.Width)/1.17
+                        Width: =Parent.Width*0.1
+                        X: =(Parent.Width-Self.Width)/1.17
                         Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =3
+                        ZIndex: =5
 
-                    Label20_1 As label:
-                        Align: =Align.Center
-                        FontWeight: =FontWeight.Semibold
-                        OnSelect: =Select(Parent)
+                    RejectedButton_2 As button:
+                        BorderThickness: =1
+                        Fill: =RGBA(118, 0, 0, 1)
+                        Height: =Parent.TemplateHeight*0.4
+                        HoverBorderColor: =RGBA(118, 0, 0, 1)
+                        HoverColor: =RGBA(118, 0, 0, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: =Set(varPopRejectHR,true)
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
-                        Text: =ThisItem.NomineeEmail
-                        Width: =Parent.TemplateWidth*0.26
-                        X: =(Parent.Width-Self.Width)/1.5
+                        Text: ="Reject"
+                        Width: =Parent.Width*0.1
+                        X: =(Parent.Width-Self.Width)/1.024
                         Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =4
+                        ZIndex: =6
+
+                    GalleryHeightSetterContainer As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =Label16_5.Height*1.5
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.TemplateWidth*0.76
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =9
+
+                        Label16_4 As label:
+                            Align: =Align.Center
+                            OnSelect: =
+                            Text: =ThisItem.'Nominee Name'
+                            Width: =Parent.Width/2.4
+                            X: =(Parent.Width-Self.Width)/5.2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =1
+
+                        Label16_5 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            OnSelect: =
+                            Text: |-
+                                =Concat(ThisItem.Justification,Value,"
+                                
+                                ")
+                            Width: =Parent.Width/2.5
+                            X: =(Parent.Width-Self.Width)/1.54
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
 
             Label7_11 As label:
                 Height: =Parent.Height*0.02

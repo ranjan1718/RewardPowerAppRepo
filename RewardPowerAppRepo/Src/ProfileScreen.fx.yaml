@@ -12,6 +12,7 @@ ProfileScreen As screen:
             Fill: =RGBA(114, 45, 173, 0.96)
             FillPortions: =0
             Height: =Parent.Height*0.15
+            LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -58,7 +59,7 @@ ProfileScreen As screen:
                 Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
                 Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
                 Text: |
-                    =LookUp('Nominee List', 'Nominee Name'=User().FullName,Points) 
+                    =LookUp('Nominee List', 'Nominee Name'=User().FullName,Redeemed in Redeemed) 
                 Width: |
                     =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
                 ZIndex: =3

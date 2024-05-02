@@ -1,2 +1,491 @@
 ApproveByHRScreen As screen:
+    Fill: =RGBA(222, 222, 222, 1)
+
+    HeaderContainer_5 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(114, 45, 173, 0.96)
+        Height: =Parent.Height*0.15
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.End
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Icon5 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.BackArrow
+            Tooltip: ="Exit to Dashboard"
+            Width: =Switch(HomeScreen.Size,1,20,2,35,3,40,4,40)
+            ZIndex: =1
+
+        Label14 As label:
+            Height: =Parent.Height
+            Text: =""
+            Width: =Parent.Width*0.05
+            ZIndex: =2
+
+    BodyContainer_2 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Fill: =RGBA(240, 240, 240, 1)
+        Height: =Parent.Height*0.8
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Width: =Parent.Width*0.95
+        X: =(Parent.Width-Self.Width)/2
+        Y: =(Parent.Height-Self.Height)/1.1
+        ZIndex: =2
+
+        Label7_7 As label:
+            Height: =Parent.Height*0.05
+            Text: =""
+            Width: =Parent.Width
+            ZIndex: =1
+
+        DashboardContainer_2 As groupContainer.verticalAutoLayoutContainer:
+            BorderColor: =RGBA(219, 219, 219, 1)
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height*0.02
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =Parent.Width*0.4
+            Y: =Parent.Y
+            ZIndex: =2
+
+        Label7_8 As label:
+            Height: =Parent.Height*0.02
+            Text: =""
+            Width: =Parent.Width
+            ZIndex: =3
+
+        FormBodyContainer_1 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =Parent.Height*0.88
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =4
+
+            NominationContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(128, 128, 128, 1)
+                BorderStyle: =BorderStyle.Dashed
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =Parent.Height*0.83
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =50
+                LayoutMode: =LayoutMode.Auto
+                PaddingTop: =Parent.Height*0.02
+                Width: =Parent.Width*0.98
+                ZIndex: =1
+
+                Container8 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height*0.1
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Button1 As button:
+                        Fill: =RGBA(0, 94, 146, 1)
+                        Height: =Parent.Height*0.9
+                        HoverFill: =RGBA(0, 94, 146, 1)
+                        Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
+                        Text: ="Nominee Name"
+                        Width: =Parent.Width/4
+                        ZIndex: =1
+
+                    Label19_1 As label:
+                        Text: =""
+                        Width: =Parent.Width*0.01
+                        ZIndex: =2
+
+                    Button2 As button:
+                        Fill: =RGBA(0, 94, 146, 1)
+                        Height: =Parent.Height*0.9
+                        HoverFill: =RGBA(0, 94, 146, 1)
+                        Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
+                        Text: ="Nominee Email"
+                        Width: =Parent.Width/4
+                        ZIndex: =3
+
+                Gallery3 As gallery.variableTemplateHeightGallery:
+                    DelayItemLoading: =true
+                    FillPortions: =0
+                    Height: =Parent.Height*0.85
+                    Items: ='Nominee List'
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =50
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateFill: =Color.LightGray
+                    TemplateSize: =Parent.Height*0.22
+                    Transition: =Transition.Pop
+                    ZIndex: =2
+
+                    Label20 As label:
+                        Align: =Align.Center
+                        FontWeight: =FontWeight.Semibold
+                        OnSelect: =Select(Parent)
+                        Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
+                        Text: =ThisItem.'Nominee Name'
+                        X: =(Parent.Width-Self.Width)/2.8
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =1
+
+                    Button3 As button:
+                        Fill: =RGBA(118, 0, 0, 1)
+                        Height: =Parent.TemplateHeight*0.4
+                        HoverBorderColor: =RGBA(118, 0, 0, 1)
+                        HoverColor: =RGBA(118, 0, 0, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: =Select(Parent)
+                        Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
+                        Text: ="Reject"
+                        Width: =Parent.TemplateWidth*0.1
+                        X: =(Parent.TemplateWidth-Self.Width)/1.024
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =2
+
+                    Button3_1 As button:
+                        Fill: =RGBA(35, 158, 55, 1)
+                        Height: =Parent.TemplateHeight*0.4
+                        HoverColor: =RGBA(37, 148, 55, 1)
+                        HoverFill: =Color.White
+                        OnSelect: =Patch('Nominee List',
+                        Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
+                        Text: ="Approve"
+                        Width: =Parent.TemplateWidth*0.1
+                        X: =(Parent.TemplateWidth-Self.Width)/1.17
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =3
+
+                    Label20_1 As label:
+                        Align: =Align.Center
+                        FontWeight: =FontWeight.Semibold
+                        OnSelect: =Select(Parent)
+                        Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
+                        Text: =ThisItem.NomineeEmail
+                        Width: =Parent.TemplateWidth*0.26
+                        X: =(Parent.Width-Self.Width)/1.5
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =4
+
+            Label7_11 As label:
+                Height: =Parent.Height*0.02
+                Text: =""
+                Width: =Parent.Width
+                ZIndex: =2
+
+            ApprovalContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(128, 128, 128, 1)
+                BorderStyle: =BorderStyle.Dashed
+                BorderThickness: =2
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =Parent.Height*0.27
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =50
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingTop: =Parent.Height*0.02
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Visible: =false
+                Width: =Parent.Width*0.98
+                ZIndex: =3
+
+                NameContainer_2 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(116, 116, 116, 1)
+                    DropShadow: =DropShadow.Semilight
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =0
+                    Height: =Parent.Height*0.8
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Width: =Parent.Width*0.98
+                    Y: =(Parent.Y)
+                    ZIndex: =1
+
+                    NomineeNameContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width*0.48
+                        ZIndex: =1
+
+                        Container1_6 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.35
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width*0.8
+                            ZIndex: =1
+
+                            Label4_6 As label:
+                                Color: =RGBA(255, 0, 0, 1)
+                                Size: =22
+                                Text: ="*"
+                                Width: =Parent.Width*0.06
+                                ZIndex: =1
+
+                            Label2_7 As label:
+                                Color: =RGBA(0, 94, 146, 1)
+                                Font: =Font.Arial
+                                Height: =Parent.Height
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
+                                Text: ="Name of the Approver"
+                                Width: =Parent.Width*0.8
+                                ZIndex: =2
+
+                        Container7_5 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderColor: =RGBA(116, 116, 116, 1)
+                            BorderThickness: =2
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.4
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =10
+                            RadiusBottomRight: =10
+                            RadiusTopLeft: =10
+                            RadiusTopRight: =10
+                            Width: =Parent.Width*0.55
+                            ZIndex: =2
+
+                    NominatorContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width*0.5
+                        ZIndex: =2
+
+                        Container1_7 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.35
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width*0.8
+                            ZIndex: =1
+
+                            Label4_7 As label:
+                                Color: =RGBA(255, 0, 0, 1)
+                                Size: =22
+                                Text: ="*"
+                                Width: =Parent.Width*0.06
+                                ZIndex: =1
+
+                            Label2_8 As label:
+                                Color: =RGBA(0, 94, 146, 1)
+                                Font: =Font.Arial
+                                Height: =Parent.Height
+                                Size: =Switch(ApprovalScreen.Size,1,12,2,16,3,18,4,18)
+                                Text: ="Date of Approval"
+                                Width: =Parent.Width*0.8
+                                ZIndex: =2
+
+                        Container7_6 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderColor: =RGBA(116, 116, 116, 1)
+                            BorderThickness: =2
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height*0.4
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =10
+                            RadiusBottomRight: =10
+                            RadiusTopLeft: =10
+                            RadiusTopRight: =10
+                            Width: =Parent.Width*0.55
+                            ZIndex: =2
+
+                            DatePicker1_1 As datepicker:
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =Parent.Height
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                Label7_9 As label:
+                    Height: =Parent.Height*0.05
+                    Text: =""
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+            Label7_12 As label:
+                Height: =Parent.Height*0.02
+                Text: =""
+                Width: =Parent.Width
+                ZIndex: =4
+
+            SubmitContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(116, 116, 116, 1)
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =0
+                Height: =Parent.Height*0.15
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =Parent.Width*0.96
+                ZIndex: =5
+
+                RejectButton_1 As button:
+                    Fill: =RGBA(151, 0, 0, 1)
+                    Height: =Parent.Height*0.4
+                    HoverBorderColor: =Color.Red
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =
+                    Size: =Switch(ApprovalScreen.Size,1,9,2,11,3,12,4,12)
+                    Text: ="Reject"
+                    Width: =Parent.Width*0.12
+                    ZIndex: =1
+
+                Label5_6 As label:
+                    Text: =""
+                    Width: =Parent.Width*0.05
+                    ZIndex: =2
+
+                SubmitButton_1 As button:
+                    Fill: =RGBA(40, 173, 62, 1)
+                    Height: =Parent.Height*0.4
+                    HoverFill: =RGBA(40, 173, 62, 1)
+                    OnSelect: =
+                    Size: =Switch(ApprovalScreen.Size,1,9,2,11,3,12,4,12)
+                    Text: ="Nominate"
+                    Width: =Parent.Width*0.12
+                    ZIndex: =3
+
+                Label5_7 As label:
+                    Text: =""
+                    Width: =Parent.Width*0.02
+                    ZIndex: =4
+
+    ImageContainer_5 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height*0.15
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width*0.24
+        ZIndex: =3
+
+        Image1_4 As image:
+            Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.6,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
+            Image: =User().Image
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
+            ZIndex: =1
+
+        Label1_4 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height*0.25
+            Size: =Switch(ApprovalScreen.Size,1,12,2,15,3,17,4,18)
+            Text: =User().FullName
+            Width: =Parent.Width
+            ZIndex: =2
+
+    DashboardLabelContainer_2 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Fill: =RGBA(222, 222, 222, 1)
+        Height: =Parent.Height*0.08
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Width: =Parent.Width*0.35
+        X: =(Parent.Width-Self.Width)/2
+        Y: =(Parent.Height-Self.Height)/5.8
+        ZIndex: =4
+
+        Label10_2 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Size: =Switch(HomeScreen.Size,1,10,2,14,3,14,4,14)
+            Text: ="Nominate"
+            Width: =Parent.Width
+            ZIndex: =1
 

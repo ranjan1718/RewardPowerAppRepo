@@ -27,8 +27,9 @@ ProfileScreen As screen:
             FillPortions: =0
             Height: =Parent.Height*0.15
             LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutGap: =If(ProfileScreen.Size=4,150,If(ProfileScreen.Size=2,50,100))
-            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutGap: |
+                =If(ProfileScreen.Size=4,5,If(ProfileScreen.Size=2,50,20))
+            LayoutJustifyContent: =LayoutJustifyContent.End
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -38,17 +39,6 @@ ProfileScreen As screen:
             RadiusTopRight: =8
             Width: =Parent.Width
             ZIndex: =2
-
-            Label8_7 As label:
-                Align: =Align.Center
-                AlignInContainer: =AlignInContainer.Stretch
-                FontWeight: =FontWeight.Bold
-                Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
-                Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
-                Text: ="Gifts"
-                Width: |
-                    =If(ProfileScreen.Size=1,Parent.Width/3,ProfileScreen.Size=2||ProfileScreen.Size=3,150,180)
-                ZIndex: =1
 
             Label8_8 As label:
                 Align: =Align.Center
@@ -61,29 +51,26 @@ ProfileScreen As screen:
                     =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
                 ZIndex: =2
 
-        Container7 As groupContainer.verticalAutoLayoutContainer:
-            LayoutDirection: =LayoutDirection.Vertical
+            Label8_9 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Bold
+                Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Text: |
+                    =LookUp('Nominee List', 'Nominee Name'=User().FullName,Points) 
+                Width: |
+                    =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
+                ZIndex: =3
+
+        Container5 As groupContainer.horizontalAutoLayoutContainer:
+            LayoutGap: =If(ProfileScreen.Size=4,150,If(ProfileScreen.Size=2,50,100))
+            LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
             ZIndex: =3
-
-            Gallery2 As gallery.galleryVertical:
-                DelayItemLoading: =true
-                Items: ='Nominee List'
-                Layout: =Layout.Vertical
-                LayoutMinHeight: =287
-                LayoutMinWidth: =320
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
-                ZIndex: =1
-
-                Label9 As label:
-                    Height: =66
-                    OnSelect: =Select(Parent)
-                    Text: =
-                    X: =434
-                    ZIndex: =1
 
     ImageContainer_4 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None

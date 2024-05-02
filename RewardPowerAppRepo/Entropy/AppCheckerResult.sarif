@@ -674,6 +674,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.HomeIcon.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.HomeIcon.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ApprovalScreen",
+                "type": "ApprovalScreen.HeaderContainer_2.HomeIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.HomeIcon.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.HomeIcon.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ApprovalScreen",
+                "type": "ApprovalScreen.HeaderContainer_2.HomeIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ApprovalScreen.ImageContainer_3.Image1_3.AccessibleLabel"
                 }
               ],
@@ -1737,6 +1797,66 @@
                 "member": "Size",
                 "module": "ApproveByHRScreen",
                 "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.Button3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.SubmitContainer_1.RejectButton_1.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.SubmitContainer_1.RejectButton_1.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.SubmitContainer_1.RejectButton_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.SubmitContainer_1.SubmitButton_1.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.SubmitContainer_1.SubmitButton_1.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.SubmitContainer_1.SubmitButton_1"
               }
             }
           ],

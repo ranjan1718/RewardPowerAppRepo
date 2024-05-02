@@ -114,28 +114,6 @@ ApproveByHRScreen As screen:
                     Width: =Parent.Width
                     ZIndex: =1
 
-                    Container5 As groupContainer.verticalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.Center
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height
-                        LayoutAlignItems: =LayoutAlignItems.End
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width/2
-                        ZIndex: =1
-
-                        Label16 As label:
-                            Align: =Align.Center
-                            Color: =RGBA(255, 255, 255, 1)
-                            FontWeight: =FontWeight.Semibold
-                            Text: ="Nominee Name"
-                            VerticalAlign: =VerticalAlign.Top
-                            Width: =Parent.Width*0.5
-                            ZIndex: =1
-
                     Container5_1 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.Center
                         DropShadow: =DropShadow.None

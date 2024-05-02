@@ -168,7 +168,8 @@ ApproveByHRScreen As screen:
                         HoverColor: =RGBA(118, 0, 0, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =Patch('Nominee List',LookUp('Nominee List','Nominee Name'=ThisItem.Name,{Status:{Value:"Rejected"}}))
+                            =Patch('Nominee List',LookUp('Nominee List','Nominee Name'=ThisItem.Name,{Status:{Value:"Rejected"}}));
+                            Notify("User Rejected",NotificationType.Information,1000);
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                         Text: ="Reject"
                         Width: =Parent.TemplateWidth*0.1
@@ -183,7 +184,8 @@ ApproveByHRScreen As screen:
                         HoverFill: =Color.White
                         OnSelect: |-
                             =Set(varEmployeeData,LookUp('Nominee List','Nominee Name'=ThisItem.'Nominee Name'));
-                            Patch('Nominee List',LookUp('Nominee List','Nominee Name'=ThisItem.Name,{Status:{Value:"Approved"},Points:varEmployeeData.Points+200}))
+                            Patch('Nominee List',LookUp('Nominee List','Nominee Name'=ThisItem.Name,{Status:{Value:"Approved"},Points:varEmployeeData.Points+200}));
+                            Notify("User Approved",NotificationType.Success,1000);
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                         Text: ="Approve"
                         Width: =Parent.TemplateWidth*0.1

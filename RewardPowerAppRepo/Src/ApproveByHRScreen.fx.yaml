@@ -182,6 +182,7 @@ ApproveByHRScreen As screen:
                         ZIndex: =1
 
                     Button3 As button:
+                        BorderThickness: =1
                         Fill: =RGBA(118, 0, 0, 1)
                         Height: =Parent.TemplateHeight*0.4
                         HoverBorderColor: =RGBA(118, 0, 0, 1)
@@ -197,6 +198,7 @@ ApproveByHRScreen As screen:
 
                     Button3_1 As button:
                         BorderColor: =RGBA(20, 156, 97, 1)
+                        BorderThickness: =1
                         Fill: =RGBA(19, 171, 105, 1)
                         Height: =Parent.TemplateHeight*0.4
                         HoverBorderColor: =RGBA(19, 171, 105, 1)
@@ -341,6 +343,13 @@ ApproveByHRScreen As screen:
             Width: =Parent.Width
             ZIndex: =1
 
+    Rectangle2 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Parent.Height
+        Visible: =varPopRejectHR
+        Width: =Parent.Width
+        ZIndex: =5
+
     PopUpRejectContainer As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height*0.25
@@ -350,7 +359,7 @@ ApproveByHRScreen As screen:
         Width: =Parent.Width*0.4
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/2
-        ZIndex: =5
+        ZIndex: =6
 
         Container9 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -387,11 +396,14 @@ ApproveByHRScreen As screen:
             ZIndex: =2
 
             Button2 As button:
+                BorderThickness: =1
                 Fill: =RGBA(19, 171, 105, 1)
-                Height: =Parent.Height*0.24
+                Height: =Parent.Height*0.25
                 OnSelect: |-
                     =Patch('Nominee List',LookUp('Nominee List',ID=Gallery3.Selected.ID),{Status:{Value:"Rejected"}});
                     Notify("User Rejected",NotificationType.Information,1000);
+                    Set(varPopRejectHR,false);
+                Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                 Text: ="Yes"
                 Width: =Parent.Width*0.25
                 ZIndex: =1
@@ -402,9 +414,11 @@ ApproveByHRScreen As screen:
                 ZIndex: =2
 
             Button4 As button:
+                BorderThickness: =1
                 Fill: =RGBA(118, 0, 0, 1)
-                Height: =Parent.Height*0.24
+                Height: =Parent.Height*0.25
                 OnSelect: =Set(varPopRejectHR,false)
+                Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                 Text: ="No"
                 Width: =Parent.Width*0.25
                 ZIndex: =3

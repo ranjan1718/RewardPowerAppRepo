@@ -117,68 +117,6 @@ NomineeListScreen As screen:
                     Width: =Parent.Width*0.15
                     ZIndex: =2
 
-        Container2 As groupContainer.verticalAutoLayoutContainer:
-            FillPortions: =0
-            Height: =Parent.Height*0.9
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            ZIndex: =2
-
-            Gallery2 As gallery.variableTemplateHeightGallery:
-                DelayItemLoading: =true
-                FillPortions: =0
-                Height: =Parent.Height
-                Items: ='Nominee List'
-                Layout: =Layout.Vertical
-                LayoutMinHeight: =287
-                LayoutMinWidth: =320
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplateFill: =Color.LightGray
-                TemplateSize: =Parent.Height*0.18
-                ZIndex: =1
-
-                Container6 As groupContainer.horizontalAutoLayoutContainer:
-                    Height: =Parent.TemplateHeight
-                    LayoutAlignItems: =LayoutAlignItems.Center
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.TemplateWidth
-                    ZIndex: =1
-
-                    Label11 As label:
-                        Align: =Align.Center
-                        FontWeight: =FontWeight.Semibold
-                        Height: =Parent.Height*0.9
-                        Size: =Switch(HomeScreen.Size,1,9,2,13,3,13,4,13)
-                        Text: =ThisItem.'Nominee Name'
-                        Width: =Parent.Width/2.2
-                        ZIndex: =1
-
-                    Label11_4 As label:
-                        Align: =Align.Center
-                        FontWeight: =FontWeight.Semibold
-                        Height: =Parent.Height*0.9
-                        Size: =Switch(HomeScreen.Size,1,9,2,13,3,13,4,13)
-                        Text: =ThisItem.Manager
-                        Width: =Parent.Width/2.3
-                        ZIndex: =2
-
-                    Icon9 As icon.NextArrow:
-                        Icon: =Icon.NextArrow
-                        OnSelect: =Navigate(ApproveByHRScreen)
-                        Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR" )),true,false)
-                        Width: =Switch(HomeScreen.Size,1,20,2,35,3,40,4,40)
-                        ZIndex: =3
-
-                    Label12 As label:
-                        Height: =Parent.Height
-                        Text: =""
-                        Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR" )),true,false)
-                        Width: =Parent.Width*0.02
-                        ZIndex: =4
-
     ImageContainer_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
         Height: =Parent.Height*0.12

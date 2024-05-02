@@ -2,8 +2,8 @@ RedemptionScreen As screen:
     Fill: =RGBA(202, 202, 202, 1)
 
     HeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(232, 75, 70, 1)
-        Height: =Parent.Height*0.21
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =Parent.Height/8
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
@@ -36,7 +36,7 @@ RedemptionScreen As screen:
 
     ImageContainer_2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =Parent.Height*0.21
+        Height: =Parent.Height/8
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -82,11 +82,45 @@ RedemptionScreen As screen:
         RadiusTopRight: =20
         Width: =Parent.Width*0.9
         X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/1.1
+        Y: =(Parent.Height-Self.Height)/1.5
         ZIndex: =3
 
-        SubCN As groupContainer.horizontalAutoLayoutContainer:
+        SubCN_2 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(214, 223, 238, 1)
+            FillPortions: =0
+            Height: =Parent.Height/7
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =If(RedemptionScreen.Size=4,2,If(RedemptionScreen.Size=2,2,2))
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width*0.2
+            ZIndex: =1
+
+            Label8_11 As label:
+                Align: =Align.Right
+                FontWeight: =FontWeight.Bold
+                Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,14,RedemptionScreen.Size=2||RedemptionScreen.Size=3,15,15)
+                Text: |-
+                    ="Your Points:"
+                Width: |
+                    =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
+                ZIndex: =4
+
+            Label8_12 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,14,RedemptionScreen.Size=2||RedemptionScreen.Size=3,15,15)
+                Text: =LookUp('Nominee List', 'Nominee Name'=User().FullName,Points)
+                Width: |
+                    =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
+                ZIndex: =5
+
+        SubCN As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =Parent.Height/7
             LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -96,13 +130,13 @@ RedemptionScreen As screen:
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             Width: =Parent.Width*0.2
-            ZIndex: =1
+            ZIndex: =2
 
             Label8_2 As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Bold
                 Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
-                Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,15,RedemptionScreen.Size=2||RedemptionScreen.Size=3,15,15)
                 Text: ="Gifts"
                 Width: |
                     =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
@@ -112,7 +146,7 @@ RedemptionScreen As screen:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Bold
                 Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
-                Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,15,RedemptionScreen.Size=2||RedemptionScreen.Size=3,15,15)
                 Text: ="Points"
                 Width: |
                     =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
@@ -130,6 +164,8 @@ RedemptionScreen As screen:
 
         DataCN As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =Parent.Height/2
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -139,7 +175,7 @@ RedemptionScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            ZIndex: =2
+            ZIndex: =3
 
             Gallery1 As gallery.galleryVertical:
                 DelayItemLoading: =true
@@ -169,10 +205,10 @@ RedemptionScreen As screen:
                     Label8_4 As label:
                         AlignInContainer: =AlignInContainer.Stretch
                         Height: =If(RedemptionScreen.Size=1,40,RedemptionScreen.Size=2||RedemptionScreen.Size=3,70,25)
-                        Size: =If(RedemptionScreen.Size=1,8,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,20)
+                        Size: =If(RedemptionScreen.Size=1,8,RedemptionScreen.Size=2||RedemptionScreen.Size=3,14,15)
                         Text: =ThisItem.Prize.Value
-                        Width: =If(RedemptionScreen.Size=1,120,RedemptionScreen.Size=2,138,RedemptionScreen.Size=3,180,190)
-                        X: =(Parent.Width-Self.Width)/2
+                        Width: =If(RedemptionScreen.Size=1,120,RedemptionScreen.Size=2,190,RedemptionScreen.Size=3,180,190)
+                        X: =(Parent.Width-Self.Width)/1
                         Y: =(Parent.Height)
                         ZIndex: =1
 
@@ -180,7 +216,7 @@ RedemptionScreen As screen:
                         Align: =Align.Center
                         AlignInContainer: =AlignInContainer.Stretch
                         Height: =If(RedemptionScreen.Size=1,40,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
-                        Size: =If(RedemptionScreen.Size=1,8,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,20)
+                        Size: =If(RedemptionScreen.Size=1,8,RedemptionScreen.Size=2||RedemptionScreen.Size=3,15,15)
                         Text: =ThisItem.point
                         Width: =If(RedemptionScreen.Size=1,120,RedemptionScreen.Size=2,135,RedemptionScreen.Size=3,180,180)
                         X: =(Parent.Width-Self.Width)/2
@@ -226,7 +262,7 @@ RedemptionScreen As screen:
                             
                             
                             )
-                        Size: =If(RedemptionScreen.Size=1,10,RedemptionScreen.Size=2,20,RedemptionScreen.Size=3,14,14)
+                        Size: =If(RedemptionScreen.Size=1,10,RedemptionScreen.Size=2,12,RedemptionScreen.Size=3,14,14)
                         Text: ="Redeem"
                         Width: =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2,90,RedemptionScreen.Size=3,110,180)
                         ZIndex: =3

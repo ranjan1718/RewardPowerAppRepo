@@ -73,17 +73,19 @@ NomineeListScreen As screen:
                 ZIndex: =2
 
                 Label9_3 As label:
+                    Height: =Parent.Height
                     Text: =""
-                    Width: =Parent.Width*0.2
+                    Width: =Parent.Width*0.1
                     ZIndex: =1
 
                 Label16_3 As label:
                     Align: =Align.Center
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Semibold
+                    Size: =Switch(HomeScreen.Size,1,9,2,13,3,13,4,13)
                     Text: ="Nominee Name"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Parent.Width*0.6
+                    Width: =Parent.Width*0.7
                     ZIndex: =2
 
             Container5_5 As groupContainer.verticalAutoLayoutContainer:
@@ -91,7 +93,7 @@ NomineeListScreen As screen:
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =Parent.Height
-                LayoutDirection: =LayoutDirection.Vertical
+                LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutJustifyContent: =LayoutJustifyContent.Center
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -103,10 +105,17 @@ NomineeListScreen As screen:
                     Align: =Align.Center
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Semibold
+                    Size: =Switch(HomeScreen.Size,1,9,2,13,3,13,4,13)
                     Text: ="Nominated By"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Parent.Width*0.8
+                    Width: =Parent.Width*0.9
                     ZIndex: =1
+
+                Label9_4 As label:
+                    Height: =Parent.Height
+                    Text: =""
+                    Width: =Parent.Width*0.15
+                    ZIndex: =2
 
         Container2 As groupContainer.verticalAutoLayoutContainer:
             FillPortions: =0
@@ -119,11 +128,85 @@ NomineeListScreen As screen:
 
             Gallery2 As gallery.variableTemplateHeightGallery:
                 DelayItemLoading: =true
+                FillPortions: =0
+                Height: =Parent.Height
                 Items: ='Nominee List'
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =280
+                TemplateFill: =Color.LightGray
+                TemplateSize: =Parent.Height*0.18
                 ZIndex: =1
+
+                Container6 As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =Parent.TemplateHeight
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.TemplateWidth
+                    ZIndex: =1
+
+                    Label11 As label:
+                        Align: =Align.Center
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height*0.9
+                        Size: =Switch(HomeScreen.Size,1,9,2,13,3,13,4,13)
+                        Text: =ThisItem.'Nominee Name'
+                        Width: =Parent.Width/2.2
+                        ZIndex: =1
+
+                    Label11_4 As label:
+                        Align: =Align.Center
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height*0.9
+                        Size: =Switch(HomeScreen.Size,1,9,2,13,3,13,4,13)
+                        Text: =ThisItem.Manager
+                        Width: =Parent.Width/2.3
+                        ZIndex: =2
+
+                    Icon9 As icon.NextArrow:
+                        Icon: =Icon.NextArrow
+                        OnSelect: =Navigate(ApproveByHRScreen)
+                        Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR" )),true,false)
+                        Width: =Switch(HomeScreen.Size,1,20,2,35,3,40,4,40)
+                        ZIndex: =3
+
+                    Label12 As label:
+                        Height: =Parent.Height
+                        Text: =""
+                        Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR" )),true,false)
+                        Width: =Parent.Width*0.02
+                        ZIndex: =4
+
+    ImageContainer_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height*0.12
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width*0.24
+        ZIndex: =4
+
+        Image1_5 As image:
+            Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.5,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
+            Image: =User().Image
+            RadiusBottomLeft: =45
+            RadiusBottomRight: =45
+            RadiusTopLeft: =45
+            RadiusTopRight: =45
+            Width: =Parent.Width*0.2
+            ZIndex: =1
+
+        Label1_5 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height*0.28
+            Size: =Switch(HomeScreen.Size,1,12,2,15,3,15,4,15)
+            Text: =User().FullName
+            Width: =Parent.Width
+            ZIndex: =2
 

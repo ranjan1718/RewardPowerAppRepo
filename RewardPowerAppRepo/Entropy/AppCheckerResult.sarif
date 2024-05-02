@@ -54,19 +54,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.AccessibleLabel"
+                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.AccessibleLabel",
+                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "NomineeListScreen",
-                "type": "NomineeListScreen.HeaderContainer1.Icon6"
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.HeaderContainer_5.Icon5"
               }
             }
           ],
@@ -84,19 +84,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.TabIndex"
+                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.TabIndex",
+                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "NomineeListScreen",
-                "type": "NomineeListScreen.HeaderContainer1.Icon6"
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.HeaderContainer_5.Icon5"
               }
             }
           ],
@@ -114,19 +114,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.AccessibleLabel"
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.AccessibleLabel",
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "NomineeListScreen",
-                "type": "NomineeListScreen.ImageContainer_1.Image1_5"
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3"
               }
             }
           ],
@@ -144,19 +144,139 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.TabIndex"
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.TabIndex",
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "NomineeListScreen",
-                "type": "NomineeListScreen.ImageContainer_1.Image1_5"
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.ImageContainer_5.Image1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.ImageContainer_5.Image1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "HomeScreen",
+                "type": "HomeScreen.ImageContainer.Image1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "HomeScreen",
+                "type": "HomeScreen.ImageContainer.Image1"
               }
             }
           ],
@@ -474,19 +594,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.AccessibleLabel"
+                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.AccessibleLabel",
+                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.HeaderContainer_2.Icon6_1"
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.HeaderContainer1.Icon6"
               }
             }
           ],
@@ -504,19 +624,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.TabIndex"
+                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.TabIndex",
+                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.HeaderContainer_2.Icon6_1"
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.HeaderContainer1.Icon6"
               }
             }
           ],
@@ -534,19 +654,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApprovalScreen.ImageContainer_3.Image1_3.AccessibleLabel"
+                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApprovalScreen.ImageContainer_3.Image1_3.AccessibleLabel",
+                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.ImageContainer_3.Image1_3"
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.ImageContainer_1.Image1_5"
               }
             }
           ],
@@ -564,19 +684,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApprovalScreen.ImageContainer_3.Image1_3.TabIndex"
+                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApprovalScreen.ImageContainer_3.Image1_3.TabIndex",
+                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.ImageContainer_3.Image1_3"
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.ImageContainer_1.Image1_5"
               }
             }
           ],
@@ -714,19 +834,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.AccessibleLabel"
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.AccessibleLabel",
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.HeaderContainer_5.Icon5"
+                "module": "ApprovalScreen",
+                "type": "ApprovalScreen.HeaderContainer_2.Icon6_1"
               }
             }
           ],
@@ -744,19 +864,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.TabIndex"
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.TabIndex",
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.HeaderContainer_5.Icon5"
+                "module": "ApprovalScreen",
+                "type": "ApprovalScreen.HeaderContainer_2.Icon6_1"
               }
             }
           ],
@@ -774,19 +894,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.AccessibleLabel"
+                  "fullyQualifiedName": "ApprovalScreen.ImageContainer_3.Image1_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.AccessibleLabel",
+                  "fullyQualifiedName": "ApprovalScreen.ImageContainer_3.Image1_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.ImageContainer_5.Image1_4"
+                "module": "ApprovalScreen",
+                "type": "ApprovalScreen.ImageContainer_3.Image1_3"
               }
             }
           ],
@@ -804,19 +924,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.TabIndex"
+                  "fullyQualifiedName": "ApprovalScreen.ImageContainer_3.Image1_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.TabIndex",
+                  "fullyQualifiedName": "ApprovalScreen.ImageContainer_3.Image1_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.ImageContainer_5.Image1_4"
+                "module": "ApprovalScreen",
+                "type": "ApprovalScreen.ImageContainer_3.Image1_3"
               }
             }
           ],
@@ -834,19 +954,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.AccessibleLabel"
+                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.Gallery4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.AccessibleLabel",
+                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.Gallery4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3"
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.ListBodyContainer.Gallery4"
               }
             }
           ],
@@ -864,19 +984,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.TabIndex"
+                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.Gallery4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.TabIndex",
+                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.Gallery4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3"
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.ListBodyContainer.Gallery4"
               }
             }
           ],
@@ -894,19 +1014,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.AccessibleLabel"
+                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.Gallery4.Container2.GoIcon.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.AccessibleLabel",
+                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.Gallery4.Container2.GoIcon.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.ImageContainer.Image1"
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.ListBodyContainer.Gallery4.Container2.GoIcon"
               }
             }
           ],
@@ -924,19 +1044,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.TabIndex"
+                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.Gallery4.Container2.GoIcon.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.TabIndex",
+                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.Gallery4.Container2.GoIcon.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.ImageContainer.Image1"
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.ListBodyContainer.Gallery4.Container2.GoIcon"
               }
             }
           ],
@@ -984,19 +1104,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.Width"
+                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.Width",
+                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Width",
-                "module": "NomineeListScreen",
-                "type": "NomineeListScreen.HeaderContainer1.Icon6"
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.HeaderContainer_5.Icon5"
               }
             }
           ],
@@ -1014,19 +1134,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.NomineeListGalleryHeaderContainer.Container5_4.Label16_3.Size"
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.ApprovedButton_2.Size"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.NomineeListGalleryHeaderContainer.Container5_4.Label16_3.Size",
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.ApprovedButton_2.Size",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Size",
-                "module": "NomineeListScreen",
-                "type": "NomineeListScreen.ListBodyContainer.NomineeListGalleryHeaderContainer.Container5_4.Label16_3"
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.ApprovedButton_2"
               }
             }
           ],
@@ -1044,19 +1164,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.NomineeListGalleryHeaderContainer.Container5_5.Label16_6.Size"
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.RejectedButton_2.Size"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NomineeListScreen.ListBodyContainer.NomineeListGalleryHeaderContainer.Container5_5.Label16_6.Size",
+                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.RejectedButton_2.Size",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Size",
-                "module": "NomineeListScreen",
-                "type": "NomineeListScreen.ListBodyContainer.NomineeListGalleryHeaderContainer.Container5_5.Label16_6"
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.RejectedButton_2"
               }
             }
           ],
@@ -1074,19 +1194,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.Height"
+                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.Height"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.Height",
+                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.Height",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Height",
-                "module": "NomineeListScreen",
-                "type": "NomineeListScreen.ImageContainer_1.Image1_5"
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.ImageContainer_5.Image1_4"
               }
             }
           ],
@@ -1104,19 +1224,169 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Label1_5.Size"
+                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Label1_4.Size"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Label1_5.Size",
+                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Label1_4.Size",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Size",
-                "module": "NomineeListScreen",
-                "type": "NomineeListScreen.ImageContainer_1.Label1_5"
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.ImageContainer_5.Label1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApproveByHRScreen.DashboardLabelContainer_2.Label10_2.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApproveByHRScreen.DashboardLabelContainer_2.Label10_2.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.DashboardLabelContainer_2.Label10_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container9.Label19.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container9.Label19.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.PopUpRejectContainer.Container9.Label19"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button2.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button2.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button4.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button4.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "ApproveByHRScreen",
+                "type": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "HomeScreen",
+                "type": "HomeScreen.ImageContainer.Image1"
               }
             }
           ],
@@ -1404,19 +1674,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.Width"
+                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.Height"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.Width",
+                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Image1_5.Height",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Width",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.HeaderContainer_2.Icon6_1"
+                "member": "Height",
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.ImageContainer_1.Image1_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Label1_5.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "NomineeListScreen.ImageContainer_1.Label1_5.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "NomineeListScreen",
+                "type": "NomineeListScreen.ImageContainer_1.Label1_5"
               }
             }
           ],
@@ -1464,289 +1764,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.Width"
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.HeaderContainer_5.Icon5.Width",
+                  "fullyQualifiedName": "ApprovalScreen.HeaderContainer_2.Icon6_1.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Width",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.HeaderContainer_5.Icon5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.Height"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Image1_4.Height",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Height",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.ImageContainer_5.Image1_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Label1_4.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.ImageContainer_5.Label1_4.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.ImageContainer_5.Label1_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApproveByHRScreen.DashboardLabelContainer_2.Label10_2.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.DashboardLabelContainer_2.Label10_2.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.DashboardLabelContainer_2.Label10_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.ApprovedButton_2.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.ApprovedButton_2.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.ApprovedButton_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.RejectedButton_2.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.RejectedButton_2.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.BodyContainer_2.FormBodyContainer_1.NominationContainer_1.Gallery3.RejectedButton_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container9.Label19.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container9.Label19.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.PopUpRejectContainer.Container9.Label19"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button2.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button2.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button4.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button4.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "ApproveByHRScreen",
-                "type": "ApproveByHRScreen.PopUpRejectContainer.Container11.Button4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.Height"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "HomeScreen.ImageContainer.Image1.Height",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Height",
-                "module": "HomeScreen",
-                "type": "HomeScreen.ImageContainer.Image1"
+                "module": "ApprovalScreen",
+                "type": "ApprovalScreen.HeaderContainer_2.Icon6_1"
               }
             }
           ],

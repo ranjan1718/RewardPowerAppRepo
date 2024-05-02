@@ -20,7 +20,7 @@ NomineeListScreen As screen:
             Color: =RGBA(255, 255, 255, 1)
             Icon: =Icon.Home
             OnSelect: =Navigate(HomeScreen)
-            Width: =Switch(HomeScreen.Size,1,20,2,35,3,40,4,40)
+            Width: =Switch(NomineeListScreen.Size,1,20,2,35,3,40,4,40)
             X: =(Parent.Width-Self.Width)/2
             ZIndex: =3
 
@@ -82,7 +82,7 @@ NomineeListScreen As screen:
                     Align: =Align.Center
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Semibold
-                    Size: =Switch(HomeScreen.Size,1,9,2,13,3,13,4,13)
+                    Size: =Switch(NomineeListScreen.Size,1,9,2,13,3,13,4,13)
                     Text: ="Nominee Name"
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.Width*0.7
@@ -105,7 +105,7 @@ NomineeListScreen As screen:
                     Align: =Align.Center
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Semibold
-                    Size: =Switch(HomeScreen.Size,1,9,2,13,3,13,4,13)
+                    Size: =Switch(NomineeListScreen.Size,1,9,2,13,3,13,4,13)
                     Text: ="Nominated By"
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.Width*0.9
@@ -116,6 +116,57 @@ NomineeListScreen As screen:
                     Text: =""
                     Width: =Parent.Width*0.15
                     ZIndex: =2
+
+        Gallery4 As gallery.variableTemplateHeightGallery:
+            DelayItemLoading: =true
+            FillPortions: =0
+            Height: =Parent.Height*0.9
+            Items: ='Nominee List'
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateFill: =Color.LightGray
+            TemplateSize: =Parent.Height*0.15
+            Transition: =Transition.Pop
+            ZIndex: =2
+
+            Container2 As groupContainer.horizontalAutoLayoutContainer:
+                Height: =Parent.TemplateHeight
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.TemplateWidth
+                ZIndex: =1
+
+                Label9 As label:
+                    Align: =Align.Center
+                    Size: =Switch(NomineeListScreen.Size,1,9,2,13,3,13,4,13)
+                    Text: =ThisItem.'Nominee Name'
+                    Width: =Parent.Width/2
+                    ZIndex: =1
+
+                Label11 As label:
+                    Align: =Align.Center
+                    Size: =Switch(NomineeListScreen.Size,1,9,2,13,3,13,4,13)
+                    Text: =ThisItem.Manager
+                    Width: =Parent.Width/2.5
+                    ZIndex: =2
+
+                GoIcon As icon.NextArrow:
+                    Icon: =Icon.NextArrow
+                    OnSelect: =Navigate(ApproveByHRScreen)
+                    Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR" )),true,false)
+                    Width: =Switch(NomineeListScreen.Size,1,20,2,35,3,40,4,40)
+                    ZIndex: =3
+
+                Label12 As label:
+                    Align: =Align.Center
+                    Height: =Parent.Height
+                    Text: =""
+                    Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR" )),true,false)
+                    Width: =Parent.Width*0.07
+                    ZIndex: =4
 
     ImageContainer_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None

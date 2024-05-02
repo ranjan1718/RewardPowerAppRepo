@@ -116,13 +116,13 @@
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
-    "Name": "Reward_Employees - V2",
+    "Name": "Reward_Employees",
     "OriginatingVersion": "1.341",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "278b139e-9faa-4dd6-8f19-36f0a5b26671",
+    "AppName": "06d154f0-6bac-4ac9-993a-a6e8916f1a3d",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",

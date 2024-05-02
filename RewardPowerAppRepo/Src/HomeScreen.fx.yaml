@@ -61,7 +61,7 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
+                Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.15)
                 X: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.5,(Parent.Width-Self.Width)/2)
                 ZIndex: =3
 

@@ -14,1237 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 20,
-                  "charOffset": 18,
-                  "snippet": {
-                    "text": "'Managers&Approvers'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Managers&Approvers"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 11,
-                  "snippet": {
-                    "text": "LookUp"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "'Name (Manager)'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Name (Manager)"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 55,
-                  "snippet": {
-                    "text": ".DisplayName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 67,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 20,
-                  "charOffset": 18,
-                  "snippet": {
-                    "text": "'Managers&Approvers'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Managers&Approvers"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 11,
-                  "snippet": {
-                    "text": "LookUp"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "'Name (Manager)'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Name (Manager)"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 55,
-                  "snippet": {
-                    "text": ".DisplayName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 67,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NominatorContainer.NomineeEmail1TextInput"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 20,
-                  "charOffset": 18,
-                  "snippet": {
-                    "text": "'Managers&Approvers'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Managers&Approvers"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 11,
-                  "snippet": {
-                    "text": "LookUp"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "'Name (Manager)'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Name (Manager)"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 55,
-                  "snippet": {
-                    "text": ".DisplayName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 67,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.NomineeNameContainer_1.Container7_1.TextInput2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 20,
-                  "charOffset": 18,
-                  "snippet": {
-                    "text": "'Managers&Approvers'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Managers&Approvers"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 11,
-                  "snippet": {
-                    "text": "LookUp"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "'Name (Manager)'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Name (Manager)"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 55,
-                  "snippet": {
-                    "text": ".DisplayName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2.DisplayMode",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 67,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.OthersContainer.Container5_2.Container7_2.ComboBox2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 20,
-                  "charOffset": 18,
-                  "snippet": {
-                    "text": "'Managers&Approvers'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Managers&Approvers"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 11,
-                  "snippet": {
-                    "text": "LookUp"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "'Name (Manager)'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Name (Manager)"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 55,
-                  "snippet": {
-                    "text": ".DisplayName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 67,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 6,
-                  "snippet": {
-                    "text": "NomineeList"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "NomineeList"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 25,
-                  "snippet": {
-                    "text": "NomineeList"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "NomineeList"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 18,
-                  "snippet": {
-                    "text": "LookUp"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 37,
-                  "snippet": {
-                    "text": "NomineeEmail"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "NomineeEmail"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 49,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 5,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "Patch"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.SubmitContainer.RejectButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Patch"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "NomineeListScreen.HeaderContainer1.Icon6.AccessibleLabel"
                 }
               ],
@@ -1268,7 +37,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1298,7 +67,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1328,7 +97,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1358,7 +127,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1388,7 +157,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 6
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1418,7 +187,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1448,7 +217,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 6
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1478,7 +247,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1508,7 +277,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 6
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1538,7 +307,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1568,7 +337,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1598,7 +367,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1628,7 +397,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1658,7 +427,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1688,7 +457,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1718,7 +487,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1748,7 +517,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1778,7 +547,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1808,7 +577,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1838,7 +607,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1868,7 +637,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1898,7 +667,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1928,7 +697,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1958,7 +727,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1988,7 +757,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2018,37 +787,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.ComboBox1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.ComboBox1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ApprovalScreen",
-                "type": "ApprovalScreen.BodyContainer_1.FormBodyContainer.NominationContainer.NameContainer.NomineeNameContainer.NameOfNomineeContainer.ComboBox1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2078,7 +817,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2108,7 +847,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2138,7 +877,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2168,7 +907,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2198,7 +937,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2228,7 +967,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2258,7 +997,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2288,7 +1027,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2318,7 +1057,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2348,7 +1087,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2378,7 +1117,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2408,7 +1147,37 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varCurrUserData"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varCurrUserData",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varCurrUserData",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2438,7 +1207,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2468,7 +1237,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2498,7 +1267,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2528,7 +1297,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2558,7 +1327,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2588,7 +1357,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2618,7 +1387,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2648,7 +1417,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2678,7 +1447,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2708,7 +1477,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2738,7 +1507,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2768,7 +1537,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2798,7 +1567,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2828,7 +1597,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2858,7 +1627,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2888,7 +1657,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2918,7 +1687,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2948,7 +1717,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2978,7 +1747,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3008,7 +1777,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3038,7 +1807,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3068,7 +1837,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3098,7 +1867,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3128,7 +1897,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 4
         }
       ],
       "tool": {
@@ -3136,69 +1905,6 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
-            {
-              "id": "app-ErrInvalidName",
-              "messageStrings": {
-                "issue": {
-                  "text": "Name isn't valid. '{0}' isn't recognized."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove or correct the reference to the name that isn't valid."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrInvalidArgs-Func",
-              "messageStrings": {
-                "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrInvalidDot",
-              "messageStrings": {
-                "issue": {
-                  "text": "Invalid use of '.'"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
-              "messageStrings": {
-                "issue": {
-                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
-                  "If you’re comparing records or tables, the field or column types must match exactly."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
             {
               "id": "acc-AccessibleLabelNeeded",
               "messageStrings": {
@@ -3248,6 +1954,23 @@
                 "level": "Medium",
                 "primaryCategory": "accessibility",
                 "whyFix": "If the focus isn't visible, people who don't use a mouse won't be able to see it when they're interacting with the app."
+              }
+            },
+            {
+              "id": "app-UnusedVariables",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unused variable"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove the unused variable."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             },
             {

@@ -15,7 +15,7 @@ RedemptionScreen As screen:
             Height: =Parent.Height
             Icon: =Icon.AddUser
             OnSelect: =Navigate(ProfileScreen,ScreenTransition.Fade)
-            Width: =If(RedemptionScreen.Size=2||RedemptionScreen.Size=3,50, 64)
+            Width: =If(RedemptionScreen.Size=2||RedemptionScreen.Size=3,35, 40)
             ZIndex: =1
 
         Label11_2 As label:
@@ -29,7 +29,7 @@ RedemptionScreen As screen:
             Height: =Parent.Height
             Icon: =Icon.BackArrow
             OnSelect: =Navigate(HomeScreen)
-            Width: =If(RedemptionScreen.Size=2||RedemptionScreen.Size=3,50, 64)
+            Width: =If(RedemptionScreen.Size=2||RedemptionScreen.Size=3,35, 40)
             X: =(Parent.Width-Self.Width)
             Y: =(Parent.Height-Self.Height)/2
             ZIndex: =3
@@ -192,6 +192,8 @@ RedemptionScreen As screen:
                         LayoutMinWidth: =0
                         OnSelect: |-
                             =
+                            //Set(gbl_val, [Concat(LookUp('Nominee List', 'Nominee Name'=User().FullName)).Redeemed,ThisItem.Prize)];
+                            
                             If(
                                 LookUp('Nominee List', 'Nominee Name' = User().FullName).Points >= ThisItem.point,
                                 // If the user has enough points to redeem the gift
@@ -200,14 +202,15 @@ RedemptionScreen As screen:
                                     LookUp('Nominee List', 'Nominee Name' = User().FullName),
                                     { 
                                         Points: LookUp('Nominee List', 'Nominee Name' = User().FullName).Points - ThisItem.point,
-                                        Redeemed:[ThisItem.Prize]
+                                          Redeemed:[ThisItem.Prize]
+                                          
                             
                                     }
                                 );
                                   
                                
                                 // Deduct the points from the user's points
-                                Collect(
+                               Collect(
                                     RedeemedPrizes,
                                     { 'Nominee Name': User().FullName, Redeemed: ThisItem.Prize }
                                 );
@@ -223,8 +226,8 @@ RedemptionScreen As screen:
                             
                             
                             )
-                        Size: =If(RedemptionScreen.Size=1,10,RedemptionScreen.Size=2,20,RedemptionScreen.Size=3,20,20)
-                        Text: ="Click"
+                        Size: =If(RedemptionScreen.Size=1,10,RedemptionScreen.Size=2,20,RedemptionScreen.Size=3,14,14)
+                        Text: ="Redeem"
                         Width: =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2,90,RedemptionScreen.Size=3,110,180)
                         ZIndex: =3
 

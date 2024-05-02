@@ -184,7 +184,7 @@ ApprovalScreen As screen:
                             BorderThickness: =1
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =Parent.Height*0.45
+                            Height: =Parent.Height*0.4
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center

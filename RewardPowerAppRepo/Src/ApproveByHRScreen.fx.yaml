@@ -3,7 +3,7 @@ ApproveByHRScreen As screen:
 
     HeaderContainer_5 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(114, 45, 173, 0.96)
-        Height: =Parent.Height*0.15
+        Height: =Parent.Height*0.12
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
@@ -16,7 +16,7 @@ ApproveByHRScreen As screen:
 
         Icon5 As icon.BackArrow:
             Color: =RGBA(255, 255, 255, 1)
-            Icon: =Icon.BackArrow
+            Icon: =Icon.Home
             OnSelect: =Navigate(HomeScreen)
             Tooltip: ="Exit to Dashboard"
             Width: =Switch(HomeScreen.Size,1,20,2,35,3,40,4,40)
@@ -31,7 +31,7 @@ ApproveByHRScreen As screen:
     BodyContainer_2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
         Fill: =RGBA(240, 240, 240, 1)
-        Height: =Parent.Height*0.8
+        Height: =Parent.Height*0.82
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
@@ -256,7 +256,7 @@ ApproveByHRScreen As screen:
 
     ImageContainer_5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =Parent.Height*0.15
+        Height: =Parent.Height*0.12
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -297,7 +297,7 @@ ApproveByHRScreen As screen:
         RadiusTopRight: =15
         Width: =Parent.Width*0.35
         X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/5.9
+        Y: =(Parent.Height-Self.Height)/7.2
         ZIndex: =4
 
         Label10_2 As label:

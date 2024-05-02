@@ -3,7 +3,7 @@ NomineeListScreen As screen:
 
     HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(114, 45, 173, 0.96)
-        Height: =Parent.Height*0.15
+        Height: =Parent.Height*0.12
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.End
         LayoutMode: =LayoutMode.Auto
@@ -33,7 +33,7 @@ NomineeListScreen As screen:
     ListBodyContainer As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =Parent.Height*0.8
+        Height: =Parent.Height*0.82
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
@@ -41,129 +41,70 @@ NomineeListScreen As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
-        Width: =Parent.Width*0.8
+        Width: =Parent.Width*0.94
         X: =(Parent.Width-Self.Width)/2
         Y: =(Parent.Height-Self.Height)/1.1
         ZIndex: =3
 
-        ListHeaderContainer As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.Start
-            BorderColor: =RGBA(128, 128, 128, 1)
+        NomineeListGalleryHeaderContainer As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Center
             DropShadow: =DropShadow.None
+            Fill: =RGBA(12, 173, 122, 1)
             FillPortions: =0
-            Height: =Parent.Height*0.12
+            Height: =Parent.Height*0.1
             LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutJustifyContent: =LayoutJustifyContent.Center
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Width: =Parent.Width
-            X: =Parent.X
-            Y: =(Parent.Height-Self.Height)/2
-            ZIndex: =2
-
-            Label12 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(255, 255, 255, 1)
-                BorderThickness: =2
-                Color: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(0, 121, 187, 1)
-                Font: =Font.'Courier New'
-                FontWeight: =FontWeight.Semibold
-                Height: =Parent.Height
-                Size: =18
-                Text: ="Users"
-                Width: =Parent.Width/2
-                ZIndex: =5
-
-            Label13 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(255, 255, 255, 1)
-                BorderThickness: =2
-                Color: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(0, 121, 187, 1)
-                Font: =Font.'Courier New'
-                FontWeight: =FontWeight.Semibold
-                Height: =Parent.Height
-                Size: =18
-                Text: ="Criteria matched"
-                Width: =Parent.Width/2
-                ZIndex: =6
-
-        Container10 As groupContainer.verticalAutoLayoutContainer:
-            FillPortions: =0
-            Height: =Parent.Height*0.82
-            LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             Width: =Parent.Width
-            ZIndex: =3
+            ZIndex: =1
 
-            Gallery4 As gallery.variableTemplateHeightGallery:
-                AlignInContainer: =AlignInContainer.Center
-                BorderColor: =RGBA(0, 0, 0, 1)
-                DelayItemLoading: =true
+            Container5_4 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.None
+                FillPortions: =0
                 Height: =Parent.Height
-                Items: ='Nominee List'
-                Layout: =Layout.Vertical
-                LayoutMinHeight: =0
-                LayoutMinWidth: =320
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =Max(Parent.Height*0.6,Container2.Height)
-                Width: =Parent.Width
-                Y: =(Parent.Height-Self.Height)/2
-                ZIndex: =1
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width/2
+                ZIndex: =2
 
-                Label18 As label:
+                Label9_3 As label:
+                    Text: =""
+                    Width: =Parent.Width*0.2
+                    ZIndex: =1
+
+                Label16_3 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    Size: =15
-                    Text: =ThisItem.'Nominee Name'
-                    Visible: =false
-                    Width: =Parent.Width/3
-                    X: =Parent.X
-                    Y: =(Parent.TemplateHeight-Self.Height)/2
+                    Text: ="Nominee Name"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.Width*0.6
                     ZIndex: =2
 
-                Container2 As groupContainer.horizontalAutoLayoutContainer:
-                    Height: =Label18_3.Height*1.2
-                    LayoutAlignItems: =LayoutAlignItems.Center
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.TemplateWidth
-                    ZIndex: =6
+            Container5_5 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width/2
+                ZIndex: =3
 
-                    Label18_2 As label:
-                        Align: =Align.Center
-                        AlignInContainer: =AlignInContainer.Center
-                        FontWeight: =FontWeight.Semibold
-                        OnSelect: =//Select(Parent)
-                        Size: =15
-                        Text: =ThisItem.'Nominee Name'
-                        Width: =Parent.Width/2
-                        X: =Parent.X
-                        Y: =//(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =1
-
-                    Label18_3 As label:
-                        Align: =Align.Center
-                        AlignInContainer: =AlignInContainer.Start
-                        AutoHeight: =true
-                        FontWeight: =FontWeight.Semibold
-                        Height: =//Parent.Height
-                        Size: =15
-                        Text: |-
-                            =Concat(ThisItem.Justification,Value,"
-                            
-                            ")
-                        VerticalAlign: =VerticalAlign.Bottom
-                        Width: =Parent.Width/2
-                        X: =(Parent.Width-Self.Width)/2
-                        Y: =//(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =2
+                Label16_6 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Text: ="Nominated By"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.Width*0.8
+                    ZIndex: =1
 

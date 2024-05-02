@@ -45,7 +45,7 @@ RedemptionScreen As screen:
         ZIndex: =2
 
         Image1_2 As image:
-            Height: =Switch(ApprovalScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.6,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
+            Height: =Switch(RedemptionScreen.Size,1,Parent.Height*0.5,2,Parent.Height*0.6,3,Parent.Height*0.6,4,Parent.Height*0.6,Parent.Height*0.6)
             Image: =User().Image
             RadiusBottomLeft: =40
             RadiusBottomRight: =40
@@ -60,9 +60,9 @@ RedemptionScreen As screen:
             Font: =Font.'Courier New'
             FontWeight: =FontWeight.Bold
             Height: =Parent.Height*0.28
-            Size: =18
+            Size: =If(RedemptionScreen.Size=1,15,RedemptionScreen.Size=2||RedemptionScreen.Size=3,15,15)
             Text: =User().FullName
-            Width: =Parent.Width
+            Width: =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,300,320)
             ZIndex: =2
 
     RedemptionBodyContainer As groupContainer.horizontalAutoLayoutContainer:
@@ -102,14 +102,17 @@ RedemptionScreen As screen:
                 Align: =Align.Right
                 FontWeight: =FontWeight.Bold
                 Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                OnSelect: |
+                    =false
                 Size: =If(RedemptionScreen.Size=1,14,RedemptionScreen.Size=2||RedemptionScreen.Size=3,15,15)
                 Text: |-
                     ="Your Points:"
                 Width: |
-                    =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
+                    =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,170,180)
                 ZIndex: =4
 
             Label8_12 As label:
+                Align: =Align.Center
                 FontWeight: =FontWeight.Bold
                 Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
                 Size: =If(RedemptionScreen.Size=1,14,RedemptionScreen.Size=2||RedemptionScreen.Size=3,15,15)
@@ -124,7 +127,7 @@ RedemptionScreen As screen:
             FillPortions: =0
             Height: =Parent.Height/7
             LayoutAlignItems: =LayoutAlignItems.Stretch
-            LayoutGap: =If(RedemptionScreen.Size=4,150,If(RedemptionScreen.Size=2,50,100))
+            LayoutGap: =If(RedemptionScreen.Size=4,140,If(RedemptionScreen.Size=2,40,80))
             LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -166,6 +169,7 @@ RedemptionScreen As screen:
             DropShadow: =DropShadow.None
             FillPortions: =0
             Height: =Parent.Height/2
+            LayoutGap: =If(RedemptionScreen.Size=4,150,If(RedemptionScreen.Size=2,50,100))
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -194,7 +198,7 @@ RedemptionScreen As screen:
                     DropShadow: =DropShadow.None
                     Height: =Parent.Height/5
                     LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutGap: =If(RedemptionScreen.Size=4,150,If(RedemptionScreen.Size=2,50,100))
+                    LayoutGap: =If(RedemptionScreen.Size=4,140,If(RedemptionScreen.Size=2,40,80))
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMode: =LayoutMode.Auto
                     PaddingRight: =5
@@ -203,12 +207,13 @@ RedemptionScreen As screen:
                     ZIndex: =1
 
                     Label8_4 As label:
+                        Align: =Align.Center
                         AlignInContainer: =AlignInContainer.Stretch
                         Height: =If(RedemptionScreen.Size=1,40,RedemptionScreen.Size=2||RedemptionScreen.Size=3,70,25)
                         Size: =If(RedemptionScreen.Size=1,8,RedemptionScreen.Size=2||RedemptionScreen.Size=3,14,15)
                         Text: =ThisItem.Prize.Value
                         Width: =If(RedemptionScreen.Size=1,120,RedemptionScreen.Size=2,190,RedemptionScreen.Size=3,180,190)
-                        X: =(Parent.Width-Self.Width)/1
+                        X: =(Parent.Width-Self.Width)/2
                         Y: =(Parent.Height)
                         ZIndex: =1
 
@@ -228,7 +233,9 @@ RedemptionScreen As screen:
                         LayoutMinWidth: =0
                         OnSelect: |-
                             =
-                            //Set(gbl_val, [Concat(LookUp('Nominee List', 'Nominee Name'=User().FullName)).Redeemed,ThisItem.Prize)];
+                            ClearCollect(col_val, LookUp('Nominee List', 'Nominee Name'=User().FullName).Redeemed);
+                            Collect(col_val,Defaults(col_val),{Value:ThisItem.Prize.Value});
+                            
                             
                             If(
                                 LookUp('Nominee List', 'Nominee Name' = User().FullName).Points >= ThisItem.point,
@@ -238,7 +245,7 @@ RedemptionScreen As screen:
                                     LookUp('Nominee List', 'Nominee Name' = User().FullName),
                                     { 
                                         Points: LookUp('Nominee List', 'Nominee Name' = User().FullName).Points - ThisItem.point,
-                                        Redeemed:[ThisItem.Prize]
+                                        Redeemed:col_val
                                           
                             
                                     }

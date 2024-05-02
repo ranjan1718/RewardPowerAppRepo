@@ -187,9 +187,7 @@ ApproveByHRScreen As screen:
                         HoverBorderColor: =RGBA(118, 0, 0, 1)
                         HoverColor: =RGBA(118, 0, 0, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: |-
-                            =Patch('Nominee List',LookUp('Nominee List',ID=ThisItem.ID),{Status:{Value:"Rejected"}});
-                            Notify("User Rejected",NotificationType.Information,1000);
+                        OnSelect: =Set(varPopRejectHR,true)
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                         Text: ="Reject"
                         Width: =Parent.TemplateWidth*0.1
@@ -342,4 +340,72 @@ ApproveByHRScreen As screen:
             Text: ="Nominate"
             Width: =Parent.Width
             ZIndex: =1
+
+    PopUpRejectContainer As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height*0.25
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Visible: =varPopRejectHR
+        Width: =Parent.Width*0.4
+        X: =(Parent.Width-Self.Width)/2
+        Y: =(Parent.Height-Self.Height)/2
+        ZIndex: =5
+
+        Container9 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =Parent.Height*0.3
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =1
+
+            Label19 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Size: =Switch(HomeScreen.Size,1,10,2,14,3,14,4,14)
+                Text: ="Sure to Reject ?"
+                Width: =Parent.Width
+                ZIndex: =1
+
+        Container11 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =Parent.Height*0.7
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =2
+
+            Button2 As button:
+                Fill: =RGBA(19, 171, 105, 1)
+                Height: =Parent.Height*0.24
+                OnSelect: |-
+                    =Patch('Nominee List',LookUp('Nominee List',ID=Gallery3.Selected.ID),{Status:{Value:"Rejected"}});
+                    Notify("User Rejected",NotificationType.Information,1000);
+                Text: ="Yes"
+                Width: =Parent.Width*0.25
+                ZIndex: =1
+
+            Label21 As label:
+                Text: =
+                Width: =Parent.Width*0.05
+                ZIndex: =2
+
+            Button4 As button:
+                Fill: =RGBA(118, 0, 0, 1)
+                Height: =Parent.Height*0.24
+                OnSelect: =Set(varPopRejectHR,false)
+                Text: ="No"
+                Width: =Parent.Width*0.25
+                ZIndex: =3
 

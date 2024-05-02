@@ -1,6 +1,8 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: =Set(varCurrUserData,User())
+    OnStart: |-
+        =Set(varCurrUserData,User());
+        Set(varPopRejectHR,false);
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

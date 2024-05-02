@@ -24,7 +24,7 @@
       "classiccontrols": false,
       "commentgeneratedformulas": true,
       "consistentreturnschemafortabularfunctions": true,
-      "copyandmerge": true,
+      "copyandmerge": false,
       "dataflowanalysisenabled": true,
       "datatablev2control": true,
       "dataverseactionsenabled": true,
@@ -122,7 +122,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "dedf950e-57e4-4da1-847e-d3de3b83e2d0",
+    "AppName": "06d154f0-6bac-4ac9-993a-a6e8916f1a3d",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",

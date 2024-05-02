@@ -40,7 +40,7 @@ HomeScreen As screen:
                 Height: =Parent.Height*0.1
                 Text: =""
                 Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),true,false)
-                Width: =Parent.Width*0.12
+                Width: =Parent.Width*0.08
                 ZIndex: =1
 
             Label5_2 As label:
@@ -54,14 +54,14 @@ HomeScreen As screen:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Regular
                 FillPortions: =0
-                Height: =Switch(HomeScreen.Size,1,Parent.Height*0.4,2,Parent.Height*0.4,3,Parent.Height*0.5,4,Parent.Height*0.5,Parent.Height*0.5)
+                Height: =Switch(HomeScreen.Size,1,Parent.Height*0.4,2,Parent.Height*0.4,3,Parent.Height*0.5,4,Parent.Height*0.4,Parent.Height*0.5)
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutJustifyContent: =LayoutJustifyContent.Center
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
+                Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.14,Parent.Width*0.15)
                 X: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.5,(Parent.Width-Self.Width)/2)
                 ZIndex: =3
 
@@ -89,14 +89,14 @@ HomeScreen As screen:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Regular
                 FillPortions: =0
-                Height: =Switch(HomeScreen.Size,1,Parent.Height*0.4,2,Parent.Height*0.4,3,Parent.Height*0.5,4,Parent.Height*0.5,Parent.Height*0.5)
+                Height: =Switch(HomeScreen.Size,1,Parent.Height*0.4,2,Parent.Height*0.4,3,Parent.Height*0.5,4,Parent.Height*0.4,Parent.Height*0.5)
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutJustifyContent: =LayoutJustifyContent.Center
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
+                Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.14,Parent.Width*0.15)
                 X: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.5,(Parent.Width-Self.Width)/2)
                 ZIndex: =5
 
@@ -117,7 +117,7 @@ HomeScreen As screen:
             Label5_4 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
+                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && (Role="Manager" || Role="HR"))),false,true)
                 Width: =Parent.Width*0.12
                 ZIndex: =6
 
@@ -125,27 +125,27 @@ HomeScreen As screen:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Regular
                 FillPortions: =0
-                Height: =Switch(HomeScreen.Size,1,Parent.Height*0.4,2,Parent.Height*0.4,3,Parent.Height*0.5,4,Parent.Height*0.5,Parent.Height*0.5)
+                Height: =Switch(HomeScreen.Size,1,Parent.Height*0.4,2,Parent.Height*0.4,3,Parent.Height*0.5,4,Parent.Height*0.4,Parent.Height*0.5)
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutJustifyContent: =LayoutJustifyContent.Center
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
-                Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.2,Parent.Width*0.2)
+                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && (Role="Manager" || Role="HR"))),false,true)
+                Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.14,Parent.Width*0.15)
                 ZIndex: =7
 
                 Icon4 As icon.CheckBadge:
                     Height: =Parent.Height*0.3
-                    Icon: =Icon.CheckBadge
+                    Icon: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Admin" )),Icon.Settings,Icon.CheckBadge)
                     ZIndex: =1
 
                 Label15 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
                     Size: =Switch(HomeScreen.Size,1,8,2,13,3,13,4,13)
-                    Text: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" )),"Nominate",If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR","Nominate")),"Approve"))
+                    Text: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" )),"Nominate",If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Admin" )),"System",If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR","Nominate")),"Approve")))
                     Width: =Parent.Width
                     ZIndex: =2
 
@@ -160,7 +160,7 @@ HomeScreen As screen:
                 Height: =Parent.Height*0.1
                 Text: =""
                 Visible: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),true,false)
-                Width: =Parent.Width*0.12
+                Width: =Parent.Width*0.08
                 ZIndex: =9
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
@@ -207,7 +207,7 @@ HomeScreen As screen:
 
     NomineeButton As button:
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Switch(HomeScreen.Size,1,Parent.Height*0.22,2,Parent.Height*0.22,3,Parent.Height*0.31,4,Parent.Height*0.31,Parent.Height*0.31)
+        Height: =Switch(HomeScreen.Size,1,Parent.Height*0.4,2,Parent.Height*0.4,3,Parent.Height*0.5,4,Parent.Height*0.25,Parent.Height*0.25)
         HoverFill: =Color.Transparent
         OnSelect: |-
             =Refresh('Nominee List');
@@ -215,22 +215,22 @@ HomeScreen As screen:
         PressedFill: =Color.Transparent
         Size: =Switch(HomeScreen.Size,1,12,2,13,3,15,4,15)
         Text: =""
-        Width: =Switch(HomeScreen.Size,1,Parent.Width*0.2,2,Parent.Width*0.2,3,Parent.Width*0.19,4,Parent.Width*0.19,Parent.Width*0.19)
-        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/3.2,(Parent.Width-Self.Width)/8)
+        Width: =Switch(HomeScreen.Size,1,Parent.Width*0.2,2,Parent.Width*0.2,3,Parent.Width*0.19,4,Parent.Width*0.13,Parent.Width*0.19)
+        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/3.2,(Parent.Width-Self.Width)/4.6)
         Y: =(Parent.Height-Self.Height)/1.4
         ZIndex: =4
 
     RedeemButton As button:
         DisabledFill: =RGBA(0, 0, 0, 0.1)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Parent.Height*0.31
+        Height: =Switch(HomeScreen.Size,1,Parent.Height*0.4,2,Parent.Height*0.4,3,Parent.Height*0.5,4,Parent.Height*0.25,Parent.Height*0.25)
         HoverFill: =Color.Transparent
         OnSelect: |-
             =Set(varEmployeeData,LookUp('Nominee List',NomineeEmail=User().Email)); //Get user data for redemption
             Navigate(RedemptionScreen);
         PressedFill: =Color.Transparent
         Text: =""
-        Width: =Parent.Width*0.19
+        Width: =Switch(HomeScreen.Size,1,Parent.Width*0.2,2,Parent.Width*0.2,3,Parent.Width*0.19,4,Parent.Width*0.13,Parent.Width*0.19)
         X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/2)
         Y: =(Parent.Height-Self.Height)/1.4
         ZIndex: =5
@@ -261,16 +261,16 @@ HomeScreen As screen:
 
     ApproveButton As button:
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Switch(HomeScreen.Size,1,Parent.Height*0.22,2,Parent.Height*0.22,3,Parent.Height*0.31,4,Parent.Height*0.31,Parent.Height*0.31)
+        Height: =Switch(HomeScreen.Size,1,Parent.Height*0.4,2,Parent.Height*0.4,3,Parent.Height*0.5,4,Parent.Height*0.25,Parent.Height*0.25)
         HoverFill: =Color.Transparent
         OnSelect: |-
             =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" )),Navigate(ApprovalScreen),If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR","Nominate")),Navigate(ApproveByHRScreen)));
             ClearCollect(varPendingUsers,ForAll('Nominee List',Status.Value="Pending")); //Get all users who has pending status
         PressedFill: =Color.Transparent
         Text: =""
-        Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
-        Width: =Parent.Width*0.19
-        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.14)
+        Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && (Role="Manager" || Role="HR"))),false,true)
+        Width: =Switch(HomeScreen.Size,1,Parent.Width*0.2,2,Parent.Width*0.2,3,Parent.Width*0.19,4,Parent.Width*0.13,Parent.Width*0.19)
+        X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.28)
         Y: =(Parent.Height-Self.Height)/1.4
         ZIndex: =7
 

@@ -42,7 +42,7 @@ ApproveByHRScreen As screen:
         RadiusTopRight: =10
         Width: =Parent.Width*0.95
         X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/1.1
+        Y: =(Parent.Height-Self.Height)/1.2
         ZIndex: =2
 
         Label7_7 As label:
@@ -180,17 +180,18 @@ ApproveByHRScreen As screen:
                         BorderColor: =RGBA(20, 156, 97, 1)
                         BorderThickness: =1
                         Fill: =RGBA(19, 171, 105, 1)
-                        Height: =Parent.TemplateHeight*0.4
+                        Height: =Parent.TemplateHeight*0.35
                         HoverBorderColor: =RGBA(19, 171, 105, 1)
                         HoverColor: =RGBA(37, 148, 55, 1)
                         HoverFill: =Color.White
                         OnSelect: |-
-                            =Set(varEmployeeData,LookUp('Nominee List',ID=ThisItem.ID));
+                            =
+                            Set(varEmployeeData,LookUp('Nominee List',ID=ThisItem.ID));
                             Patch('Nominee List',LookUp('Nominee List',ID=ThisItem.ID),{Status:{Value:"Approved"},Points:varEmployeeData.Points+200});
                             Notify("User Approved",NotificationType.Success,1000);
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                         Text: ="Approve"
-                        Width: =Parent.Width*0.1
+                        Width: =Parent.Width*0.08
                         X: =(Parent.Width-Self.Width)/1.17
                         Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =5
@@ -198,15 +199,15 @@ ApproveByHRScreen As screen:
                     RejectedButton_2 As button:
                         BorderThickness: =1
                         Fill: =RGBA(118, 0, 0, 1)
-                        Height: =Parent.TemplateHeight*0.4
+                        Height: =Parent.TemplateHeight*0.35
                         HoverBorderColor: =RGBA(118, 0, 0, 1)
                         HoverColor: =RGBA(118, 0, 0, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: =Set(varPopRejectHR,true)
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)
                         Text: ="Reject"
-                        Width: =Parent.Width*0.1
-                        X: =(Parent.Width-Self.Width)/1.024
+                        Width: =Parent.Width*0.08
+                        X: =(Parent.Width-Self.Width)/1.05
                         Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =6
 

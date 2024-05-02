@@ -469,7 +469,8 @@ ApprovalScreen As screen:
                                             NomineeEmail: NomineeEmail1TextInput.Text,
                                             Points: Value(TextInput2.Text),
                                             NominationDate: Today(),
-                                            Justification: ComboBox2.SelectedItems
+                                            Justification: ComboBox2.SelectedItems,
+                                            Manager:User().FullName
                                         }
                                     );
                                     Notify(

@@ -258,7 +258,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -2687,7 +2687,14 @@
     "Icon4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Icon.CheckBadge",
+          "InvariantPropertyName": "Icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Color",
         "DisabledColor",
         "PressedColor",
@@ -5785,7 +5792,14 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Visible"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role=\"Manager\" || Role=\"HR\")),false,true)",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {

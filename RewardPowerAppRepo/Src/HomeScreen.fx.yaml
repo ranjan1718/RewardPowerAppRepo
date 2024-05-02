@@ -117,7 +117,7 @@ HomeScreen As screen:
             Label5_4 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
+                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && (Role="Manager" || Role="HR"))),false,true)
                 Width: =Parent.Width*0.12
                 ZIndex: =6
 
@@ -132,20 +132,20 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
+                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && (Role="Manager" || Role="HR"))),false,true)
                 Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.14,Parent.Width*0.15)
                 ZIndex: =7
 
                 Icon4 As icon.CheckBadge:
                     Height: =Parent.Height*0.3
-                    Icon: =Icon.CheckBadge
+                    Icon: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Admin" )),Icon.Settings,Icon.CheckBadge)
                     ZIndex: =1
 
                 Label15 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
                     Size: =Switch(HomeScreen.Size,1,8,2,13,3,13,4,13)
-                    Text: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" )),"Nominate",If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR","Nominate")),"Approve"))
+                    Text: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" )),"Nominate",If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Admin" )),"System",If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR","Nominate")),"Approve")))
                     Width: =Parent.Width
                     ZIndex: =2
 
@@ -268,7 +268,7 @@ HomeScreen As screen:
             ClearCollect(varPendingUsers,ForAll('Nominee List',Status.Value="Pending")); //Get all users who has pending status
         PressedFill: =Color.Transparent
         Text: =""
-        Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),false,true)
+        Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && (Role="Manager" || Role="HR"))),false,true)
         Width: =Switch(HomeScreen.Size,1,Parent.Width*0.2,2,Parent.Width*0.2,3,Parent.Width*0.19,4,Parent.Width*0.13,Parent.Width*0.19)
         X: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" || Role="HR")),(Parent.Width-Self.Width)/1.45,(Parent.Width-Self.Width)/1.28)
         Y: =(Parent.Height-Self.Height)/1.4

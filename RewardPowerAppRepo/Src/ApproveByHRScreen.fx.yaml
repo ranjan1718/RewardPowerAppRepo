@@ -42,7 +42,7 @@ ApproveByHRScreen As screen:
         RadiusTopRight: =10
         Width: =Parent.Width*0.95
         X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/1.1
+        Y: =(Parent.Height-Self.Height)/1.2
         ZIndex: =2
 
         Label7_7 As label:
@@ -185,7 +185,8 @@ ApproveByHRScreen As screen:
                         HoverColor: =RGBA(37, 148, 55, 1)
                         HoverFill: =Color.White
                         OnSelect: |-
-                            =Set(varEmployeeData,LookUp('Nominee List',ID=ThisItem.ID));
+                            =
+                            Set(varEmployeeData,LookUp('Nominee List',ID=ThisItem.ID));
                             Patch('Nominee List',LookUp('Nominee List',ID=ThisItem.ID),{Status:{Value:"Approved"},Points:varEmployeeData.Points+200});
                             Notify("User Approved",NotificationType.Success,1000);
                         Size: =Switch(HomeScreen.Size,1,8,2,12,3,12,4,12)

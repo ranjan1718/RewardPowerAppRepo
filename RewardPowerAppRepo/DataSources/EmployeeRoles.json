@@ -29,6 +29,8 @@
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
+      "EmployeeRole": "EmployeeRole",
+      "EmployeeRole#Id": "EmployeeRole Id",
       "ID": "ID",
       "Mail": "Mail",
       "Modified": "Modified",

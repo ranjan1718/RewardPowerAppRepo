@@ -117,7 +117,7 @@ HomeScreen As screen:
             Label5_4 As label:
                 Height: =Parent.Height*0.1
                 Text: =""
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && (Role="Manager" || Role="HR"))),false,true)
+                Visible: =If(If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Admin" )),"System"),false,true)
                 Width: =Parent.Width*0.12
                 ZIndex: =6
 
@@ -132,7 +132,7 @@ HomeScreen As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && (Role="Manager" || Role="HR"))),false,true)
+                Visible: =If(If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Admin" )),"System"),false,true)
                 Width: =Switch(HomeScreen.Size,1,Parent.Width*0.3,2,Parent.Width*0.3,3,Parent.Width*0.2,4,Parent.Width*0.14,Parent.Width*0.15)
                 ZIndex: =7
 
@@ -145,7 +145,7 @@ HomeScreen As screen:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Semibold
                     Size: =Switch(HomeScreen.Size,1,8,2,13,3,13,4,13)
-                    Text: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Manager" )),"Nominate",If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Admin" )),"System",If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="HR","Nominate")),"Approve")))
+                    Text: =If(!IsBlank(LookUp(EmployeeRoles,Name.DisplayName=User().FullName && Role="Admin" )),"System")
                     Width: =Parent.Width
                     ZIndex: =2
 

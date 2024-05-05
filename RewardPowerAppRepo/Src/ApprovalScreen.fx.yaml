@@ -401,7 +401,7 @@ ApprovalScreen As screen:
                                 IsSearchable: =false
                                 Items: =Choices('Nominee List'.Justification)
                                 SearchFields: =["Value"]
-                                SearchItems: =Choices('Nominee List'.Justification,ComboBox2.SearchText)
+                                SearchItems: =[]
                                 Size: =Switch(ApprovalScreen.Size,1,8,2,11,3,13,4,13)
                                 Width: =Parent.Width
                                 ZIndex: =1

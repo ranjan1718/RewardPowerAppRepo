@@ -172,42 +172,57 @@ RedemptionScreen As screen:
                         Fill: =RGBA(26, 46, 34, 1)
                         LayoutMinWidth: =0
                         OnSelect: |-
-                            =
-                            ClearCollect(col_val, LookUp('Nominee List', 'Nominee Name'=User().FullName).Redeemed);
-                            Collect(col_val,Defaults(col_val),{Value:ThisItem.Prize.Value});
-                            
-                            
+                            =ClearCollect(
+                                col_val,
+                                LookUp(
+                                    'Nominee List',
+                                    'Nominee Name' = User().FullName
+                                ).Redeemed
+                            );
+                            Collect(
+                                col_val,
+                                Defaults(col_val),
+                                {Value: ThisItem.Prize.Value}
+                            );
                             If(
-                                LookUp('Nominee List', 'Nominee Name' = User().FullName).Points >= ThisItem.point,
+                                LookUp(
+                                    'Nominee List',
+                                    'Nominee Name' = User().FullName
+                                ).Points >= ThisItem.point,
                                 // If the user has enough points to redeem the gift
                                 Patch(
                                     'Nominee List',
-                                    LookUp('Nominee List', 'Nominee Name' = User().FullName),
-                                    { 
-                                        Points: LookUp('Nominee List', 'Nominee Name' = User().FullName).Points - ThisItem.point,
-                                        Redeemed:col_val
-                                          
-                            
+                                    LookUp(
+                                        'Nominee List',
+                                        'Nominee Name' = User().FullName
+                                    ),
+                                    {
+                                        Points: LookUp(
+                                            'Nominee List',
+                                            'Nominee Name' = User().FullName
+                                        ).Points - ThisItem.point,
+                                        Redeemed: col_val
                                     }
                                 );
-                                  
-                               
                                 // Deduct the points from the user's points
-                               Collect(
+                            Collect(
                                     RedeemedPrizes,
-                                    { 'Nominee Name': User().FullName, Redeemed: ThisItem.Prize }
+                                    {
+                                        'Nominee Name': User().FullName,
+                                        Redeemed: ThisItem.Prize
+                                    }
                                 );
                                  // Add the redeemed gift to the RedeemedPrizes collection
-                                 Office365Outlook.SendEmail(
+                            Office365Outlook.SendEmail(
                                     User().Email,
                                     "Gift Redeemed Successfully",
                                     "Congratulations! You have successfully redeemed the gift: " & ThisItem.Prize.Value
                                 );
-                               
-                                Notify("Gift redeemed successfully", NotificationType.Success)
+                                Notify(
+                                    "Gift redeemed successfully",
+                                    NotificationType.Success
+                                )
                                 // Show a success message   
-                            
-                            
                             )
                         Size: =If(RedemptionScreen.Size=1,10,RedemptionScreen.Size=2,12,RedemptionScreen.Size=3,14,14)
                         Text: ="Redeem"

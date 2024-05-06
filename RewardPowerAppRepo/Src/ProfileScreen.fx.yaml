@@ -104,6 +104,8 @@ ProfileScreen As screen:
             ZIndex: =3
 
             GallaryCN As groupContainer.verticalAutoLayoutContainer:
+                BorderStyle: =BorderStyle.Dotted
+                BorderThickness: =1
                 DropShadow: =DropShadow.Bold
                 FillPortions: =0
                 Height: =If(ProfileScreen.Size=2,Parent.Height/7||ProfileScreen.Size=3,Parent.Height,Parent.Height*0.5)

@@ -1,13 +1,16 @@
 ProfileScreen As screen:
+    Fill: =RGBA(202, 202, 202, 1)
 
     Container3 As groupContainer.verticalAutoLayoutContainer:
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: |
+            =10
         LayoutMode: =LayoutMode.Auto
-        PaddingBottom: =5
-        PaddingLeft: =5
-        PaddingRight: =5
-        PaddingTop: =5
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
         Width: =Parent.Width
         ZIndex: =1
 
@@ -33,7 +36,7 @@ ProfileScreen As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =Parent.Height
                 Icon: =Icon.BackArrow
-                OnSelect: =Navigate(HomeScreen)
+                OnSelect: =Navigate(RedemptionScreen)
                 Width: =If(RedemptionScreen.Size=2||RedemptionScreen.Size=3,35, 40)
                 X: =(Parent.Width-Self.Width)
                 Y: =(Parent.Height-Self.Height)/2
@@ -80,7 +83,7 @@ ProfileScreen As screen:
                 FontWeight: =FontWeight.Bold
                 Height: =If(ProfileScreen.Size=1,20,ProfileScreen.Size=2||ProfileScreen.Size=3,35,40)
                 Size: =If(ProfileScreen.Size=1,10,ProfileScreen.Size=2||ProfileScreen.Size=3,15,15)
-                Text: ="Your Details"
+                Text: ="Your Gifts"
                 Width: =If(ProfileScreen.Size=1,100,ProfileScreen.Size=2||ProfileScreen.Size=3,200,320)
                 ZIndex: =1
 
@@ -88,48 +91,82 @@ ProfileScreen As screen:
             AlignInContainer: =AlignInContainer.Center
             Fill: =RGBA(204, 231, 246, 1)
             Height: =Parent.Height
-            LayoutDirection: =LayoutDirection.Vertical
+            LayoutAlignItems: =LayoutAlignItems.Center
             LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            Width: =Parent.Width
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =Parent.Width*0.8
             ZIndex: =3
 
-            "Gallery4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-                AlignInContainer: =AlignInContainer.Center
-                BorderThickness: =2
-                DelayItemLoading: =true
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(204, 231, 246, 1)
-                Height: =Parent.Height
-                Items: =Filter(Choices('Nominee List'.Redeemed),Value)
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplatePadding: =0
-                TemplateSize: =80
-                Width: =Parent.Width*0.5
+            GallaryCN As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Bold
+                FillPortions: =0
+                Height: =If(ProfileScreen.Size=2,Parent.Height/7||ProfileScreen.Size=3,Parent.Height,Parent.Height*0.2)
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Width: =If(ProfileScreen.Size=2,Parent.Width*0.7,ProfileScreen.Size=3,Parent.Width*0.5,Parent.Width*0.5)
                 ZIndex: =1
 
-                Title5 As label:
-                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                    Height: =53
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =ThisItem.Value
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =196
-                    X: =243
-                    Y: =27
+                "Gallery7 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(204, 231, 246, 1)
+                    Height: =If(ProfileScreen.Size=1,50, ProfileScreen.Size=2||ProfileScreen.Size=3,250,250)
+                    Items: =Filter('Nominee List','Nominee Name'=User().FullName)
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
+                    TemplatePadding: =0
+                    TemplateSize: =80
+                    Width: =Parent.Width*0.6
                     ZIndex: =1
 
-                Separator5 As rectangle:
-                    Height: =8
-                    OnSelect: =Select(Parent)
-                    Width: =Parent.TemplateWidth
-                    Y: =Parent.TemplateHeight - Self.Height
-                    ZIndex: =3
+                    Title12 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =56
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =If(ProfileScreen.Size=1,10,ProfileScreen.Size=2||ProfileScreen.Size=3,15,15)
+                        Text: =ThisItem.Title
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =If(ProfileScreen.Size=2||ProfileScreen.Size=3,150,150)
+                        X: =79
+                        Y: =16
+                        ZIndex: =1
+
+                    Label16 As label:
+                        Align: = Align.Center
+                        BorderColor: =RGBA(9, 33, 98, 1)
+                        BorderStyle: =BorderStyle.Dashed
+                        BorderThickness: =3
+                        Fill: =RGBA(227, 234, 243, 1)
+                        FocusedBorderThickness: =3
+                        Height: =80
+                        OnSelect: =Select(Parent)
+                        Size: =If(ProfileScreen.Size=1,10,ProfileScreen.Size=2||ProfileScreen.Size=3,15,15)
+                        Text: |-
+                            =Concat(ThisItem.Redeemed,Value,"
+                            
+                            ")
+                        Width: =If(ProfileScreen.Size=1,100,ProfileScreen.Size=2||ProfileScreen.Size=3,200,320)
+                        Wrap: =false
+                        X: =7
+                        ZIndex: =4
 

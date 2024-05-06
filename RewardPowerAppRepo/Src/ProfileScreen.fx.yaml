@@ -116,7 +116,7 @@ ProfileScreen As screen:
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
-                PaddingTop: =50
+                PaddingTop: =90
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5
@@ -161,7 +161,7 @@ ProfileScreen As screen:
                         Align: =Align.Center
                         BorderColor: =RGBA(9, 33, 98, 1)
                         BorderStyle: =BorderStyle.Dashed
-                        BorderThickness: =3
+                        BorderThickness: =5
                         Fill: =RGBA(227, 234, 243, 1)
                         FocusedBorderThickness: =3
                         Height: =If(ProfileScreen.Size=2,150,ProfileScreen.Size=3,150,150)

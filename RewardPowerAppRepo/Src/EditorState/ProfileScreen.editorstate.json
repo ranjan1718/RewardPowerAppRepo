@@ -1156,7 +1156,14 @@
         "PaddingBottom",
         "PaddingLeft",
         "PaddingRight",
-        "PaddingTop"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PaddingTop",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {

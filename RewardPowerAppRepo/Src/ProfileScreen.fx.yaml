@@ -128,6 +128,8 @@ ProfileScreen As screen:
                     Height: =If(ProfileScreen.Size=1,50, ProfileScreen.Size=2||ProfileScreen.Size=3,250,250)
                     Items: =Filter('Nominee List','Nominee Name'=User().FullName)
                     Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
                     TemplatePadding: =0

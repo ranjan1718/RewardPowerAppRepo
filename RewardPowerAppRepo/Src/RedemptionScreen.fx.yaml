@@ -148,7 +148,7 @@ RedemptionScreen As screen:
                         AlignInContainer: =AlignInContainer.Stretch
                         Height: =If(RedemptionScreen.Size=1,40,RedemptionScreen.Size=2||RedemptionScreen.Size=3,70,25)
                         Size: =If(RedemptionScreen.Size=1,8,RedemptionScreen.Size=2||RedemptionScreen.Size=3,14,15)
-                        Text: =ThisItem.Prize.Value
+                        Text: =ThisItem.PrizeName
                         Width: =If(RedemptionScreen.Size=1,120,RedemptionScreen.Size=2,190,RedemptionScreen.Size=3,180,190)
                         X: =(Parent.Width-Self.Width)/2
                         Y: =(Parent.Height)

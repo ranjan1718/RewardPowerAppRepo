@@ -35,6 +35,7 @@
       "point": "point",
       "Prize": "Prize",
       "Prize#Id": "Prize Id",
+      "PrizeName": "PrizeName",
       "Title": "Title"
     },
     "DatasetName": "https://sigilotech.sharepoint.com/sites/RewardEmployees",

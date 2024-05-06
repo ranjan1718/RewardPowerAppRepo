@@ -24,6 +24,7 @@
       "{TriggerWindowStartToken}": "Trigger Window Start Token",
       "{VersionNumber}": "Version number",
       "Approver": "Approver",
+      "ApproverJustification": "ApproverJustification",
       "Author": "Created By",
       "Author#Claims": "Created By Claims",
       "ComplianceAssetId": "Compliance Asset Id",

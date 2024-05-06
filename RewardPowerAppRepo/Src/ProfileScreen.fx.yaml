@@ -158,13 +158,13 @@ ProfileScreen As screen:
                         ZIndex: =1
 
                     Label16 As label:
-                        Align: = Align.Center
+                        Align: =Align.Center
                         BorderColor: =RGBA(9, 33, 98, 1)
                         BorderStyle: =BorderStyle.Dashed
                         BorderThickness: =3
                         Fill: =RGBA(227, 234, 243, 1)
                         FocusedBorderThickness: =3
-                        Height: =If(ProfileScreen.Size=2,50,ProfileScreen.Size=3,90,150)
+                        Height: =If(ProfileScreen.Size=2,150,ProfileScreen.Size=3,150,150)
                         OnSelect: =Select(Parent)
                         Size: =If(ProfileScreen.Size=1,10,ProfileScreen.Size=2||ProfileScreen.Size=3,15,15)
                         Text: |-

@@ -106,7 +106,7 @@ ProfileScreen As screen:
             GallaryCN As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Bold
                 FillPortions: =0
-                Height: =If(ProfileScreen.Size=2,Parent.Height/7||ProfileScreen.Size=3,Parent.Height,Parent.Height*0.2)
+                Height: =If(ProfileScreen.Size=2,Parent.Height/7||ProfileScreen.Size=3,Parent.Height,Parent.Height*0.5)
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -129,7 +129,7 @@ ProfileScreen As screen:
                     DelayItemLoading: =true
                     DisplayMode: =DisplayMode.View
                     Fill: =RGBA(204, 231, 246, 1)
-                    Height: =If(ProfileScreen.Size=1,50, ProfileScreen.Size=2||ProfileScreen.Size=3,250,250)
+                    Height: =If(ProfileScreen.Size=1,50, ProfileScreen.Size=2||ProfileScreen.Size=3,250,200)
                     Items: =Filter('Nominee List','Nominee Name'=User().FullName)
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
@@ -164,7 +164,7 @@ ProfileScreen As screen:
                         BorderThickness: =3
                         Fill: =RGBA(227, 234, 243, 1)
                         FocusedBorderThickness: =3
-                        Height: =80
+                        Height: =If(ProfileScreen.Size=2,50,ProfileScreen.Size=3,90,150)
                         OnSelect: =Select(Parent)
                         Size: =If(ProfileScreen.Size=1,10,ProfileScreen.Size=2||ProfileScreen.Size=3,15,15)
                         Text: |-

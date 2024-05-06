@@ -159,7 +159,7 @@ RedemptionScreen As screen:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Bold
                 Height: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
-                Size: =If(RedemptionScreen.Size=1,20,RedemptionScreen.Size=2||RedemptionScreen.Size=3,20,25)
+                Size: =If(RedemptionScreen.Size=1,15,RedemptionScreen.Size=2||RedemptionScreen.Size=3,15,15)
                 Text: =""
                 Width: |
                     =If(RedemptionScreen.Size=1,Parent.Width/3,RedemptionScreen.Size=2||RedemptionScreen.Size=3,120,180)
@@ -231,6 +231,7 @@ RedemptionScreen As screen:
                     Button12 As button:
                         AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =If(LookUp('Nominee List', 'Nominee Name'=User().FullName).Points>= ThisItem.point,DisplayMode.Edit,DisplayMode.Disabled)
+                        Fill: =RGBA(26, 46, 34, 1)
                         LayoutMinWidth: =0
                         OnSelect: |-
                             =

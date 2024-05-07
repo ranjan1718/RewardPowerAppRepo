@@ -23,6 +23,7 @@
       "{TriggerWindowEndToken}": "Trigger Window End Token",
       "{TriggerWindowStartToken}": "Trigger Window Start Token",
       "{VersionNumber}": "Version number",
+      "ApproveDate": "ApproveDate",
       "Approver": "Approver",
       "ApproverJustification": "ApproverJustification",
       "Author": "Created By",
@@ -46,6 +47,7 @@
       "Redeemed": "Redeemed",
       "Redeemed#Id": "Redeemed Id",
       "Redeemed@odata.type": "Redeemed (Redeemed@odata.type)",
+      "RejectionDate": "RejectionDate",
       "Status": "Status",
       "Status#Id": "Status Id",
       "Title": "Title"

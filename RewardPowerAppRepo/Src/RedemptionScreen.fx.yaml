@@ -146,6 +146,7 @@ RedemptionScreen As screen:
                     Label8_4 As label:
                         Align: =Align.Center
                         AlignInContainer: =AlignInContainer.Stretch
+                        Fill: =RGBA(232, 244, 217, 1)
                         Height: =If(RedemptionScreen.Size=1,40,RedemptionScreen.Size=2||RedemptionScreen.Size=3,70,25)
                         Size: =If(RedemptionScreen.Size=1,8,RedemptionScreen.Size=2||RedemptionScreen.Size=3,14,15)
                         Text: =ThisItem.PrizeName

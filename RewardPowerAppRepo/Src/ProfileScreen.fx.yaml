@@ -173,10 +173,13 @@ ProfileScreen As screen:
                     ZIndex: =2
 
                     Gallery4 As gallery.galleryVertical:
+                        AlignInContainer: =AlignInContainer.SetByContainer
                         DelayItemLoading: =true
                         Height: =Parent.Height
                         Items: =Filter('Nominee List','Nominee Name'=User().FullName)
                         Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
                         Width: =Parent.Width

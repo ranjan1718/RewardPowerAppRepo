@@ -271,6 +271,7 @@ RedemptionScreen As screen:
             LayoutMinHeight: =100
             LayoutMinWidth: =50
             LayoutMode: =LayoutMode.Auto
+            PaddingRight: =15
             ZIndex: =4
 
             Label11_2 As label:
